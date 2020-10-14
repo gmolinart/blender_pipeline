@@ -1,0 +1,171 @@
+{
+    "blender": [
+        {
+            "buttons": [
+                {
+                    "label": "SaveCurrentScene",
+                    "module": "cgl_tools.blender.preflights.mdl.SaveCurrentScene",
+                    "name": "SaveCurrentScene",
+                    "order": 1,
+                    "required": "True"
+                },
+                {
+                    "label": "Collectionname",
+                    "module": "cgl_tools.blender.preflights.mdl.Collectionname",
+                    "name": "Collectionname",
+                    "order": 2,
+                    "required": "True"
+                },
+                {
+                    "label": "Viewportcolors",
+                    "module": "cgl_tools.blender.preflights.mdl.Viewportcolors",
+                    "name": "Viewportcolors",
+                    "order": 3,
+                    "required": "True"
+                },
+                {
+                    "label": "Cleanturntable",
+                    "module": "cgl_tools.blender.preflights.mdl.Cleanturntable",
+                    "name": "Cleanturntable",
+                    "order": 4,
+                    "required": "True"
+                },
+                {
+                    "label": "Checknormals",
+                    "module": "cgl_tools.blender.preflights.mdl.Checknormals",
+                    "name": "Checknormals",
+                    "order": 5,
+                    "required": "True"
+                },
+                {
+                    "label": "Resettransformations",
+                    "module": "cgl_tools.blender.preflights.mdl.Resettransformations",
+                    "name": "Resettransformations",
+                    "order": 6,
+                    "required": "True"
+                },
+                {
+                    "label": "Cleanscene",
+                    "module": "cgl_tools.blender.preflights.mdl.Cleanscene",
+                    "name": "Cleanscene",
+                    "order": 7,
+                    "required": "True"
+                },
+                {
+                    "label": "Publish",
+                    "module": "cgl_tools.blender.preflights.mdl.Publish",
+                    "name": "Publish",
+                    "order": 8,
+                    "required": "True"
+                }
+            ],
+            "name": "mdl"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "Publish",
+                    "module": "cgl_tools.blender.preflights.default.Publish",
+                    "name": "Publish",
+                    "order": 1,
+                    "required": "True"
+                }
+            ],
+            "name": "default"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "Savecurrentscene",
+                    "module": "cgl_tools.blender.preflights.rig.Savecurrentscene",
+                    "name": "Savecurrentscene",
+                    "order": 1,
+                    "required": "True"
+                },
+                {
+                    "label": "CleanTurntable",
+                    "module": "cgl_tools.blender.preflights.rig.CleanTurntable",
+                    "name": "CleanTurntable",
+                    "order": 2,
+                    "required": "True"
+                },
+                {
+                    "label": "CheckRigName",
+                    "module": "cgl_tools.blender.preflights.rig.CheckRigName",
+                    "name": "CheckRigName",
+                    "order": 3,
+                    "required": "True"
+                },
+                {
+                    "label": "Removeactions",
+                    "module": "cgl_tools.blender.preflights.rig.Removeactions",
+                    "name": "Removeactions",
+                    "order": 4,
+                    "required": "True"
+                },
+                {
+                    "label": "Parentmeshtorig",
+                    "module": "cgl_tools.blender.preflights.rig.Parentmeshtorig",
+                    "name": "Parentmeshtorig",
+                    "order": 5,
+                    "required": "True"
+                },
+                {
+                    "label": "Checkshaders",
+                    "module": "cgl_tools.blender.preflights.rig.Checkshaders",
+                    "name": "Checkshaders",
+                    "order": 6,
+                    "required": "True"
+                },
+                {
+                    "label": "Resetbones",
+                    "module": "cgl_tools.blender.preflights.rig.Resetbones",
+                    "name": "Resetbones",
+                    "order": 7,
+                    "required": "True"
+                },
+                {
+                    "label": "Cleanrigscene",
+                    "module": "cgl_tools.blender.preflights.rig.Cleanrigscene",
+                    "name": "Cleanrigscene",
+                    "order": 8,
+                    "required": "True"
+                },
+                {
+                    "label": "Publish",
+                    "module": "cgl_tools.blender.preflights.rig.Publish",
+                    "name": "Publish",
+                    "order": 9,
+                    "required": "True"
+                }
+            ],
+            "name": "rig"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "SaveCurrentScene",
+                    "module": "cgl_tools.blender.preflights.anim.SaveCurrentScene",
+                    "name": "SaveCurrentScene",
+                    "order": 1,
+                    "required": "True"
+                },
+                {
+                    "label": "WriteAnimationData",
+                    "module": "cgl_tools.blender.preflights.anim.WriteAnimationData",
+                    "name": "WriteAnimationData",
+                    "order": 2,
+                    "required": "True"
+                },
+                {
+                    "label": "Publish",
+                    "module": "cgl_tools.blender.preflights.anim.Publish",
+                    "name": "Publish",
+                    "order": 3,
+                    "required": "True"
+                }
+            ],
+            "name": "anim"
+        }
+    ]
+}

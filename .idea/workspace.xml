@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="292dd7de-72be-4162-9c08-eb3914d873cb" name="Default Changelist" comment="reorganized roejct" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hBZrC561YLCjPBaUcJijAvfFov" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Roaming/Blender Foundation/Blender/2.83/scripts/addons/skin_selection_LC.py" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="292dd7de-72be-4162-9c08-eb3914d873cb" name="Default Changelist" comment="" />
+      <created>1599486641195</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599486641195</updated>
+    </task>
+    <task id="LOCAL-00001" summary="refformated code">
+      <created>1601642898570</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601642898570</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added mirror vertex group and switch proxy in animation">
+      <created>1601744609334</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601744609334</updated>
+    </task>
+    <task id="LOCAL-00003" summary="reorganized menus to be in a single tab">
+      <created>1601818293805</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601818293805</updated>
+    </task>
+    <task id="LOCAL-00004" summary="grease pencil switch remove mesh controllers and some changes">
+      <created>1602367566986</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602367566986</updated>
+    </task>
+    <task id="LOCAL-00005" summary="reorganized rig menu and added import task and replace base mesh operators">
+      <created>1602434099216</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602434099216</updated>
+    </task>
+    <task id="LOCAL-00006" summary="reorganized roejct">
+      <created>1602704192216</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602704192216</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="refformated code" />
+    <MESSAGE value="added mirror vertex group and switch proxy in animation" />
+    <MESSAGE value="reorganized menus to be in a single tab" />
+    <MESSAGE value="grease pencil switch remove mesh controllers and some changes" />
+    <MESSAGE value="reorganized rig menu and added import task and replace base mesh operators" />
+    <MESSAGE value="reorganized roejct" />
+    <option name="LAST_COMMIT_MESSAGE" value="reorganized roejct" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-2967" y="355" key="#Plugins" timestamp="1600533268148">
+      <screen x="-3840" y="9" width="2560" height="1420" />
+    </state>
+    <state x="-2967" y="355" key="#Plugins/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1600533268148" />
+    <state x="-3104" y="369" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602704917407">
+      <screen x="-3840" y="9" width="2560" height="1420" />
+    </state>
+    <state x="-3104" y="369" key="#com.intellij.execution.impl.EditConfigurationsDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602704917407" />
+    <state x="-2820" y="335" key="#com.intellij.ide.util.MemberChooser" timestamp="1600277067647">
+      <screen x="-3840" y="9" width="2560" height="1420" />
+    </state>
+    <state x="-2820" y="335" key="#com.intellij.ide.util.MemberChooser/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1600277067647" />
+    <state x="765" y="241" key="#com.intellij.ide.util.MemberChooser/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@0.0.1920.1050" timestamp="1599698743760" />
+    <state x="970" y="1462" key="FileChooserDialogImpl" timestamp="1602674159462">
+      <screen x="307" y="1080" width="1600" height="1170" />
+    </state>
+    <state x="970" y="1462" key="FileChooserDialogImpl/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@307.1080.1600.1170" timestamp="1602674159462" />
+    <state x="-2779" y="469" key="FileChooserDialogImpl/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1602437834992" />
+    <state x="-2760" y="633" key="Github.CreateGistDialog" timestamp="1601642520381">
+      <screen x="-3840" y="9" width="2560" height="1409" />
+    </state>
+    <state x="-2760" y="633" key="Github.CreateGistDialog/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1601642520381" />
+    <state x="-2961" y="617" width="536" height="193" key="Github.ShareDialog" timestamp="1601642638195">
+      <screen x="-3840" y="9" width="2560" height="1409" />
+    </state>
+    <state x="-2961" y="617" width="536" height="193" key="Github.ShareDialog/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1601642638195" />
+    <state x="-2781" y="337" width="1013" height="754" key="Github.UntrackedFilesDialog" timestamp="1601642649247">
+      <screen x="-3840" y="9" width="2560" height="1409" />
+    </state>
+    <state x="-2781" y="337" width="1013" height="754" key="Github.UntrackedFilesDialog/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1601642649247" />
+    <state x="-3028" y="360" key="SettingsEditor" timestamp="1602704939404">
+      <screen x="-3840" y="9" width="2560" height="1420" />
+    </state>
+    <state x="-3028" y="360" key="SettingsEditor/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602704939404" />
+    <state x="-3747" y="102" width="2375" height="1224" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1602689775501">
+      <screen x="-3840" y="9" width="2560" height="1420" />
+    </state>
+    <state x="-3747" y="102" width="2375" height="1224" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@307.1080.1600.1170" timestamp="1602689775501" />
+    <state x="345" y="1204" width="1447" height="966" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602704691439">
+      <screen x="307" y="1080" width="1600" height="1170" />
+    </state>
+    <state x="-3717" y="133" width="2315" height="1172" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1600276611779" />
+    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@0.0.1920.1050" timestamp="1600359644766" />
+    <state x="345" y="1204" width="1447" height="966" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@307.1080.1600.1170" timestamp="1602704691439" />
+    <state x="-3717" y="132" width="2315" height="1163" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1602428765824" />
+    <state x="-2926" y="329" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602439151935">
+      <screen x="-3840" y="9" width="2560" height="1409" />
+    </state>
+    <state x="-2926" y="329" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1602439151935" />
+    <state x="-2779" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602434059352">
+      <screen x="-3840" y="9" width="2560" height="1409" />
+    </state>
+    <state x="-2779" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1602434059352" />
+    <state x="-3009" y="316" width="896" height="917" key="search.everywhere.popup" timestamp="1602704933713">
+      <screen x="-3840" y="9" width="2560" height="1420" />
+    </state>
+    <state x="-3009" y="316" width="896" height="917" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602704933713" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@0.0.1920.1050" timestamp="1602350476090" />
+    <state x="826" y="1333" width="672" height="756" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@307.1080.1600.1170" timestamp="1602704768937" />
+    <state x="-3009" y="314" width="896" height="910" key="search.everywhere.popup/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1602615727418" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@0.0.1920.1050" timestamp="1602592399805" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/menus/lumbermill/Renamecollection.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
