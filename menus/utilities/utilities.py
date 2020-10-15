@@ -34,4 +34,5 @@ class utilities(bpy.types.Panel):
         self.layout.row().operator("object.switch_resolution")
         self.layout.row().operator("object.open_selected")
         self.layout.row().operator("object.collection_to_asset")
-
+        self.layout.row().operator("object.open_documentation")
+        self.layout.row().operator("object.source_to_render")

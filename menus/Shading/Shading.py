@@ -19,3 +19,4 @@ class Shading(bpy.types.Panel):
         self.layout.row().operator("object.setup_shader_color")
         self.layout.row().operator("object.save_materials")
         self.layout.row().operator("object.load_materials")
+        self.layout.row().operator("object.publish_textures")

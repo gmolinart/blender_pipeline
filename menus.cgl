@@ -107,6 +107,24 @@
                     "module": "import cgl_tools.blender.menus.Modeling.CenterReset as CenterReset; CenterReset.run()",
                     "name": "CenterReset",
                     "order": 4
+                },
+                {
+                    "label": "ExportToObj",
+                    "module": "import cgl_tools.blender.menus.Modeling.ExportToObj as ExportToObj; ExportToObj.run()",
+                    "name": "ExportToObj",
+                    "order": 5
+                },
+                {
+                    "label": "WriteMeshList",
+                    "module": "import cgl_tools.blender.menus.Modeling.WriteMeshList as WriteMeshList; WriteMeshList.run()",
+                    "name": "WriteMeshList",
+                    "order": 6
+                },
+                {
+                    "label": "UpdateResolutions",
+                    "module": "import cgl_tools.blender.menus.Modeling.UpdateResolutions as UpdateResolutions; UpdateResolutions.run()",
+                    "name": "UpdateResolutions",
+                    "order": 7
                 }
             ],
             "name": "Modeling"
@@ -426,6 +444,18 @@
                     "module": "import cgl_tools.blender.menus.utilities.CollectionToAsset as CollectionToAsset; CollectionToAsset.run()",
                     "name": "CollectionToAsset",
                     "order": 20
+                },
+                {
+                    "label": "OpenDocumentation",
+                    "module": "import cgl_tools.blender.menus.utilities.OpenDocumentation as OpenDocumentation; OpenDocumentation.run()",
+                    "name": "OpenDocumentation",
+                    "order": 21
+                },
+                {
+                    "label": "SourceToRender",
+                    "module": "import cgl_tools.blender.menus.utilities.SourceToRender as SourceToRender; SourceToRender.run()",
+                    "name": "SourceToRender",
+                    "order": 22
                 }
             ],
             "name": "utilities"
@@ -485,6 +515,12 @@
                     "module": "import cgl_tools.blender.menus.navigation.BackToPrevious as BackToPrevious; BackToPrevious.run()",
                     "name": "BackToPrevious",
                     "order": 9
+                },
+                {
+                    "label": "CopyToUser",
+                    "module": "import cgl_tools.blender.menus.Navigation.CopyToUser as CopyToUser; CopyToUser.run()",
+                    "name": "CopyToUser",
+                    "order": 10
                 }
             ],
             "name": "Navigation"
