@@ -78,6 +78,36 @@
                     "module": "import cgl_tools.blender.menus.Layout.RenameCameras as RenameCameras; RenameCameras.run()",
                     "name": "RenameCameras",
                     "order": 4
+                },
+                {
+                    "label": "SwitchSelectedResolution",
+                    "module": "import cgl_tools.blender.menus.Layout.SwitchSelectedResolution as SwitchSelectedResolution; SwitchSelectedResolution.run()",
+                    "name": "SwitchSelectedResolution",
+                    "order": 5
+                },
+                {
+                    "label": "SwitchSelectedUser",
+                    "module": "import cgl_tools.blender.menus.Layout.SwitchSelectedUser as SwitchSelectedUser; SwitchSelectedUser.run()",
+                    "name": "SwitchSelectedUser",
+                    "order": 6
+                },
+                {
+                    "label": "SwitchSelectedVersion",
+                    "module": "import cgl_tools.blender.menus.Layout.SwitchSelectedVersion as SwitchSelectedVersion; SwitchSelectedVersion.run()",
+                    "name": "SwitchSelectedVersion",
+                    "order": 7
+                },
+                {
+                    "label": "UnlinkAsset",
+                    "module": "import cgl_tools.blender.menus.Layout.UnlinkAsset as UnlinkAsset; UnlinkAsset.run()",
+                    "name": "UnlinkAsset",
+                    "order": 8
+                },
+                {
+                    "label": "ReadLayoutFromSelected",
+                    "module": "import cgl_tools.blender.menus.Layout.ReadLayoutFromSelected as ReadLayoutFromSelected; ReadLayoutFromSelected.run()",
+                    "name": "ReadLayoutFromSelected",
+                    "order": 9
                 }
             ],
             "name": "Layout"
@@ -267,6 +297,42 @@
                     "module": "import cgl_tools.blender.menus.Animation.IkFkSwitch as IkFkSwitch; IkFkSwitch.run()",
                     "name": "IkFkSwitch",
                     "order": 5
+                },
+                {
+                    "label": "SwitchProxy",
+                    "module": "import cgl_tools.blender.menus.Animation.SwitchProxy as SwitchProxy; SwitchProxy.run()",
+                    "name": "SwitchProxy",
+                    "order": 6
+                },
+                {
+                    "label": "SwitchRig",
+                    "module": "import cgl_tools.blender.menus.Animation.SwitchRig as SwitchRig; SwitchRig.run()",
+                    "name": "SwitchRig",
+                    "order": 7
+                },
+                {
+                    "label": "SwitchExtras",
+                    "module": "import cgl_tools.blender.menus.Animation.SwitchExtras as SwitchExtras; SwitchExtras.run()",
+                    "name": "SwitchExtras",
+                    "order": 8
+                },
+                {
+                    "label": "WriteAnimationData",
+                    "module": "import cgl_tools.blender.menus.Animation.WriteAnimationData as WriteAnimationData; WriteAnimationData.run()",
+                    "name": "WriteAnimationData",
+                    "order": 9
+                },
+                {
+                    "label": "RenderWithAudio",
+                    "module": "import cgl_tools.blender.menus.Animation.RenderWithAudio as RenderWithAudio; RenderWithAudio.run()",
+                    "name": "RenderWithAudio",
+                    "order": 10
+                },
+                {
+                    "label": "Publish",
+                    "module": "import cgl_tools.blender.menus.Animation.Publish as Publish; Publish.run()",
+                    "name": "Publish",
+                    "order": 11
                 }
             ],
             "name": "Animation"

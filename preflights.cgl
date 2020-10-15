@@ -111,31 +111,24 @@
                     "required": "True"
                 },
                 {
-                    "label": "Checkshaders",
-                    "module": "cgl_tools.blender.preflights.rig.Checkshaders",
-                    "name": "Checkshaders",
-                    "order": 6,
-                    "required": "True"
-                },
-                {
                     "label": "Resetbones",
                     "module": "cgl_tools.blender.preflights.rig.Resetbones",
                     "name": "Resetbones",
-                    "order": 7,
+                    "order": 6,
                     "required": "True"
                 },
                 {
                     "label": "Cleanrigscene",
                     "module": "cgl_tools.blender.preflights.rig.Cleanrigscene",
                     "name": "Cleanrigscene",
-                    "order": 8,
+                    "order": 7,
                     "required": "True"
                 },
                 {
                     "label": "Publish",
                     "module": "cgl_tools.blender.preflights.rig.Publish",
                     "name": "Publish",
-                    "order": 9,
+                    "order": 8,
                     "required": "True"
                 }
             ],

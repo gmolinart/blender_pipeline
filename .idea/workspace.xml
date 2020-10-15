@@ -19,12 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="292dd7de-72be-4162-9c08-eb3914d873cb" name="Default Changelist" comment="reorganized roejct">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="292dd7de-72be-4162-9c08-eb3914d873cb" name="Default Changelist" comment="added shading nodes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus.cgl" beforeDir="false" afterPath="$PROJECT_DIR$/menus.cgl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Layout/Test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Light/DefaultLightSetup_.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/Shading/Shading.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Shading/Shading.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/utilities/utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/utilities/utilities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/utilities/ImportAsset.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/utilities/ImportAsset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights.cgl" beforeDir="false" afterPath="$PROJECT_DIR$/preflights.cgl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/rig/Checkshaders.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/rig/Parentmeshtorig.py" beforeDir="false" afterPath="$PROJECT_DIR$/preflights/rig/Parentmeshtorig.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/rig/Publish.py" beforeDir="false" afterPath="$PROJECT_DIR$/preflights/rig/Publish.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602704192216</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added shading nodes">
+      <created>1602762745264</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602762745264</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,7 +136,8 @@
     <MESSAGE value="grease pencil switch remove mesh controllers and some changes" />
     <MESSAGE value="reorganized rig menu and added import task and replace base mesh operators" />
     <MESSAGE value="reorganized roejct" />
-    <option name="LAST_COMMIT_MESSAGE" value="reorganized roejct" />
+    <MESSAGE value="added shading nodes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added shading nodes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-2967" y="355" key="#Plugins" timestamp="1600533268148">
@@ -163,14 +176,15 @@
       <screen x="-3840" y="9" width="2560" height="1420" />
     </state>
     <state x="-3028" y="360" key="SettingsEditor/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602704939404" />
-    <state x="-3747" y="102" width="2375" height="1224" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1602689775501">
+    <state x="-3747" y="102" width="2375" height="1224" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1602767731934">
       <screen x="-3840" y="9" width="2560" height="1420" />
     </state>
+    <state x="-3747" y="102" width="2375" height="1224" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602767731934" />
     <state x="-3747" y="102" width="2375" height="1224" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@307.1080.1600.1170" timestamp="1602689775501" />
-    <state x="-3717" y="133" width="2315" height="1172" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602762634856">
+    <state x="-3717" y="133" width="2315" height="1172" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602768096385">
       <screen x="-3840" y="9" width="2560" height="1420" />
     </state>
-    <state x="-3717" y="133" width="2315" height="1172" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602762634856" />
+    <state x="-3717" y="133" width="2315" height="1172" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602768096385" />
     <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@0.0.1920.1050" timestamp="1600359644766" />
     <state x="345" y="1204" width="1447" height="966" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@307.1080.1600.1170" timestamp="1602704691439" />
     <state x="-3717" y="132" width="2315" height="1163" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1602428765824" />
@@ -182,10 +196,10 @@
       <screen x="-3840" y="9" width="2560" height="1409" />
     </state>
     <state x="-2779" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1602434059352" />
-    <state x="-3009" y="316" width="896" height="917" key="search.everywhere.popup" timestamp="1602762628697">
+    <state x="-3009" y="316" width="896" height="917" key="search.everywhere.popup" timestamp="1602767981043">
       <screen x="-3840" y="9" width="2560" height="1420" />
     </state>
-    <state x="-3009" y="316" width="896" height="917" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602762628697" />
+    <state x="-3009" y="316" width="896" height="917" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602767981043" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@0.0.1920.1050" timestamp="1602350476090" />
     <state x="826" y="1333" width="672" height="756" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@307.1080.1600.1170" timestamp="1602704768937" />
     <state x="-3009" y="314" width="896" height="910" key="search.everywhere.popup/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1602615727418" />

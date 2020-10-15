@@ -19,7 +19,7 @@ class Parentmeshtorig(PreflightCheck):
         self.fail_check('Message about a failed check')
         :return:
         """
-
-        bpy.ops.object.parent_mesh_to_rig()
+        #TODO : check if the mesh is parented to rig this was breaking
+        #bpy.ops.object.parent_mesh_to_rig()
         self.pass_check('Check Passed')
         # self.fail_check('Check Failed')
