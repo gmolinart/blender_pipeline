@@ -18,3 +18,8 @@ class Layout(bpy.types.Panel):
         self.layout.row().operator("object.write_layout")
         self.layout.row().operator("object.publish_cameras")
         self.layout.row().operator("object.rename_cameras")
+        self.layout.row().operator("object.switch_selected_resolution")
+        self.layout.row().operator("object.switch_selected_user")
+        self.layout.row().operator("object.switch_selected_version")
+        self.layout.row().operator("object.unlink_asset")
+        self.layout.row().operator("object.read_layout_from_selected")
