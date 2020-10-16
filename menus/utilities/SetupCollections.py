@@ -19,30 +19,33 @@ class SetupCollections(bpy.types.Operator):
 
 
 def reparent_linked_environemnt_assets(library):
+    import os
     env = library
     bpy.ops.file.make_paths_absolute()
     env_path = lm.LumberObject(env.filepath)
     env_layout = env_path.copy(ext='json').path_root
 
-    data = load_json(env_layout)
-    assets_collection_name = '{}_assets'.format(env_path.asset)
-    if assets_collection_name not in bpy.data.collections['env'].children:
+    if os.path.isfile(env_layout):
 
-        assets_collection = bpy.data.collections.new(assets_collection_name)
-        bpy.data.collections['env'].children.link(assets_collection)
-    else:
-        assets_collection = bpy.data.collections[assets_collection_name]
+        data = load_json(env_layout)
+        assets_collection_name = '{}_assets'.format(env_path.asset)
+        if assets_collection_name not in bpy.data.collections['env'].children:
 
-    for i in data:
-        print(i)
-        name = data[i]['name']
+            assets_collection = bpy.data.collections.new(assets_collection_name)
+            bpy.data.collections['env'].children.link(assets_collection)
+        else:
+            assets_collection = bpy.data.collections[assets_collection_name]
 
-        if i in bpy.data.objects:
-            obj = bpy.data.objects[i]
-            if assets_collection not in obj.users_collection:
-                assets_collection.objects.link(obj)
+        for i in data:
+            print(i)
+            name = data[i]['name']
 
-            keep_single_user_collection(obj, assetName=assets_collection_name)
+            if i in bpy.data.objects:
+                obj = bpy.data.objects[i]
+                if assets_collection not in obj.users_collection:
+                    assets_collection.objects.link(obj)
+
+                keep_single_user_collection(obj, assetName=assets_collection_name)
 
 
 def keep_single_user_collection(obj, assetName=None):
