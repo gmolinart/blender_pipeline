@@ -1,7 +1,7 @@
 from cgl.plugins.preflight.preflight_check import PreflightCheck
 # from cgl.plugins.blender import lumbermill as lm
 # from cgl.plugins.blender import utils
-import bpy
+
 
 class Parentmeshtorig(PreflightCheck):
 
@@ -19,7 +19,6 @@ class Parentmeshtorig(PreflightCheck):
         self.fail_check('Message about a failed check')
         :return:
         """
-        #TODO : check if the mesh is parented to rig this was breaking
-        #bpy.ops.object.parent_mesh_to_rig()
+        print('Parentmeshtorig')
         self.pass_check('Check Passed')
         # self.fail_check('Check Failed')

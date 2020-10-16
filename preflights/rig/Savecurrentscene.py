@@ -19,7 +19,7 @@ class Savecurrentscene(PreflightCheck):
         self.fail_check('Message about a failed check')
         :return:
         """
-        lm.save_file()
+        lm.version_up()
         print('Savecurrentscene')
         self.pass_check('Check Passed')
         # self.fail_check('Check Failed')

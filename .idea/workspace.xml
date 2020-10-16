@@ -19,12 +19,36 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="292dd7de-72be-4162-9c08-eb3914d873cb" name="Default Changelist" comment="updating menus that were lost">
+    <list default="true" id="292dd7de-72be-4162-9c08-eb3914d873cb" name="Default Changelist" comment=" &#10;changes on read layout from selected to alert user if there isnt a layout file">
+      <change afterPath="$PROJECT_DIR$/preflights/mdl/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preflights/mdl/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preflights/mdl/.idea/mdl.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preflights/mdl/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preflights/mdl/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preflights/mdl/BakeModifiers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preflights/mdl/WriteLayout.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Animation/Animation.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Animation/Animation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Fx/Fx.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Fx/Fx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Layout/Layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Layout/Layout.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Layout/ReadLayoutFromSelected.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Layout/ReadLayoutFromSelected.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights.cgl" beforeDir="false" afterPath="$PROJECT_DIR$/preflights.cgl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/anim/Publish.py" beforeDir="false" afterPath="$PROJECT_DIR$/preflights/anim/Publish.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/default/Publish.py" beforeDir="false" afterPath="$PROJECT_DIR$/preflights/default/Publish.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/mdl/Checknormals.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/mdl/Cleanscene.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/mdl/Cleanturntable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/mdl/Collectionname.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/mdl/Publish.py" beforeDir="false" afterPath="$PROJECT_DIR$/preflights/mdl/Publish.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/mdl/Resettransformations.py" beforeDir="false" afterPath="$PROJECT_DIR$/preflights/mdl/Resettransformations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/mdl/SaveCurrentScene.py" beforeDir="false" afterPath="$PROJECT_DIR$/preflights/mdl/SaveCurrentScene.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/mdl/TesSpaceNameF.py" beforeDir="false" afterPath="$PROJECT_DIR$/preflights/mdl/RemoveLinkedAssets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/mdl/TestSpacEnameC.py" beforeDir="false" afterPath="$PROJECT_DIR$/preflights/mdl/MakePathsAbsolute.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/mdl/TestSpaceD_.py" beforeDir="false" afterPath="$PROJECT_DIR$/preflights/mdl/WriteMeshList.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/mdl/TestSpaceName.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/mdl/TestSpaceNameB.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/mdl/TestSpaceNameD.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/mdl/TestSpaceNameG.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/mdl/TestSpaceNameH.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/mdl/Viewportcolors.py" beforeDir="false" afterPath="$PROJECT_DIR$/preflights/mdl/Viewportcolors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/rig/Parentmeshtorig.py" beforeDir="false" afterPath="$PROJECT_DIR$/preflights/rig/Parentmeshtorig.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/rig/Savecurrentscene.py" beforeDir="false" afterPath="$PROJECT_DIR$/preflights/rig/Savecurrentscene.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602768115374</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary=" &#10;changes on read layout from selected to alert user if there isnt a layout file">
+      <created>1602851160961</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1602851160961</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,7 +171,8 @@
     <MESSAGE value="reorganized roejct" />
     <MESSAGE value="added shading nodes" />
     <MESSAGE value="updating menus that were lost" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating menus that were lost" />
+    <MESSAGE value=" &#10;changes on read layout from selected to alert user if there isnt a layout file" />
+    <option name="LAST_COMMIT_MESSAGE" value=" &#10;changes on read layout from selected to alert user if there isnt a layout file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-2967" y="355" key="#Plugins" timestamp="1600533268148">
@@ -156,6 +188,10 @@
     </state>
     <state x="-2820" y="335" key="#com.intellij.ide.util.MemberChooser/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1600277067647" />
     <state x="765" y="241" key="#com.intellij.ide.util.MemberChooser/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@0.0.1920.1050" timestamp="1599698743760" />
+    <state x="-3747" y="102" width="2375" height="1224" key="DiffContextDialog" timestamp="1602851580438">
+      <screen x="-3840" y="9" width="2560" height="1420" />
+    </state>
+    <state x="-3747" y="102" width="2375" height="1224" key="DiffContextDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602851580438" />
     <state x="970" y="1462" key="FileChooserDialogImpl" timestamp="1602674159462">
       <screen x="307" y="1080" width="1600" height="1170" />
     </state>
@@ -175,19 +211,23 @@
     </state>
     <state x="-2781" y="340" key="Github.UntrackedFilesDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602704973963" />
     <state x="-2781" y="337" width="1013" height="754" key="Github.UntrackedFilesDialog/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1601642649247" />
+    <state x="-2788" y="333" key="RollbackChangesDialog" timestamp="1602851756229">
+      <screen x="-3840" y="9" width="2560" height="1420" />
+    </state>
+    <state x="-2788" y="333" key="RollbackChangesDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602851756229" />
     <state x="-3028" y="360" key="SettingsEditor" timestamp="1602704939404">
       <screen x="-3840" y="9" width="2560" height="1420" />
     </state>
     <state x="-3028" y="360" key="SettingsEditor/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602704939404" />
-    <state x="-3747" y="102" width="2375" height="1224" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1602767731934">
+    <state x="-3747" y="102" width="2375" height="1224" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1602851580438">
       <screen x="-3840" y="9" width="2560" height="1420" />
     </state>
-    <state x="-3747" y="102" width="2375" height="1224" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602767731934" />
+    <state x="-3747" y="102" width="2375" height="1224" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602851580438" />
     <state x="-3747" y="102" width="2375" height="1224" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@307.1080.1600.1170" timestamp="1602689775501" />
-    <state x="-7" y="0" width="717" height="483" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602814638353">
+    <state x="-7" y="0" width="1226" height="916" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602852092027">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="-7" y="0" width="717" height="483" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602814638353" />
+    <state x="-7" y="0" width="1226" height="916" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602852092027" />
     <state x="-7" y="0" width="1076" height="725" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@0.0.1920.1050" timestamp="1602773775462" />
     <state x="345" y="1204" width="1447" height="966" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@307.1080.1600.1170" timestamp="1602704691439" />
     <state x="-145" y="59" width="2315" height="1163" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1602769756671" />
@@ -199,10 +239,10 @@
       <screen x="-3840" y="9" width="2560" height="1409" />
     </state>
     <state x="-2779" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1602434059352" />
-    <state x="-3009" y="314" width="896" height="910" key="search.everywhere.popup" timestamp="1602771340542">
-      <screen x="-3840" y="9" width="2560" height="1409" />
+    <state x="-3009" y="316" width="896" height="917" key="search.everywhere.popup" timestamp="1602851224673">
+      <screen x="-3840" y="9" width="2560" height="1420" />
     </state>
-    <state x="-3009" y="316" width="896" height="917" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602767981043" />
+    <state x="-3009" y="316" width="896" height="917" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602851224673" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@0.0.1920.1050" timestamp="1602350476090" />
     <state x="826" y="1333" width="672" height="756" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@307.1080.1600.1170" timestamp="1602704768937" />
     <state x="-3009" y="314" width="896" height="910" key="search.everywhere.popup/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1602771340542" />

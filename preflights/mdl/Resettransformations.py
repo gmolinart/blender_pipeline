@@ -24,20 +24,20 @@ class Resettransformations(PreflightCheck):
         obj_in_collection = bpy.data.collections[assetName].all_objects
 
         if lm.scene_object().type != 'env':
-
+            bpy.ops.object.select_all(action='DESELECT')
             for obj in obj_in_collection:
-                try:
-                    bpy.ops.object.select_all(action='DESELECT')
+                if obj.type == 'MESH':
                     obj.select_set(True)
-                    bpy.ops.object.make_single_user(object=True, obdata=True, material=True, animation=False)
-                    bpy.ops.object.transform_apply(location=True, rotation=True, scale=True)
-
-                except(AttributeError):
-                    logging.debug('{} Skipping'.format(obj.name))
-                    pass
+            try:
+                bpy.ops.object.origin_set(type='ORIGIN_GEOMETRY')
+                bpy.ops.object.center_reset()
+            except(AttributeError):
+                logging.debug('{} Skipping'.format(obj.name))
+                self.fail_check('Check Failed, plese reset all transformations')
+            except RuntimeError:
+                pass
 
         print('Resettransformations')
         self.pass_check('Check Passed')
-            # self.fail_check('Check Failed')
 
 

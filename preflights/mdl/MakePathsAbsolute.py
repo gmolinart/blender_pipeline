@@ -1,9 +1,10 @@
 from cgl.plugins.preflight.preflight_check import PreflightCheck
 # from cgl.plugins.blender import lumbermill as lm
 # from cgl.plugins.blender import utils
+import bpy
 
 
-class Test Space Name(PreflightCheck):
+class MakePathsAbsolute(PreflightCheck):
 
     def getName(self):
         pass
@@ -19,6 +20,7 @@ class Test Space Name(PreflightCheck):
         self.fail_check('Message about a failed check')
         :return:
         """
-        print('Test Space Name')
+        print('Make Paths Absolute')
+        bpy.ops.file.make_paths_absolute()
         self.pass_check('Check Passed')
         # self.fail_check('Check Failed')

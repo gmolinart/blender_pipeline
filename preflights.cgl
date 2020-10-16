@@ -3,59 +3,66 @@
         {
             "buttons": [
                 {
-                    "label": "SaveCurrentScene",
-                    "module": "cgl_tools.blender.preflights.mdl.SaveCurrentScene",
-                    "name": "SaveCurrentScene",
+                    "label": "CollectionName",
+                    "module": "cgl_tools.blender.preflights.mdl.CollectionName",
+                    "name": "CollectionName",
                     "order": 1,
                     "required": "True"
                 },
                 {
-                    "label": "Collectionname",
-                    "module": "cgl_tools.blender.preflights.mdl.Collectionname",
-                    "name": "Collectionname",
+                    "label": "SaveCurrentScene",
+                    "module": "cgl_tools.blender.preflights.mdl.SaveCurrentScene",
+                    "name": "SaveCurrentScene",
                     "order": 2,
                     "required": "True"
                 },
                 {
-                    "label": "Viewportcolors",
-                    "module": "cgl_tools.blender.preflights.mdl.Viewportcolors",
-                    "name": "Viewportcolors",
+                    "label": "CleanTurntable",
+                    "module": "cgl_tools.blender.preflights.mdl.CleanTurntable",
+                    "name": "CleanTurntable",
                     "order": 3,
                     "required": "True"
                 },
                 {
-                    "label": "Cleanturntable",
-                    "module": "cgl_tools.blender.preflights.mdl.Cleanturntable",
-                    "name": "Cleanturntable",
+                    "label": "CleanScene",
+                    "module": "cgl_tools.blender.preflights.mdl.CleanScene",
+                    "name": "CleanScene",
                     "order": 4,
                     "required": "True"
                 },
                 {
-                    "label": "Checknormals",
-                    "module": "cgl_tools.blender.preflights.mdl.Checknormals",
-                    "name": "Checknormals",
+                    "label": "WriteLayout",
+                    "module": "cgl_tools.blender.preflights.mdl.WriteLayout",
+                    "name": "WriteLayout",
                     "order": 5,
+                    "required": "True"
+                },
+                {
+                    "label": "RemoveLinkedAssets",
+                    "module": "cgl_tools.blender.preflights.mdl.RemoveLinkedAssets",
+                    "name": "RemoveLinkedAssets",
+                    "order": 6,
+                    "required": "True"
+                },
+                {
+                    "label": "BakeModifiers",
+                    "module": "cgl_tools.blender.preflights.mdl.BakeModifiers",
+                    "name": "BakeModifiers",
+                    "order": 7,
                     "required": "True"
                 },
                 {
                     "label": "Resettransformations",
                     "module": "cgl_tools.blender.preflights.mdl.Resettransformations",
                     "name": "Resettransformations",
-                    "order": 6,
-                    "required": "True"
-                },
-                {
-                    "label": "Cleanscene",
-                    "module": "cgl_tools.blender.preflights.mdl.Cleanscene",
-                    "name": "Cleanscene",
-                    "order": 7,
+                    "order": 8,
                     "required": "True"
                 },
                 {
                     "label": "Publish",
                     "module": "cgl_tools.blender.preflights.mdl.Publish",
                     "name": "Publish",
-                    "order": 8,
+                    "order": 9,
                     "required": "True"
                 }
             ],

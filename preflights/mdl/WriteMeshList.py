@@ -1,9 +1,10 @@
 from cgl.plugins.preflight.preflight_check import PreflightCheck
 from cgl.plugins.blender import lumbermill as lm
-# from cgl.plugins.blender import utils
 import bpy
+# from cgl.plugins.blender import utils
+import os
 
-class Collectionname(PreflightCheck):
+class WriteMeshList(PreflightCheck):
 
     def getName(self):
         pass
@@ -19,17 +20,15 @@ class Collectionname(PreflightCheck):
         self.fail_check('Message about a failed check')
         :return:
         """
-        currentScene = lm.scene_object()
-        assetName = lm.scene_object().shot
-        collectionExists = False
-        for collections in bpy.data.collections:
+        print('Write Mesh List')
+        bpy.ops.object.write_mesh_list()
 
-            if assetName == collections.name:
-                print('{} exists'.format(assetName))
-                collectionExists = True
 
-        if collectionExists:
+        scene = lm.scene_object()
+        if os.path.isfile(scene.copy(ext = 'json', context = 'render').path_root):
+
+
             self.pass_check('Check Passed')
 
         else:
-            self.fail_check('Couldnt find collection with Asset name')
+            self.fail_check('Check Failed, mesh_list wasnt exported')
