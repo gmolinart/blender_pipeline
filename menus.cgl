@@ -155,6 +155,12 @@
                     "module": "import cgl_tools.blender.menus.Modeling.UpdateResolutions as UpdateResolutions; UpdateResolutions.run()",
                     "name": "UpdateResolutions",
                     "order": 7
+                },
+                {
+                    "label": "CopyLatestLow",
+                    "module": "import cgl_tools.blender.menus.Modeling.CopyLatestLow as CopyLatestLow; CopyLatestLow.run()",
+                    "name": "CopyLatestLow",
+                    "order": 8
                 }
             ],
             "name": "Modeling"

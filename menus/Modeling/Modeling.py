@@ -21,3 +21,4 @@ class Modeling(bpy.types.Panel):
         self.layout.row().operator("object.export_to_obj")
         self.layout.row().operator("object.write_mesh_list")
         self.layout.row().operator("object.update_resolutions")
+        self.layout.row().operator("object.copy_latest_low")

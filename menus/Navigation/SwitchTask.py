@@ -27,12 +27,19 @@ class SwitchTask(bpy.types.Operator):
 
     def execute(self, context):
         self.report({'INFO'}, "Selected: %s" % self.selected_task)
-        new_user = lm.scene_object().copy(task=self.selected_task, user ='publish',set_proper_filename=True).latest_version().path_root
+        new_user = lm.scene_object().copy(task=self.selected_task,set_proper_filename=True).latest_version().path_root
         if os.path.isfile(new_user):
             lm.open_file(new_user)
 
         else:
-            lm.confirm_prompt(message = 'file des not exist, please check manually  ')
+            new_user = lm.scene_object().copy(task=self.selected_task,
+                                              user = 'publish',
+                                              set_proper_filename=True).latest_version().path_root
+            if os.path.isfile(new_user):
+                lm.open_file(new_user)
+            else:
+
+                lm.confirm_prompt(message = 'file des not exist, please check manually  ')
 
         return {'FINISHED'}
 
