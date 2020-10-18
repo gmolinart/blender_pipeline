@@ -2,6 +2,7 @@ import bpy
 from cgl.plugins.blender import lumbermill as lm
 from cgl.core.utils.read_write import load_json
 
+
 class SetupCollections(bpy.types.Operator):
     """
     This class is required to register a button in blender.
@@ -18,34 +19,49 @@ class SetupCollections(bpy.types.Operator):
         return {'FINISHED'}
 
 
-def reparent_linked_environemnt_assets(library):
+def create_environment_objects_collection(asset):
+    asset_collection_name = '{}_assets'.format(asset)
+    if asset_collection_name in bpy.data.collections['env'].children:
+        asset_collection = bpy.data.collections[asset_collection_name]
+
+    else:
+        asset_collection = bpy.data.collections.new(asset_collection_name)
+        bpy.data.collections['env'].children.link(asset_collection)
+
+    return asset_collection
+
+
+def move_to_collection(objectName, asset_collection):
+    if objectName in bpy.context.view_layer.objects:
+        print(objectName)
+        obj = bpy.data.objects[objectName]
+
+        if objectName not in asset_collection.objects:
+            if objectName in bpy.data.objects:
+                asset_collection.objects.link(obj)
+
+        keep_single_user_collection(obj, assetName=asset_collection.name)
+
+
+def parent_linked_environment_assets(library):
     import os
     env = library
     bpy.ops.file.make_paths_absolute()
     env_path = lm.LumberObject(env.filepath)
     env_layout = env_path.copy(ext='json').path_root
+    asset_collection = create_collection('env')
 
     if os.path.isfile(env_layout):
-
         data = load_json(env_layout)
-        assets_collection_name = '{}_assets'.format(env_path.asset)
-        if assets_collection_name not in bpy.data.collections['env'].children:
-
-            assets_collection = bpy.data.collections.new(assets_collection_name)
-            bpy.data.collections['env'].children.link(assets_collection)
-        else:
-            assets_collection = bpy.data.collections[assets_collection_name]
+        env_object_collection = create_environment_objects_collection(env_path.asset)
 
         for i in data:
-            print(i)
             name = data[i]['name']
-
-            if i in bpy.data.objects:
-                obj = bpy.data.objects[i]
-                if assets_collection not in obj.users_collection:
-                    assets_collection.objects.link(obj)
-
-                keep_single_user_collection(obj, assetName=assets_collection_name)
+            print(44444444444)
+            print(env_object_collection)
+            move_to_collection(i, env_object_collection)
+        print(env_path.asset)
+        move_to_collection(env_path.asset, bpy.data.collections['env'])
 
 
 def keep_single_user_collection(obj, assetName=None):
@@ -70,7 +86,6 @@ def reparent_collections(view_layer):
             if obj.instance_collection:
 
                 collection = obj.instance_collection
-                print(11111111111111)
                 print(collection)
                 print(collection.library)
                 if collection.library:
@@ -84,8 +99,11 @@ def reparent_collections(view_layer):
                             # print(collection.name )
 
                             if collection not in obj.users_collection:
-                                collection.objects.link(obj)
-
+                                try:
+                                    collection.objects.link(obj)
+                                except RuntimeError:
+                                    print(" Error: Could not link the object {} ".format(obj),
+                                          "because one of it's collections is  is linked.")
                     unlink_collections(obj, path_object.type)
 
     for collection in bpy.context.scene.collection.children:
@@ -139,6 +157,7 @@ def return_lib_path(library):
     filename = Path(bpy.path.abspath(library_path)).__str__()
     return (filename)
 
+
 def run():
     view_layer = bpy.context.scene.objects
 
@@ -152,9 +171,13 @@ def run():
     for lib in bpy.data.libraries:
         type = lm.LumberObject(return_lib_path(lib)).type
         if type == 'env':
-            reparent_linked_environemnt_assets(lib)
+            print('________________________env library found:')
+            print(lib)
+
+            parent_linked_environment_assets(lib)
 
     bpy.ops.file.make_paths_relative()
 
 
-#run()
+if __name__ == "__main__":
+    run()

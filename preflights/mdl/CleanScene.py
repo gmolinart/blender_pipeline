@@ -4,20 +4,6 @@ from cgl.plugins.preflight.preflight_check import PreflightCheck
 import bpy
 
 
-def remove_environments():
-    import bpy
-    from cgl.plugins.blender import lumbermill as lm
-
-    if 'env' in bpy.data.collections:
-
-        for obj in bpy.data.collections['env'].objects:
-            try:
-                if 'env' in obj.instance_collection.library.name:
-                    obj.select_set(True)
-                    bpy.ops.object.unlink_asset()
-
-            except AttributeError:
-                pass
 
 
 class CleanScene(PreflightCheck):
@@ -37,8 +23,6 @@ class CleanScene(PreflightCheck):
         :return:
         """
         print('Cleanscene')
-
-        remove_environments()
         bpy.ops.object.cleanup_scene()
 
         self.pass_check('Check Passed')

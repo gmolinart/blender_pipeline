@@ -23,8 +23,10 @@ import bpy
 def remove_modifier():
     objects = bpy.context.selected_objects
     for obj in objects:
-        for mod in obj.modifiers:
-            bpy.ops.object.modifier_remove(modifier=mod.name)
+        if 'instancer' not in obj.name:
+
+            for mod in obj.modifiers:
+                bpy.ops.object.modifier_remove(modifier=mod.name)
 
 
 

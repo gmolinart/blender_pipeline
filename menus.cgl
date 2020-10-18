@@ -268,6 +268,30 @@
                     "module": "import cgl_tools.blender.menus.Rigging.MeshToMdlTask as MeshToMdlTask; MeshToMdlTask.run()",
                     "name": "MeshToMdlTask",
                     "order": 17
+                },
+                {
+                    "label": "CleanupWeights",
+                    "module": "import cgl_tools.blender.menus.Rigging.CleanupWeights as CleanupWeights; CleanupWeights.run()",
+                    "name": "CleanupWeights",
+                    "order": 18
+                },
+                {
+                    "label": "MirrorVertexGroups",
+                    "module": "import cgl_tools.blender.menus.Rigging.MirrorVertexGroups as MirrorVertexGroups; MirrorVertexGroups.run()",
+                    "name": "MirrorVertexGroups",
+                    "order": 19
+                },
+                {
+                    "label": "RemoveMeshControllers",
+                    "module": "import cgl_tools.blender.menus.Rigging.RemoveMeshControllers as RemoveMeshControllers; RemoveMeshControllers.run()",
+                    "name": "RemoveMeshControllers",
+                    "order": 20
+                },
+                {
+                    "label": "CopySkinWeights",
+                    "module": "import cgl_tools.blender.menus.Rigging.CopySkinWeights as CopySkinWeights; CopySkinWeights.run()",
+                    "name": "CopySkinWeights",
+                    "order": 21
                 }
             ],
             "name": "Rigging"
@@ -476,58 +500,52 @@
                     "order": 13
                 },
                 {
-                    "label": "UnlinkAsset",
-                    "module": "import cgl_tools.blender.menus.utilities.UnlinkAsset as UnlinkAsset; UnlinkAsset.run()",
-                    "name": "UnlinkAsset",
-                    "order": 14
-                },
-                {
                     "label": "SwitchUsers",
                     "module": "import cgl_tools.blender.menus.utilities.SwitchUsers as SwitchUsers; SwitchUsers.run()",
                     "name": "SwitchUsers",
-                    "order": 15
+                    "order": 14
                 },
                 {
                     "label": "SwitchTask",
                     "module": "import cgl_tools.blender.menus.utilities.SwitchTask as SwitchTask; SwitchTask.run()",
                     "name": "SwitchTask",
-                    "order": 16
+                    "order": 15
                 },
                 {
                     "label": "SwitchVersions",
                     "module": "import cgl_tools.blender.menus.utilities.SwitchVersions as SwitchVersions; SwitchVersions.run()",
                     "name": "SwitchVersions",
-                    "order": 17
+                    "order": 16
                 },
                 {
                     "label": "SwitchResolution",
                     "module": "import cgl_tools.blender.menus.utilities.SwitchResolution as SwitchResolution; SwitchResolution.run()",
                     "name": "SwitchResolution",
-                    "order": 18
+                    "order": 17
                 },
                 {
                     "label": "OpenSelected",
                     "module": "import cgl_tools.blender.menus.utilities.OpenSelected as OpenSelected; OpenSelected.run()",
                     "name": "OpenSelected",
-                    "order": 19
+                    "order": 18
                 },
                 {
                     "label": "CollectionToAsset",
                     "module": "import cgl_tools.blender.menus.utilities.CollectionToAsset as CollectionToAsset; CollectionToAsset.run()",
                     "name": "CollectionToAsset",
-                    "order": 20
+                    "order": 19
                 },
                 {
                     "label": "OpenDocumentation",
                     "module": "import cgl_tools.blender.menus.utilities.OpenDocumentation as OpenDocumentation; OpenDocumentation.run()",
                     "name": "OpenDocumentation",
-                    "order": 21
+                    "order": 20
                 },
                 {
                     "label": "SourceToRender",
                     "module": "import cgl_tools.blender.menus.utilities.SourceToRender as SourceToRender; SourceToRender.run()",
                     "name": "SourceToRender",
-                    "order": 22
+                    "order": 21
                 }
             ],
             "name": "utilities"

@@ -13,8 +13,7 @@ class BakeModifiers(PreflightCheck):
 
         import bpy
 
-        objects = bpy.data.objects
-
+        objects = bpy.context.view_layer.objects
 
         for window in bpy.context.window_manager.windows:
             screen = window.screen
@@ -24,21 +23,26 @@ class BakeModifiers(PreflightCheck):
                     override = {'window': window, 'screen': screen, 'area': area}
                     bpy.ops.screen.screen_full_area(override)
 
-        bpy.ops.object.select_all(action='SELECT')
+        try:
+            bpy.ops.object.select_all(action='SELECT')
 
-        bpy.ops.object.convert(target='MESH')
 
-        for obj in objects:
-            if obj.show_wire:
-                print(obj.name)
-                objects.remove(obj)
 
-            elif 'BOOLEAN' in obj.name:
-                objects.remove(obj)
+            for obj in objects:
+                if 'instancer' not in obj.name:
+                    bpy.ops.object.convert(target='MESH')
 
-            elif obj.display_type == 'BOUNDS':
-                objects.remove(obj)
+                    if obj.show_wire:
+                        print(obj.name)
+                        objects.remove(obj)
 
+                    elif 'BOOLEAN' in obj.name:
+                        objects.remove(obj)
+
+                    elif obj.display_type == 'BOUNDS':
+                        objects.remove(obj)
+        except:
+            pass
         print('Bake Modifiers')
         self.pass_check('Check Passed')
         # self.fail_check('Check Failed')

@@ -1,8 +1,7 @@
-import os
-
 import bpy
 from cgl.plugins.blender import lumbermill as lm
 from cgl.plugins.blender import utils as utils
+import os
 
 
 def reorder_list(items, arg=''):
@@ -38,7 +37,7 @@ def get_users(self, context):
 
     user_list = path_object.glob_project_element('user')
     if not user_list:
-        path_object = path_object.copy(task='rig')
+        path_object= path_object.copy(task = 'rig')
         user_list = path_object.glob_project_element('user')
     users = reorder_list(user_list, arg='publish')
 
@@ -63,8 +62,7 @@ class DialogUserB(bpy.types.Operator):
 
     users: bpy.props.EnumProperty(items=get_users)
     task: bpy.props.EnumProperty(items=get_task)
-
-    # version: bpy.props.EnumProperty(items=get_version)
+    #version: bpy.props.EnumProperty(items=get_version)
 
     def execute(self, context):
         # my_users =  bpy.props.EnumProperty(items = split_string(self.my_string))
@@ -78,14 +76,14 @@ class DialogUserB(bpy.types.Operator):
         open_file = path_object.path_root
 
         message = 'selected {}'.format(open_file)
-        try:
+        try :
             bpy.ops.object.mode_set(mode='OBJECT')
         except RuntimeError:
             pass
 
         if os.path.isfile((open_file)):
 
-            if path_object.type == 'env':
+            if  path_object.type == 'env':
 
                 lm.import_file(open_file)
                 if os.path.isfile(path_object.copy(ext='json').path_root):
@@ -103,7 +101,7 @@ class DialogUserB(bpy.types.Operator):
                 objects.active = objects[name]
                 bpy.ops.object.proxy_make(object=rig)
         else:
-            lm.confirm_prompt(message='This file doesnt exist, please check for sync or review for errors')
+            lm.confirm_prompt(message= 'This file doesnt exist, please check for sync or review for errors')
 
         # if lm.scene_object().type is not 'env':
         #     bpy.ops.object.setup_collections()

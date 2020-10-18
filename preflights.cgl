@@ -24,9 +24,9 @@
                     "required": "True"
                 },
                 {
-                    "label": "CleanScene",
-                    "module": "cgl_tools.blender.preflights.mdl.CleanScene",
-                    "name": "CleanScene",
+                    "label": "RemoveEnvironments",
+                    "module": "cgl_tools.blender.preflights.mdl.RemoveEnvironments",
+                    "name": "RemoveEnvironments",
                     "order": 4,
                     "required": "True"
                 },
@@ -38,31 +38,38 @@
                     "required": "True"
                 },
                 {
+                    "label": "CleanScene",
+                    "module": "cgl_tools.blender.preflights.mdl.CleanScene",
+                    "name": "CleanScene",
+                    "order": 6,
+                    "required": "True"
+                },
+                {
                     "label": "RemoveLinkedAssets",
                     "module": "cgl_tools.blender.preflights.mdl.RemoveLinkedAssets",
                     "name": "RemoveLinkedAssets",
-                    "order": 6,
+                    "order": 7,
                     "required": "True"
                 },
                 {
                     "label": "BakeModifiers",
                     "module": "cgl_tools.blender.preflights.mdl.BakeModifiers",
                     "name": "BakeModifiers",
-                    "order": 7,
+                    "order": 8,
                     "required": "True"
                 },
                 {
                     "label": "Resettransformations",
                     "module": "cgl_tools.blender.preflights.mdl.Resettransformations",
                     "name": "Resettransformations",
-                    "order": 8,
+                    "order": 9,
                     "required": "True"
                 },
                 {
                     "label": "Publish",
                     "module": "cgl_tools.blender.preflights.mdl.Publish",
                     "name": "Publish",
-                    "order": 9,
+                    "order": 10,
                     "required": "True"
                 }
             ],

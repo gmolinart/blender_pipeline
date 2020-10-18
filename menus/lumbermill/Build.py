@@ -98,7 +98,9 @@ def import_dependencies():
                     lm.import_file(depObject.path_root, type='CAMERA', linked=False,
                                    collection_name=depObject.filename_base)
 
-                    bpy.context.scene.collection.objects.link(bpy.data.objects[depObject.filename_base])
+                    if depObject.filename_base not in bpy.context.scene.collection.objects:
+
+                        bpy.context.scene.collection.objects.link(bpy.data.objects[depObject.filename_base])
                     frame_start = set_shot_duration(json)
 
                     action = bpy.data.objects[depObject.filename_base].animation_data.action
@@ -106,8 +108,11 @@ def import_dependencies():
                         for point in fcurve.keyframe_points:
                             point.co.x += 1000 - frame_start
 
-                    bpy.ops.action.view_frame()
+                    try:
 
+                        bpy.ops.action.view_frame()
+                    except RuntimeError:
+                        pass
             if depObject.task == 'anim':
                 if isfile(depObject.path_root):
                     print('{} exists'.format(depObject.path_root))
