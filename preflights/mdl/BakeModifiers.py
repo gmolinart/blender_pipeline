@@ -10,11 +10,8 @@ class BakeModifiers(PreflightCheck):
 
     def run(self):
         from cgl.plugins.blender import lumbermill as lm
-
         import bpy
-
         objects = bpy.context.view_layer.objects
-
         for window in bpy.context.window_manager.windows:
             screen = window.screen
 
@@ -24,12 +21,11 @@ class BakeModifiers(PreflightCheck):
                     bpy.ops.screen.screen_full_area(override)
 
         try:
-            bpy.ops.object.select_all(action='SELECT')
-
-
 
             for obj in objects:
                 if 'instancer' not in obj.name:
+                    object.select_set(True)
+                    bpy.context.active_object = object
                     bpy.ops.object.convert(target='MESH')
 
                     if obj.show_wire:
@@ -41,8 +37,11 @@ class BakeModifiers(PreflightCheck):
 
                     elif obj.display_type == 'BOUNDS':
                         objects.remove(obj)
+
+                bpy.ops.object.select_all(action='DESELECT')
         except:
             pass
+
         print('Bake Modifiers')
         self.pass_check('Check Passed')
         # self.fail_check('Check Failed')

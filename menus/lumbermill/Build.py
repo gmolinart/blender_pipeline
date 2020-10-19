@@ -68,6 +68,12 @@ def required_dependencies():
     if current.task == 'rig':
         requirements.append('ref')
         requirements.append('mdl')
+
+    if current.task == 'light':
+        requirements.append('lay')
+        requirements.append('cam')
+        requirements.append('anim')
+
     return requirements
 
 
@@ -99,7 +105,6 @@ def import_dependencies():
                                    collection_name=depObject.filename_base)
 
                     if depObject.filename_base not in bpy.context.scene.collection.objects:
-
                         bpy.context.scene.collection.objects.link(bpy.data.objects[depObject.filename_base])
                     frame_start = set_shot_duration(json)
 

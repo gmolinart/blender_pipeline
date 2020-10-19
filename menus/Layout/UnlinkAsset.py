@@ -31,8 +31,8 @@ def remove_unused_libraries():
     for obj in objects:
         if obj.is_instancer:
             if obj.instance_collection == None:
-                obj_to_delete.append(obj)
-
+                if 'instancer' not in obj.name:
+                    obj_to_delete.append(obj)
             else:
                 lib = obj.instance_collection.library
                 libraries_in_scene.append(lib)
@@ -41,8 +41,8 @@ def remove_unused_libraries():
         if lib not in libraries_in_scene:
             obj_to_delete.append(lib)
 
+    print(obj_to_delete)
     bpy.data.batch_remove(ids=(obj_to_delete))
-
 
 def unlink_asset(object):
     filepath = None

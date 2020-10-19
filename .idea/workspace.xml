@@ -19,22 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="292dd7de-72be-4162-9c08-eb3914d873cb" name="Default Changelist" comment="consolidated unlink asset">
-      <change afterPath="$PROJECT_DIR$/preflights/mdl/RemoveEnvironments.py" afterDir="false" />
+    <list default="true" id="292dd7de-72be-4162-9c08-eb3914d873cb" name="Default Changelist" comment="reworked build and remove environments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus.cgl" beforeDir="false" afterPath="$PROJECT_DIR$/menus.cgl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Rigging/RemoveModifiers.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Rigging/RemoveModifiers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Rigging/Rigging.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Rigging/Rigging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Animation/RenderWithAudio.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Animation/RenderWithAudio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Layout/UnlinkAsset.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Layout/UnlinkAsset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Layout/WriteLayout.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Layout/WriteLayout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Navigation/CopyToUser.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Navigation/CopyToUser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/lumbermill/Build.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/lumbermill/Build.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/lumbermill/CleanupScene.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/lumbermill/ImportAsset.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/utilities/ImportAsset.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/utilities/ImportAsset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/utilities/SetupCollections.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/utilities/SetupCollections.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/utilities/UnlinkAsset.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/utilities/utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/utilities/utilities.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preflights.cgl" beforeDir="false" afterPath="$PROJECT_DIR$/preflights.cgl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/preflights/mdl/BakeModifiers.py" beforeDir="false" afterPath="$PROJECT_DIR$/preflights/mdl/BakeModifiers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preflights/mdl/CleanScene.py" beforeDir="false" afterPath="$PROJECT_DIR$/preflights/mdl/CleanScene.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602853600589</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="reworked build and remove environments">
+      <created>1603034384240</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1603034384240</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,7 +193,8 @@
     <MESSAGE value="mdl preflights" />
     <MESSAGE value="updated switch task" />
     <MESSAGE value="consolidated unlink asset" />
-    <option name="LAST_COMMIT_MESSAGE" value="consolidated unlink asset" />
+    <MESSAGE value="reworked build and remove environments" />
+    <option name="LAST_COMMIT_MESSAGE" value="reworked build and remove environments" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-2967" y="355" key="#Plugins" timestamp="1600533268148">
@@ -261,10 +261,10 @@
       <screen x="-3840" y="9" width="2560" height="1409" />
     </state>
     <state x="-2779" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1602434059352" />
-    <state x="-3009" y="316" width="896" height="917" key="search.everywhere.popup" timestamp="1603034297460">
+    <state x="-3009" y="316" width="896" height="917" key="search.everywhere.popup" timestamp="1603059275572">
       <screen x="-3840" y="9" width="2560" height="1420" />
     </state>
-    <state x="-3009" y="316" width="896" height="917" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1603034297460" />
+    <state x="-3009" y="316" width="896" height="917" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1603059275572" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@0.0.1920.1050" timestamp="1602350476090" />
     <state x="826" y="1333" width="672" height="756" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@307.1080.1600.1170" timestamp="1602704768937" />
     <state x="-3009" y="314" width="896" height="910" key="search.everywhere.popup/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1602771340542" />

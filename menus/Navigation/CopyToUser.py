@@ -1,7 +1,7 @@
 import os
 import bpy
 from cgl.plugins.blender import lumbermill as lm
-
+from shutil import copyfile
 
 def get_name_from_user():
     from cgl.core.config import app_config
@@ -51,6 +51,13 @@ class CopyToUser(bpy.types.Operator):
         os.makedirs(new_version.path_root)
         lm.save_file_as(new_version.copy(set_proper_filename=True).path_root)
         lm.open_file(new_version.copy(set_proper_filename=True).path_root)
+        if os.path.isfile(lm.scene_object().copy(extension = 'json').path_root):
+            print("______________Json File Saved____________")
+            copyfile(lm.scene_object().copy(extension = 'json').path_root,
+                     new_version.copy(set_proper_filename=True,ext = 'json').path_root)
+        else:
+            print("______________No Json File on: ____________")
+            print(lm.scene_object().copy(extension = 'json').path_root)
 
         return {'FINISHED'}
 
@@ -72,4 +79,4 @@ if __name__ == "__main__":
     register()
 
     # test call
-    bpy.ops.object.copytouser('INVOKE_DEFAULT')
+    bpy.ops.object.copy_to_user('INVOKE_DEFAULT')
