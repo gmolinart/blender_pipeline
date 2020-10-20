@@ -38,7 +38,6 @@ class SwitchRig(bpy.types.Operator):
     rigs = bpy.props.EnumProperty(items=get_items)
 
     def execute(self, context):
-        print(55555555)
         print(self.rigs)
         for obj in bpy.context.selected_objects:
             obj.select_set(False)

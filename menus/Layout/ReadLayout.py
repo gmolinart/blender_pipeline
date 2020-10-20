@@ -1,8 +1,8 @@
-import bpy
-import json
 import os
+
+import bpy
 from cgl.plugins.blender import lumbermill as lm
-from cgl.plugins.blender import utils as utils
+
 
 class ReadLayout(bpy.types.Operator):
     """
@@ -16,12 +16,27 @@ class ReadLayout(bpy.types.Operator):
         return {'FINISHED'}
 
 
-def read_layout(outFile=None, linked=False, append=False):
+def get_layout_libraries(data):
+    libraries = {}
+
+    for p in data:
+
+        data_path = data[p]['source_path']
+
+        if data_path in libraries:
+            libraries[data_path].append(p)
+        else:
+            libraries[data_path] = [p]
+
+    return libraries
+
+
+def read_layout(outFile=None, linked=True, append=False):
     """
     Reads layout from json file
     :param outFile: path to json file
     :param linked:
-    :param append:
+    :param append: if true the files are imported in the scene
     :return:
     """
     from cgl.plugins.blender.lumbermill import scene_object, LumberObject, import_file
@@ -29,18 +44,27 @@ def read_layout(outFile=None, linked=False, append=False):
     import bpy
 
     if outFile == None:
-        outFileObject = scene_object().copy(ext='json', task='lay', user='publish').latest_version()
-        outFileObject.set_attr(filename='%s_%s_%s.%s' % (outFileObject.seq,
-                                                         outFileObject.shot,
-                                                         outFileObject.task,
-                                                         'json'
-                                                         ))
+        outFileObject = scene_object().copy(ext='json', task='lay', set_proper_filename=True).latest_version()
         outFile = outFileObject.path_root
     # outFile = scene_object().path_root.replace(scene_object().ext, 'json')
 
-
-
     data = load_json(outFile)
+    libraries = get_layout_libraries(data)
+
+    print('________LIBRARIES___________')
+
+    for i in libraries:
+        pathToFile = os.path.join(scene_object().root, i)
+        lumberObject = LumberObject(pathToFile)
+
+        print(pathToFile)
+
+        if lumberObject.filename_base in bpy.data.libraries:
+            lib = bpy.data.libraries[lumberObject.filename]
+            bpy.data.batch_remove(ids=([lib]))
+            import_file(lumberObject.path_root, linked=False, append=True)
+        else:
+            import_file(lumberObject.path_root, linked=False, append=True)
 
     for p in data:
         print(p)
@@ -49,32 +73,35 @@ def read_layout(outFile=None, linked=False, append=False):
 
         transform_data = []
         for value in blender_transform:
-            transform_data.append(value)
-
-        print(transform_data)
+            transform_data.append(float(value))
 
         pathToFile = os.path.join(scene_object().root, data_path)
         lumberObject = LumberObject(pathToFile)
 
+        obj = bpy.data.objects.new(p, None)
+        bpy.context.collection.objects.link(obj)
+        obj.instance_type = 'COLLECTION'
+        obj.instance_collection = bpy.data.collections[lumberObject.asset]
 
+        location = (transform_data[0], transform_data[1], transform_data[2])
+        obj.location = location
 
-        if lumberObject.filename in bpy.data.libraries:
-            lib = bpy.data.libraries[lumberObject.filename]
-            bpy.data.batch_remove(ids=([lib]))
-            import_file(lumberObject.path_root, linked=linked, append=append)
-        else:
-            import_file(lumberObject.path_root, linked=linked, append=append)
+        rotation = (transform_data[3], transform_data[4], transform_data[5])
+        obj.rotation_euler = rotation
 
-        if p not in bpy.context.collection.objects:
-            obj = bpy.data.objects.new(p, None)
-            bpy.context.collection.objects.link(obj)
-            obj.instance_type = 'COLLECTION'
-            obj.instance_collection = bpy.data.collections[lumberObject.asset]
-            obj.location = (transform_data[0], transform_data[1], transform_data[2])
-            obj.rotation_euler = (transform_data[3], transform_data[4], transform_data[5])
-            obj.scale = (transform_data[6], transform_data[7], transform_data[8])
+        scale = (transform_data[6], transform_data[7], transform_data[8])
+        obj.scale = scale
 
-    bpy.ops.file.make_paths_relative()
+        if lumberObject.type in ['char', ]:
+            if append:
+
+                print("___________creating proxy rig for {}____________".format(lumberObject.asset))
+                rig = '{}_rig'.format(lumberObject.asset)
+                print(rig)
+                objects = bpy.context.view_layer.objects
+                bpy.context.view_layer.objects.active = objects[lumberObject.asset]
+                bpy.ops.object.proxy_make(object=rig)
+
 
 def run():
     """
@@ -83,7 +110,15 @@ def run():
     """
 
     if lm.scene_object().type == 'env':
-        read_layout(outFile=lm.scene_object().copy(ext='json').path_root)
+        read_layout(outFile=lm.scene_object().copy(ext='json').path_root, append=True)
+
+    elif lm.scene_object().type == 'light':
+        read_layout(append=False)
+
 
     else:
-        read_layout()
+        read_layout(append=True)
+
+
+if __name__ == '__main__':
+    run()

@@ -1,6 +1,34 @@
 from cgl.plugins.preflight.preflight_check import PreflightCheck
+import bpy
 # from cgl.plugins.blender import lumbermill as lm
 # from cgl.plugins.blender import utils
+
+
+def delete_booleans_shapes():
+    objects = bpy.data.objects
+    for obj in objects:
+        if 'instancer' not in obj.name:
+
+            if obj.show_wire:
+                print(obj.name)
+                objects.remove(obj)
+
+            elif 'BOOLEAN' in obj.name:
+                objects.remove(obj)
+
+            elif obj.display_type == 'BOUNDS':
+                objects.remove(obj)
+
+        bpy.ops.object.select_all(action='DESELECT')
+
+
+def bake_modifiers():
+
+    objects = bpy.context.view_layer.objects
+    for obj in objects:
+        obj.select_set(True)
+        bpy.context.view_layer.objects.active = obj
+        bpy.ops.object.convert(target='MESH')
 
 
 class BakeModifiers(PreflightCheck):
@@ -20,27 +48,10 @@ class BakeModifiers(PreflightCheck):
                     override = {'window': window, 'screen': screen, 'area': area}
                     bpy.ops.screen.screen_full_area(override)
 
-        try:
 
-            for obj in objects:
-                if 'instancer' not in obj.name:
-                    object.select_set(True)
-                    bpy.context.active_object = object
-                    bpy.ops.object.convert(target='MESH')
-
-                    if obj.show_wire:
-                        print(obj.name)
-                        objects.remove(obj)
-
-                    elif 'BOOLEAN' in obj.name:
-                        objects.remove(obj)
-
-                    elif obj.display_type == 'BOUNDS':
-                        objects.remove(obj)
-
-                bpy.ops.object.select_all(action='DESELECT')
-        except:
-            pass
+            bake_modifiers()
+            delete_booleans_shapes()
+        bpy.ops.object.unlink_asset()
 
         print('Bake Modifiers')
         self.pass_check('Check Passed')
