@@ -90,7 +90,10 @@ def import_dependencies():
 
                     print('_____LAYOUT______')
                     print(depObject.filename)
+
+
                     bpy.ops.object.read_layout()
+
                     burn_in_image()
 
             if depObject.task == 'cam':

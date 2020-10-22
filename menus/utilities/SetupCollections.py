@@ -92,19 +92,22 @@ def reparent_collections(view_layer):
 
                     path_object = lm.LumberObject(collection.library.filepath)
 
-                    create_collection(path_object.type)
-                    for collection in bpy.data.collections:
+                    if path_object.asset:
 
-                        if collection.name == path_object.type:
-                            # print(collection.name )
+                        print(path_object.root)
+                        create_collection(path_object.type)
+                        for collection in bpy.data.collections:
 
-                            if collection not in obj.users_collection:
-                                try:
-                                    collection.objects.link(obj)
-                                except RuntimeError:
-                                    print(" Error: Could not link the object {} ".format(obj),
-                                          "because one of it's collections is  is linked.")
-                    unlink_collections(obj, path_object.type)
+                            if collection.name == path_object.type:
+                                # print(collection.name )
+
+                                if collection not in obj.users_collection:
+                                    try:
+                                        collection.objects.link(obj)
+                                    except RuntimeError:
+                                        print(" Error: Could not link the object {} ".format(obj),
+                                              "because one of it's collections is  is linked.")
+                        unlink_collections(obj, path_object.type)
 
     for collection in bpy.context.scene.collection.children:
         if len(collection.objects) < 1:

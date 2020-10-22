@@ -21,6 +21,7 @@ def get_layout_libraries(data):
 
     for p in data:
 
+        print(p)
         data_path = data[p]['source_path']
 
         if data_path in libraries:
@@ -47,60 +48,73 @@ def read_layout(outFile=None, linked=True, append=False):
         outFileObject = scene_object().copy(ext='json', task='lay', set_proper_filename=True).latest_version()
         outFile = outFileObject.path_root
     # outFile = scene_object().path_root.replace(scene_object().ext, 'json')
+    if os.path.isfile(outFile):
 
-    data = load_json(outFile)
-    libraries = get_layout_libraries(data)
 
-    print('________LIBRARIES___________')
+        data = load_json(outFile)
 
-    for i in libraries:
-        pathToFile = os.path.join(scene_object().root, i)
-        lumberObject = LumberObject(pathToFile)
 
-        print(pathToFile)
+        libraries = get_layout_libraries(data)
 
-        if lumberObject.filename_base in bpy.data.libraries:
-            lib = bpy.data.libraries[lumberObject.filename]
-            bpy.data.batch_remove(ids=([lib]))
-            import_file(lumberObject.path_root, linked=False, append=True)
-        else:
-            import_file(lumberObject.path_root, linked=False, append=True)
+        print('________LIBRARIES___________')
 
-    for p in data:
-        print(p)
-        data_path = data[p]['source_path']
-        blender_transform = data[p]['blender_transform']
+        for i in libraries:
+            pathToFile = os.path.join(scene_object().root, i)
+            lumberObject = LumberObject(pathToFile)
 
-        transform_data = []
-        for value in blender_transform:
-            transform_data.append(float(value))
+            print(pathToFile)
 
-        pathToFile = os.path.join(scene_object().root, data_path)
-        lumberObject = LumberObject(pathToFile)
+            if lumberObject.filename_base in bpy.data.libraries:
+                lib = bpy.data.libraries[lumberObject.filename]
+                bpy.data.batch_remove(ids=([lib]))
+                import_file(lumberObject.path_root, linked=False, append=True)
+            else:
+                import_file(lumberObject.path_root, linked=False, append=True)
 
-        obj = bpy.data.objects.new(p, None)
-        bpy.context.collection.objects.link(obj)
-        obj.instance_type = 'COLLECTION'
-        obj.instance_collection = bpy.data.collections[lumberObject.asset]
+        for p in data:
+            print(p)
+            data_path = data[p]['source_path']
+            blender_transform = data[p]['blender_transform']
 
-        location = (transform_data[0], transform_data[1], transform_data[2])
-        obj.location = location
+            transform_data = []
+            for value in blender_transform:
+                transform_data.append(float(value))
 
-        rotation = (transform_data[3], transform_data[4], transform_data[5])
-        obj.rotation_euler = rotation
+            pathToFile = os.path.join(scene_object().root, data_path)
+            lumberObject = LumberObject(pathToFile)
+            obj = bpy.data.objects.new(p, None)
+            bpy.context.collection.objects.link(obj)
+            obj.instance_type = 'COLLECTION'
+            if lumberObject.asset in bpy.data.collections:
 
-        scale = (transform_data[6], transform_data[7], transform_data[8])
-        obj.scale = scale
+                obj.instance_collection = bpy.data.collections[lumberObject.asset]
 
-        if lumberObject.type in ['char', ]:
-            if append:
+                location = (transform_data[0], transform_data[1], transform_data[2])
+                obj.location = location
 
-                print("___________creating proxy rig for {}____________".format(lumberObject.asset))
-                rig = '{}_rig'.format(lumberObject.asset)
-                print(rig)
-                objects = bpy.context.view_layer.objects
-                bpy.context.view_layer.objects.active = objects[lumberObject.asset]
-                bpy.ops.object.proxy_make(object=rig)
+                rotation = (transform_data[3], transform_data[4], transform_data[5])
+                obj.rotation_euler = rotation
+
+                scale = (transform_data[6], transform_data[7], transform_data[8])
+                obj.scale = scale
+
+                if lumberObject.type in ['char', ]:
+                    if append:
+                        print("___________creating proxy rig for {}____________".format(lumberObject.asset))
+                        rig = '{}_rig'.format(lumberObject.asset)
+                        print(rig)
+                        objects = bpy.context.view_layer.objects
+                        bpy.context.view_layer.objects.active = objects[lumberObject.asset]
+                        bpy.ops.object.proxy_make(object=rig)
+                        anim_path = data[p]['blender_action_path']
+                        path_to_anim = os.path.join(scene_object().root, anim_path)
+                        print(path_to_anim)
+                        lm.import_file(path_to_anim,type='ANIM', collection_name=data[p]['blender_action'],linked = False)
+
+            else:
+                print("__________________{} not found_____________".format(lumberObject.path_root))
+    else:
+        print("_____________NO LAYOUT FOUND__________")
 
 
 def run():

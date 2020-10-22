@@ -21,20 +21,11 @@ def rename_collection(current_scene):
     else:
         rename = current_scene.filename_base
 
-    try:
-        if rename not in bpy.data.collections:
 
-            selected_objects = bpy.context.object
-            bpy.data.collections[selected_objects.users_collection[0].name].name = rename
 
-    except:
-        if rename not in bpy.data.collections:
-            if len(bpy.data.collections) == 1:
-                try:
-                    bpy.data.collections[0].name = rename
+    selected_objects = bpy.context.object
+    bpy.data.collections[selected_objects.users_collection[0].name].name = rename
 
-                except KeyError:
-                    print('couldnt rename collection')
 
 
 def run():

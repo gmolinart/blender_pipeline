@@ -36,6 +36,6 @@ def run():
     This run statement is what's executed when your button is pressed in blender.
     :return:
     """
-    modifier_remove()
+    remove_modifier()
     print('Hello World!: button_template')
 

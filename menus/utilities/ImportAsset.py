@@ -45,6 +45,96 @@ def get_users(self, context):
 
     return (value)
 
+def get_layout_libraries(data):
+    libraries = {}
+
+    for p in data:
+
+        print(p)
+        data_path = data[p]['source_path']
+
+        if data_path in libraries:
+            libraries[data_path].append(p)
+        else:
+            libraries[data_path] = [p]
+
+    return libraries
+
+def read_layout(outFile=None, linked=True, append=False):
+    """
+    Reads layout from json file
+    :param outFile: path to json file
+    :param linked:
+    :param append: if true the files are imported in the scene
+    :return:
+    """
+    from cgl.plugins.blender.lumbermill import scene_object, LumberObject, import_file
+    from cgl.core.utils.read_write import load_json
+    import bpy
+
+    if outFile == None:
+        outFileObject = scene_object().copy(ext='json', task='lay', set_proper_filename=True).latest_version()
+        outFile = outFileObject.path_root
+    # outFile = scene_object().path_root.replace(scene_object().ext, 'json')
+
+    data = load_json(outFile)
+    libraries = get_layout_libraries(data)
+
+    print('________LIBRARIES___________')
+
+    for i in libraries:
+        pathToFile = os.path.join(scene_object().root, i)
+        lumberObject = LumberObject(pathToFile)
+
+        print(pathToFile)
+
+        if lumberObject.filename_base in bpy.data.libraries:
+            lib = bpy.data.libraries[lumberObject.filename]
+            bpy.data.batch_remove(ids=([lib]))
+            import_file(lumberObject.path_root, linked=False, append=True)
+        else:
+            import_file(lumberObject.path_root, linked=False, append=True)
+
+    for p in data:
+        print(p)
+        data_path = data[p]['source_path']
+        blender_transform = data[p]['blender_transform']
+
+        transform_data = []
+        for value in blender_transform:
+            transform_data.append(float(value))
+
+        pathToFile = os.path.join(scene_object().root, data_path)
+        lumberObject = LumberObject(pathToFile)
+        obj = bpy.data.objects.new(p, None)
+        bpy.context.collection.objects.link(obj)
+        obj.instance_type = 'COLLECTION'
+        if lumberObject.asset in bpy.data.collections:
+
+            obj.instance_collection = bpy.data.collections[lumberObject.asset]
+
+            location = (transform_data[0], transform_data[1], transform_data[2])
+            obj.location = location
+
+            rotation = (transform_data[3], transform_data[4], transform_data[5])
+            obj.rotation_euler = rotation
+
+            scale = (transform_data[6], transform_data[7], transform_data[8])
+            obj.scale = scale
+
+            if lumberObject.type in ['char', ]:
+                if append:
+                    print("___________creating proxy rig for {}____________".format(lumberObject.asset))
+                    rig = '{}_rig'.format(lumberObject.asset)
+                    print(rig)
+                    objects = bpy.context.view_layer.objects
+                    bpy.context.view_layer.objects.active = objects[lumberObject.asset]
+                    bpy.ops.object.proxy_make(object=rig)
+
+        else:
+            print("__________________{} not found_____________".format(lumberObject.path_root))
+
+
 
 def get_version(self, context):
     scene = bpy.types.Scene.scene_enum
@@ -87,7 +177,7 @@ class DialogUserB(bpy.types.Operator):
 
                 lm.import_file(open_file)
                 if os.path.isfile(path_object.copy(ext='json').path_root):
-                    utils.read_layout(outFile=path_object.copy(ext='json').path_root)
+                    read_layout(outFile=path_object.copy(ext='json').path_root, append=True)
                     bpy.ops.object.setup_collections()
 
             else:

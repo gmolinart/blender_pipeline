@@ -1,6 +1,7 @@
 import bpy
 from cgl.plugins.blender import lumbermill as lm
 
+
 class WriteAnimationData(bpy.types.Operator):
     """
     This class is required to register a button in blender.
@@ -17,56 +18,65 @@ class WriteAnimationData(bpy.types.Operator):
         return {'FINISHED'}
 
 
-
-
 def renanme_action():
     objects = bpy.context.selected_objects
     # selected_object = bpy.context.object
     for selected_object in objects:
         action = selected_object.animation_data.action
-        currentScene = lm.scene_object()
+        if action:
 
-        newActionName = '_'.join([currentScene.filename_base, selected_object.name, currentScene.version])
-        action.name = newActionName
-        print(newActionName)
+            currentScene = lm.scene_object()
+
+            newActionName = '_'.join([currentScene.filename_base, selected_object.name, currentScene.version])
+            action.name = newActionName
+            print(newActionName)
+
+        else:
+            lm.confirm_prompt(message='No action linked to object')
 
 
 def write_anim(outFile=None):
     from cgl.plugins.blender.lumbermill import scene_object, LumberObject, import_file
+    from cgl.core.utils.read_write import load_json, save_json
     import bpy
     from pathlib import Path
-    import json
+
     if outFile == None:
         outFile = scene_object().copy(ext='json').path_root
     data = {}
 
+    data = load_json(outFile)
+
     for obj in bpy.data.objects:
+
         if 'proxy' in obj.name:
-            name = obj.name
-            print('___________' + name)
-            #            blender_transform = np.array(obj.matrix_world).tolist()
-            blender_transform = [obj.matrix_world.to_translation().x,
-                                 obj.matrix_world.to_translation().y,
-                                 obj.matrix_world.to_translation().z,
-                                 obj.matrix_world.to_euler().x,
-                                 obj.matrix_world.to_euler().y,
-                                 obj.matrix_world.to_euler().z,
-                                 obj.matrix_world.to_scale().x,
-                                 obj.matrix_world.to_scale().y,
-                                 obj.matrix_world.to_scale().z]
-            libraryPath = bpy.path.abspath(obj.proxy_collection.instance_collection.library.filepath)
-            filename = Path(bpy.path.abspath(libraryPath)).__str__()
-            libObject = LumberObject(filename)
-            sourcePath = lm.scene_object()
+            animation_data = obj.animation_data.action
+            if animation_data:
+                name = obj.name.split('_proxy')[0]
+                print('___________' + name)
+                #            blender_transform = np.array(obj.matrix_world).tolist()
+                blender_transform = [obj.matrix_world.to_translation().x,
+                                     obj.matrix_world.to_translation().y,
+                                     obj.matrix_world.to_translation().z,
+                                     obj.matrix_world.to_euler().x,
+                                     obj.matrix_world.to_euler().y,
+                                     obj.matrix_world.to_euler().z,
+                                     obj.matrix_world.to_scale().x,
+                                     obj.matrix_world.to_scale().y,
+                                     obj.matrix_world.to_scale().z]
+                libraryPath = bpy.path.abspath(obj.proxy_collection.instance_collection.library.filepath)
+                filename = Path(bpy.path.abspath(libraryPath)).__str__()
+                libObject = LumberObject(filename)
 
-            data[name] = {'name': libObject.asset,
-                            'library_path':libObject.path,
-                            'source_path': sourcePath.path,
-                            'blender_transform': blender_transform,
-                            'blender_action': obj.animation_data.action.name}
+                sourcePath = lm.scene_object()
 
-    with open(outFile, "w") as library_data_file:
-        json.dump(data, library_data_file, indent=4, sort_keys=True)
+                data[name] = {'name': libObject.asset,
+                              'source_path': libObject.path,
+                              'blender_transform': blender_transform,
+                              'blender_action': obj.animation_data.action.name,
+                              'blender_action_path': sourcePath.path}
+
+    save_json(outFile, data)
 
     print(data)
     return (outFile)
@@ -77,9 +87,11 @@ def run():
     This run statement is what's executed when your button is pressed in blender.
     :return:
     """
+    renanme_action()
 
     write_anim()
+    lm.save_file()
+
 
 if __name__ == "__main__":
-
     run()
