@@ -161,6 +161,12 @@
                     "module": "import cgl_tools.blender.menus.Modeling.CopyLatestLow as CopyLatestLow; CopyLatestLow.run()",
                     "name": "CopyLatestLow",
                     "order": 8
+                },
+                {
+                    "label": "FixMeshName",
+                    "module": "import cgl_tools.blender.menus.Modeling.FixMeshName as FixMeshName; FixMeshName.run()",
+                    "name": "FixMeshName",
+                    "order": 9
                 }
             ],
             "name": "Modeling"
@@ -292,6 +298,12 @@
                     "module": "import cgl_tools.blender.menus.Rigging.CopySkinWeights as CopySkinWeights; CopySkinWeights.run()",
                     "name": "CopySkinWeights",
                     "order": 21
+                },
+                {
+                    "label": "RemoveDrivers",
+                    "module": "import cgl_tools.blender.menus.Rigging.RemoveDrivers as RemoveDrivers; RemoveDrivers.run()",
+                    "name": "RemoveDrivers",
+                    "order": 22
                 }
             ],
             "name": "Rigging"
@@ -363,6 +375,12 @@
                     "module": "import cgl_tools.blender.menus.Animation.Publish as Publish; Publish.run()",
                     "name": "Publish",
                     "order": 11
+                },
+                {
+                    "label": "GreasePencilSwitch",
+                    "module": "import cgl_tools.blender.menus.Animation.GreasePencilSwitch as GreasePencilSwitch; GreasePencilSwitch.run()",
+                    "name": "GreasePencilSwitch",
+                    "order": 12
                 }
             ],
             "name": "Animation"
@@ -415,6 +433,12 @@
                     "module": "import cgl_tools.blender.menus.Lighting.ImportAllObjects as ImportAllObjects; ImportAllObjects.run()",
                     "name": "ImportAllObjects",
                     "order": 2
+                },
+                {
+                    "label": "SplitScene",
+                    "module": "import cgl_tools.blender.menus.Lighting.SplitScene as SplitScene; SplitScene.run()",
+                    "name": "SplitScene",
+                    "order": 3
                 }
             ],
             "name": "Lighting"

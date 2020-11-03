@@ -16,3 +16,4 @@ class Lighting(bpy.types.Panel):
         # ADD BUTTONS
         self.layout.row().operator("object.default_light_setup")
         self.layout.row().operator("object.import_all_objects")
+        self.layout.row().operator("object.split_scene")

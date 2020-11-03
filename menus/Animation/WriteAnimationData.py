@@ -47,34 +47,41 @@ def write_anim(outFile=None):
 
     data = load_json(outFile)
 
+    valid_rigs = []
+
     for obj in bpy.data.objects:
 
         if 'proxy' in obj.name:
-            animation_data = obj.animation_data.action
+            animation_data = obj.animation_data
             if animation_data:
-                name = obj.name.split('_proxy')[0]
-                print('___________' + name)
-                #            blender_transform = np.array(obj.matrix_world).tolist()
-                blender_transform = [obj.matrix_world.to_translation().x,
-                                     obj.matrix_world.to_translation().y,
-                                     obj.matrix_world.to_translation().z,
-                                     obj.matrix_world.to_euler().x,
-                                     obj.matrix_world.to_euler().y,
-                                     obj.matrix_world.to_euler().z,
-                                     obj.matrix_world.to_scale().x,
-                                     obj.matrix_world.to_scale().y,
-                                     obj.matrix_world.to_scale().z]
-                libraryPath = bpy.path.abspath(obj.proxy_collection.instance_collection.library.filepath)
-                filename = Path(bpy.path.abspath(libraryPath)).__str__()
-                libObject = LumberObject(filename)
+                action = animation_data.action
+                if action:
+                    valid_rigs.append(obj)
 
-                sourcePath = lm.scene_object()
+    for obj in valid_rigs:
+        name = obj.name.split('_proxy')[0]
+        print('___________' + name)
+        #            blender_transform = np.array(obj.matrix_world).tolist()
+        blender_transform = [obj.matrix_world.to_translation().x,
+                             obj.matrix_world.to_translation().y,
+                             obj.matrix_world.to_translation().z,
+                             obj.matrix_world.to_euler().x,
+                             obj.matrix_world.to_euler().y,
+                             obj.matrix_world.to_euler().z,
+                             obj.matrix_world.to_scale().x,
+                             obj.matrix_world.to_scale().y,
+                             obj.matrix_world.to_scale().z]
+        libraryPath = bpy.path.abspath(obj.proxy_collection.instance_collection.library.filepath)
+        filename = Path(bpy.path.abspath(libraryPath)).__str__()
+        libObject = LumberObject(filename)
 
-                data[name] = {'name': libObject.asset,
-                              'source_path': libObject.path,
-                              'blender_transform': blender_transform,
-                              'blender_action': obj.animation_data.action.name,
-                              'blender_action_path': sourcePath.path}
+    sourcePath = lm.scene_object()
+
+    data[name] = {'name': libObject.asset,
+                  'source_path': libObject.path,
+                  'blender_transform': blender_transform,
+                  'blender_action': obj.animation_data.action.name,
+                  'blender_action_path': sourcePath.path}
 
     save_json(outFile, data)
 

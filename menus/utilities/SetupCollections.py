@@ -127,14 +127,17 @@ def unlink_collections(obj, type):
                     pass
 
 
-def create_collection(type):
+def create_collection(type, parent=None):
+    if not parent:
+        parent = bpy.context.scene.collection
+
     if type not in bpy.data.collections:
         bpy.data.collections.new(type)
 
     collection = bpy.data.collections[type]
     try:
 
-        bpy.context.scene.collection.children.link(collection)
+        parent.children.link(collection)
     except(RuntimeError):
         print('{} collection already in scene'.format(type))
         pass
@@ -161,6 +164,26 @@ def return_lib_path(library):
     return (filename)
 
 
+def get_characters():
+    characters = []
+    for obj in bpy.data.collections['char'].objects:
+        characters.append(obj.name)
+
+    return (characters)
+
+
+
+
+def create_characters_collections():
+    for char in get_characters():
+        item_to_keep = 'char_{}'.format(char)
+        char_collection = bpy.data.collections['char']
+        create_collection(parent=char_collection, type=item_to_keep)
+        char_obj = bpy.data.objects[char]
+        keep_single_user_collection(char_obj, assetName=item_to_keep)
+
+
+
 def run():
     view_layer = bpy.context.scene.objects
 
@@ -171,6 +194,7 @@ def run():
     parent_object(view_layer, 'light', 'LIGHT')
     parent_object(view_layer, 'gpencil', 'GPENCIL')
     parent_object(view_layer, 'armature', 'ARMATURE')
+    create_characters_collections()
     for lib in bpy.data.libraries:
         type = lm.LumberObject(return_lib_path(lib)).type
         if type == 'env':

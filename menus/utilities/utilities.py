@@ -14,37 +14,24 @@ class utilities(bpy.types.Panel):
         :return:
         """
         # ADD BUTTONS
-        self.layout.row().label(text='Switch')
+        self.layout.row().operator("object.import_asset")
+        self.layout.row().operator("object.correct_file_name")
+        self.layout.row().operator("object.open_asset")
+        self.layout.row().operator("object.open_shot")
+        self.layout.row().operator("object.delete_defaults")
+        self.layout.row().operator("object.import_references")
+        self.layout.row().operator("object.delete_turntable")
+        self.layout.row().operator("object.setup_collections")
+        self.layout.row().operator("object.fix_collection_name")
+        self.layout.row().operator("object.rename_object")
+        self.layout.row().operator("object.cleanup_scene")
+        self.layout.row().operator("object.show_in_folder")
+        self.layout.row().operator("object.delete_workspaces")
         self.layout.row().operator("object.switch_users")
         self.layout.row().operator("object.switch_task")
         self.layout.row().operator("object.switch_versions")
         self.layout.row().operator("object.switch_resolution")
-
-
-        self.layout.row().label(text='Open/ import')
-        self.layout.row().operator("object.import_asset")
-        self.layout.row().operator("object.open_asset")
-        self.layout.row().operator("object.open_shot")
-        self.layout.row().operator("object.import_references")
         self.layout.row().operator("object.open_selected")
-
-
-        self.layout.row().label(text='Organization')
-        self.layout.row().operator("object.setup_collections")
-        self.layout.row().operator("object.correct_file_name")
-        self.layout.row().operator("object.fix_collection_name")
-        self.layout.row().operator("object.rename_object")
-        self.layout.row().operator("object.cleanup_scene")
-        self.layout.row().operator("object.delete_defaults")
-        self.layout.row().operator("object.delete_turntable")
-        self.layout.row().operator("object.delete_workspaces")
-
-
-        self.layout.row().label(text='Export/Move')
         self.layout.row().operator("object.collection_to_asset")
-        self.layout.row().operator("object.source_to_render")
-
-
-        self.layout.row().label(text='Shortcuts')
         self.layout.row().operator("object.open_documentation")
-        self.layout.row().operator("object.show_in_folder")
+        self.layout.row().operator("object.source_to_render")

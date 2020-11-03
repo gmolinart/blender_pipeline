@@ -115,6 +115,6 @@ class RemoveEnvironments(PreflightCheck):
 
 
         print('Remove Environments')
-        remove_environments()
+        #remove_environments()
         self.pass_check('Check Passed')
         # self.fail_check('Check Failed')

@@ -35,7 +35,7 @@ def get_default_shader():
             'seq': 'lib',
             'shot': 'DEFAULTSHADER',
             'task': 'shd',
-            'version': '001.000',
+            'version': '003.000',
             'user': 'publish',
             'resolution': 'high',
             'filename': 'lib_DEFAULTSHADER_shd',
@@ -43,6 +43,8 @@ def get_default_shader():
             }
 
     path_object = lm.LumberObject(dict)
+
+    print(path_object.path_root)
     path_object = path_object.copy(set_proper_filename=True)
 
     # print(default_shader.path_root)

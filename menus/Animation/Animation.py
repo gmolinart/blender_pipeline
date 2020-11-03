@@ -25,3 +25,4 @@ class Animation(bpy.types.Panel):
         self.layout.row().operator("object.write_animation_data")
         self.layout.row().operator("object.render_with_audio")
         self.layout.row().operator("object.publish")
+        self.layout.row().operator("object.grease_pencil_switch")

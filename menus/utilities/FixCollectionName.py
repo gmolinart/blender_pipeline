@@ -17,14 +17,25 @@ class FixCollectionName(bpy.types.Operator):
 
 def rename_collection(current_scene):
     if current_scene.scope == 'assets':
-        rename = current_scene.asset
+        name = current_scene.asset
     else:
-        rename = current_scene.filename_base
+        name = current_scene.filename_base
 
 
+    obj = bpy.context.object
 
-    selected_objects = bpy.context.object
-    bpy.data.collections[selected_objects.users_collection[0].name].name = rename
+    if obj:
+        if current_scene.asset in bpy.data.collections:
+            print('collection exist ')
+        object = bpy.context.object
+        object.users_collection[0].name = name
+
+    else:
+        if current_scene.asset in bpy.data.collections:
+            print('collection exist')
+
+        else:
+            bpy.data.collections['Collection'].name = name
 
 
 

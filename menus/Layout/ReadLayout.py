@@ -43,6 +43,7 @@ def read_layout(outFile=None, linked=True, append=False):
     from cgl.plugins.blender.lumbermill import scene_object, LumberObject, import_file
     from cgl.core.utils.read_write import load_json
     import bpy
+    import os
 
     if outFile == None:
         outFileObject = scene_object().copy(ext='json', task='lay', set_proper_filename=True).latest_version()
@@ -50,9 +51,7 @@ def read_layout(outFile=None, linked=True, append=False):
     # outFile = scene_object().path_root.replace(scene_object().ext, 'json')
     if os.path.isfile(outFile):
 
-
         data = load_json(outFile)
-
 
         libraries = get_layout_libraries(data)
 
@@ -68,6 +67,8 @@ def read_layout(outFile=None, linked=True, append=False):
                 lib = bpy.data.libraries[lumberObject.filename]
                 bpy.data.batch_remove(ids=([lib]))
                 import_file(lumberObject.path_root, linked=False, append=True)
+                bpy.data.ojects[lumberObject.asset].select_set(True)
+                bpy.ops.object.unlink_asset()
             else:
                 import_file(lumberObject.path_root, linked=False, append=True)
 
@@ -99,6 +100,7 @@ def read_layout(outFile=None, linked=True, append=False):
                 obj.scale = scale
 
                 if lumberObject.type in ['char', ]:
+
                     if append:
                         print("___________creating proxy rig for {}____________".format(lumberObject.asset))
                         rig = '{}_rig'.format(lumberObject.asset)
@@ -106,10 +108,13 @@ def read_layout(outFile=None, linked=True, append=False):
                         objects = bpy.context.view_layer.objects
                         bpy.context.view_layer.objects.active = objects[lumberObject.asset]
                         bpy.ops.object.proxy_make(object=rig)
-                        anim_path = data[p]['blender_action_path']
-                        path_to_anim = os.path.join(scene_object().root, anim_path)
-                        print(path_to_anim)
-                        lm.import_file(path_to_anim,type='ANIM', collection_name=data[p]['blender_action'],linked = False)
+
+                        if 'blender_action_path' in data[p]:
+                            anim_path = data[p]['blender_action_path']
+                            path_to_anim = os.path.join(scene_object().root, anim_path)
+                            print(path_to_anim)
+                            lm.import_file(path_to_anim, type='ANIM', collection_name=data[p]['blender_action'],
+                                           linked=False)
 
             else:
                 print("__________________{} not found_____________".format(lumberObject.path_root))
