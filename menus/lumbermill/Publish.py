@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 class Publish(bpy.types.Operator):
     """
@@ -24,17 +24,17 @@ def run():
     """
     print('publish button pressed')
 
-    scene = lm.scene_object()
+    scene = alc.scene_object()
 
     if scene.context == 'source':
         if scene.resolution == 'high':
-            lm.launch_preflight()
+            alc.launch_preflight()
 
 
         else:
-            lm.confirm_prompt(message="This is a low resolution version , please edit source file")
+            alc.confirm_prompt(message="This is a low resolution version , please edit source file")
 
     else:
-        lm.confirm_prompt(message="files in the render context shouldn't be versioned up, please edit source file")
+        alc.confirm_prompt(message="files in the render context shouldn't be versioned up, please edit source file")
 
 

@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 class Render(bpy.types.Operator):
     """
@@ -30,12 +30,12 @@ def run():
     """
     #switch_overlays(visible=False)
     previewRenderTypes = ['anim', 'rig', 'mdl', 'lay','grmt', 'remsh']
-    if lm.scene_object().task in previewRenderTypes:
+    if alc.scene_object().task in previewRenderTypes:
 
 
-        lm.render(preview=True)
+        alc.render(preview=True)
 
     else:
-        lm.render()
+        alc.render()
 
 

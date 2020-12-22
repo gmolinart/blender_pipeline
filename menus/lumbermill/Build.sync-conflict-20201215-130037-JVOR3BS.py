@@ -1,8 +1,7 @@
 import bpy
 import json
 from os.path import isdir, isfile
-from cgl.plugins.blender import alchemy as alc
-
+from cgl.plugins.blender import lumbermill as lm
 from cgl.plugins.blender import utils as utils
 
 
@@ -26,7 +25,7 @@ def defaultShotSettings():
 
 
 def gather_dependencies():
-    current = alc.scene_object()
+    current = lm.scene_object()
 
     # Gather Dependencies
     light_file = current.copy(task='light', set_proper_filename=True).latest_version()
@@ -53,7 +52,7 @@ def gather_dependencies():
 
 def required_dependencies():
     requirements = []
-    current = alc.scene_object()
+    current = lm.scene_object()
 
     if current.task == 'lay':
         requirements.append('lay')
@@ -83,8 +82,6 @@ def import_dependencies():
         print(depObject.path_root)
         print(depObject.task)
 
-
-
         if depObject.task in required_dependencies():
 
             if depObject.task == 'lay':
@@ -107,7 +104,7 @@ def import_dependencies():
                     print(depObject.filename)
                     json = depObject.copy(ext='json')
                     print(json)
-                    alc.import_file_old(depObject.path_root, type='CAMERA', linked=False,
+                    lm.import_file(depObject.path_root, type='CAMERA', linked=False,
                                    collection_name=depObject.filename_base)
 
                     if depObject.filename_base not in bpy.context.scene.collection.objects:
@@ -127,10 +124,10 @@ def import_dependencies():
             if depObject.task == 'anim':
                 if isfile(depObject.path_root):
                     print('{} exists'.format(depObject.path_root))
+
                     print('_____ANIM______')
                     print(depObject.filename)
-                    if isfile(depObject.copy(ext = 'json').path_root):
-                        utils.read_layout()
+                    utils.read_layout()
                     burn_in_image()
 
             if depObject.task == 'mdl':
@@ -160,7 +157,7 @@ def import_dependencies():
 def burn_in_image():
     current = bpy.context.scene
     mSettings = current.render
-    sceneObject = alc.scene_object()
+    sceneObject = lm.scene_object()
     current.name = sceneObject.filename_base
     scene_info = bpy.context.scene.statistics(bpy.context.view_layer)
     try:
@@ -194,11 +191,11 @@ def set_shot_duration(camJson):
     # dependencies  = gather_dependencies()
     # print(dependencies)
     default_start_frame = 1000
-    current = alc.scene_object()
+    current = lm.scene_object()
     filename = camJson
 
     # filename = '{}_{}_{}.json'.format(current.seq, current.asset, 'cam')
-    # outFile = alc.scene_object().copy(task='cam', filename=filename).path_root
+    # outFile = lm.scene_object().copy(task='cam', filename=filename).path_root
     outFile = camJson.path_root
 
     with open(outFile) as json_file:
@@ -228,7 +225,7 @@ def buildShot():
 
 
 def gather_object_list(outFile):
-    from cgl.plugins.blender.lumbermill import scene_object, LumberObject, import_file_old
+    from cgl.plugins.blender.lumbermill import scene_object, LumberObject, import_file
     from cgl.core.utils.read_write import load_json
     import bpy
 
@@ -262,7 +259,7 @@ def import_mesh_from_file(file):
     objects = gather_object_list(outFile.path_root)
     for obj in objects:
         remove_object(obj)
-    alc.import_file_old(file.path_root, append=False, linked=False)
+    lm.import_file(file.path_root, append=False, linked=False)
     for obj in objects:
         object = bpy.data.objects[obj]
         bpy.context.collection.objects.link(object)
@@ -273,7 +270,12 @@ def run():
     This run statement is what's executed when your button is pressed in blender.
     :return:
     """
-    alc.build()
+    buildShot()
+    try:
+
+        lm.confirm_prompt(message='Build Completed')
+    except RuntimeError:
+        pass
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 from cgl.core.utils.general import create_file_dirs, cgl_copy
 
 class VersionUp(bpy.types.Operator):
@@ -24,27 +24,27 @@ def run():
     :return:
     """
 
-    scene = lm.scene_object()
+    scene = alc.scene_object()
 
     if scene.context == 'source':
         if scene.resolution == 'high':
-            lm.version_up()
+            alc.version_up()
 
 
             bpy.ops.file.make_paths_relative()
 
-            low_res = lm.scene_object().copy(resolution='low')
+            low_res = alc.scene_object().copy(resolution='low')
             for res in low_res.glob_project_element('filename'):
                 create_file_dirs(res)
                 cgl_copy(res.path_root, low_res.path_root)
 
-            lm.confirm_prompt(message="Version up to {}".format(lm.scene_object().version))
+            alc.confirm_prompt(message="Version up to {}".format(alc.scene_object().version))
 
         else:
-            lm.confirm_prompt(message="This is a low resolution version , please edit source file")
+            alc.confirm_prompt(message="This is a low resolution version , please edit source file")
 
     else:
-        lm.confirm_prompt(message="files in the render context shouldn't be versioned up, please edit source file")
+        alc.confirm_prompt(message="files in the render context shouldn't be versioned up, please edit source file")
 
 
 

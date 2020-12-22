@@ -173,6 +173,39 @@
                 }
             ],
             "name": "anim"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "CheckProject",
+                    "module": "cgl_tools.blender.preflights.lay.CheckProject",
+                    "name": "CheckProject",
+                    "order": 1,
+                    "required": "True"
+                },
+                {
+                    "label": "CheckRelativePaths",
+                    "module": "cgl_tools.blender.preflights.lay.CheckRelativePaths",
+                    "name": "CheckRelativePaths",
+                    "order": 2,
+                    "required": "True"
+                },
+                {
+                    "label": "ExportMsd",
+                    "module": "cgl_tools.blender.preflights.lay.ExportMsd",
+                    "name": "ExportMsd",
+                    "order": 3,
+                    "required": "True"
+                },
+                {
+                    "label": "Publish",
+                    "module": "cgl_tools.blender.preflights.mdl.Publish",
+                    "name": "Publish",
+                    "order": 4,
+                    "required": "True"
+                }
+            ],
+            "name": "lay"
         }
     ]
 }

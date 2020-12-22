@@ -26,3 +26,6 @@ class Animation(bpy.types.Panel):
         self.layout.row().operator("object.render_with_audio")
         self.layout.row().operator("object.publish")
         self.layout.row().operator("object.grease_pencil_switch")
+        self.layout.row().operator("object.gp_main_layers")
+        self.layout.row().operator("object.interactive")
+        self.layout.row().operator("object.current_frame")

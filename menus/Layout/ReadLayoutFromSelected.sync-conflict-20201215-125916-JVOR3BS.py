@@ -27,7 +27,7 @@ def read_layout(outFile=None, linked=True, append=False):
     :param append: if true the files are imported in the scene
     :return:
     """
-    from cgl.plugins.blender.lumbermill import scene_object, LumberObject, import_file_old
+    from cgl.plugins.blender.lumbermill import scene_object, LumberObject, import_file
     from cgl.core.utils.read_write import load_json
     import bpy
     import os
@@ -52,11 +52,11 @@ def read_layout(outFile=None, linked=True, append=False):
             if lumberObject.filename_base in bpy.data.libraries:
                 lib = bpy.data.libraries[lumberObject.filename]
                 bpy.data.batch_remove(ids=([lib]))
-                import_file_old(lumberObject.path_root, linked=False, append=True)
+                import_file(lumberObject.path_root, linked=False, append=True)
                 bpy.data.ojects[lumberObject.asset].select_set(True)
                 bpy.ops.object.unlink_asset()
             else:
-                import_file_old(lumberObject.path_root, linked=False, append=True)
+                import_file(lumberObject.path_root, linked=False, append=True)
 
         for p in data:
             print(p)
@@ -99,7 +99,7 @@ def read_layout(outFile=None, linked=True, append=False):
                             anim_path = data[p]['blender_action_path']
                             path_to_anim = os.path.join(scene_object().root, anim_path)
                             print(path_to_anim)
-                            lm.import_file_old(path_to_anim, type='ANIM', collection_name=data[p]['blender_action'],
+                            lm.import_file(path_to_anim, type='ANIM', collection_name=data[p]['blender_action'],
                                            linked=False)
 
             else:

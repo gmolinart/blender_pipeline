@@ -24,3 +24,4 @@ class Navigation(bpy.types.Panel):
         self.layout.row().operator("object.switch_task")
         self.layout.row().operator("object.back_to_previous")
         self.layout.row().operator("object.copy_to_user")
+        self.layout.row().operator("object.copy_to_task")

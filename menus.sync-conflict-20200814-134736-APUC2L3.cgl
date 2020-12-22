@@ -1,0 +1,271 @@
+{
+    "blender": {
+        "Animation": {
+            "CreateGreasePencil": {
+                "label": "CreateGreasePencil",
+                "module": "import cgl_tools.blender.menus.Animation.CreateGreasePencil as CreateGreasePencil; CreateGreasePencil.run()",
+                "name": "CreateGreasePencil",
+                "order": 2
+            },
+            "Publish": {
+                "label": "Publish",
+                "module": "import cgl_tools.blender.menus.Animation.Publish as Publish; Publish.run()",
+                "name": "Publish",
+                "order": 1
+            },
+            "order": 5
+        },
+        "Layout": {
+            "PublishCameras": {
+                "label": "PublishCameras",
+                "module": "import cgl_tools.blender.menus.Layout.PublishCameras as PublishCameras; PublishCameras.run()",
+                "name": "PublishCameras",
+                "order": 3
+            },
+            "ReadLayout": {
+                "label": "ReadLayout",
+                "module": "import cgl_tools.blender.menus.Layout.ReadLayout as ReadLayout; ReadLayout.run()",
+                "name": "ReadLayout",
+                "order": 1
+            },
+            "RenameCameras": {
+                "label": "RenameCameras",
+                "module": "import cgl_tools.blender.menus.Layout.RenameCameras as RenameCameras; RenameCameras.run()",
+                "name": "RenameCameras",
+                "order": 4
+            },
+            "WriteLayout": {
+                "label": "WriteLayout",
+                "module": "import cgl_tools.blender.menus.Layout.WriteLayout as WriteLayout; WriteLayout.run()",
+                "name": "WriteLayout",
+                "order": 2
+            },
+            "order": 2
+        },
+        "Modeling": {
+            "Checknormals": {
+                "label": "Checknormals",
+                "module": "import cgl_tools.blender.menus.Modeling.Checknormals as Checknormals; Checknormals.run()",
+                "name": "Checknormals",
+                "order": 1
+            },
+            "order": 3
+        },
+        "Rigging": {
+            "AddControllers": {
+                "label": "AddControllers",
+                "module": "import cgl_tools.blender.menus.Rigging.AddControllers as AddControllers; AddControllers.run()",
+                "name": "AddControllers",
+                "order": 14
+            },
+            "Checkshaders": {
+                "label": "Checkshaders",
+                "module": "import cgl_tools.blender.menus.Rigging.Checkshaders as Checkshaders; Checkshaders.run()",
+                "name": "Checkshaders",
+                "order": 4
+            },
+            "CleanupRig": {
+                "label": "CleanupRig",
+                "module": "import cgl_tools.blender.menus.Rigging.CleanupRig as CleanupRig; CleanupRig.run()",
+                "name": "CleanupRig",
+                "order": 5
+            },
+            "CorrectiveBlendShapes": {
+                "label": "CorrectiveBlendShapes",
+                "module": "import cgl_tools.blender.menus.Rigging.CorrectiveBlendShapes as CorrectiveBlendShapes; CorrectiveBlendShapes.run()",
+                "name": "CorrectiveBlendShapes",
+                "order": 10
+            },
+            "CreateHooks": {
+                "label": "CreateHooks",
+                "module": "import cgl_tools.blender.menus.Rigging.CreateHooks as CreateHooks; CreateHooks.run()",
+                "name": "CreateHooks",
+                "order": 7
+            },
+            "Fixrignames": {
+                "label": "Fixrignames",
+                "module": "import cgl_tools.blender.menus.Rigging.Fixrignames as Fixrignames; Fixrignames.run()",
+                "name": "Fixrignames",
+                "order": 2
+            },
+            "GetDefaultAction": {
+                "label": "GetDefaultAction",
+                "module": "import cgl_tools.blender.menus.Rigging.GetDefaultAction as GetDefaultAction; GetDefaultAction.run()",
+                "name": "GetDefaultAction",
+                "order": 12
+            },
+            "GetDefaultCamera": {
+                "label": "GetDefaultCamera",
+                "module": "import cgl_tools.blender.menus.Rigging.GetDefaultCamera as GetDefaultCamera; GetDefaultCamera.run()",
+                "name": "GetDefaultCamera",
+                "order": 13
+            },
+            "ParentMeshToRig": {
+                "label": "ParentMeshToRig",
+                "module": "import cgl_tools.blender.menus.Rigging.ParentMeshToRig as ParentMeshToRig; ParentMeshToRig.run()",
+                "name": "ParentMeshToRig",
+                "order": 3
+            },
+            "RemoveConstraints": {
+                "label": "RemoveConstraints",
+                "module": "import cgl_tools.blender.menus.Rigging.RemoveConstraints as RemoveConstraints; RemoveConstraints.run()",
+                "name": "RemoveConstraints",
+                "order": 8
+            },
+            "RemoveModifiers": {
+                "label": "RemoveModifiers",
+                "module": "import cgl_tools.blender.menus.Rigging.RemoveModifiers as RemoveModifiers; RemoveModifiers.run()",
+                "name": "RemoveModifiers",
+                "order": 9
+            },
+            "ResetArmature": {
+                "label": "ResetArmature",
+                "module": "import cgl_tools.blender.menus.Rigging.ResetArmature as ResetArmature; ResetArmature.run()",
+                "name": "ResetArmature",
+                "order": 6
+            },
+            "SetupRigTest": {
+                "label": "SetupRigTest",
+                "module": "import cgl_tools.blender.menus.Rigging.SetupRigTest as SetupRigTest; SetupRigTest.run()",
+                "name": "SetupRigTest",
+                "order": 11
+            },
+            "SimpleController": {
+                "label": "SimpleController",
+                "module": "import cgl_tools.blender.menus.Rigging.SimpleController as SimpleController; SimpleController.run()",
+                "name": "SimpleController",
+                "order": 1
+            },
+            "order": 4
+        },
+        "Shading": {
+            "DefaultShader": {
+                "label": "DefaultShader",
+                "module": "import cgl_tools.blender.menus.Shading.DefaultShader as DefaultShader; DefaultShader.run()",
+                "name": "DefaultShader",
+                "order": 1
+            },
+            "RenameMaterials": {
+                "label": "RenameMaterials",
+                "module": "import cgl_tools.blender.menus.Shading.RenameMaterials as RenameMaterials; RenameMaterials.run()",
+                "name": "RenameMaterials",
+                "order": 2
+            },
+            "SetupShaderColor": {
+                "label": "SetupShaderColor",
+                "module": "import cgl_tools.blender.menus.Shading.SetupShaderColor as SetupShaderColor; SetupShaderColor.run()",
+                "name": "SetupShaderColor",
+                "order": 3
+            },
+            "order": 6
+        },
+        "lumbermill": {
+            "Build": {
+                "label": "Build",
+                "module": "import cgl_tools.blender.menus.lumbermill.Build as Build; Build.run()",
+                "name": "Build",
+                "order": 3
+            },
+            "CleanupScene": {
+                "label": "CleanupScene",
+                "module": "import cgl_tools.blender.menus.lumbermill.CleanupScene as CleanupScene; CleanupScene.run()",
+                "name": "CleanupScene",
+                "order": 11
+            },
+            "Launch": {
+                "label": "Launch",
+                "module": "import cgl_tools.blender.menus.lumbermill.Launch as Launch; Launch.run()",
+                "name": "Launch",
+                "order": 1
+            },
+            "PublishItem": {
+                "label": "PublishItem",
+                "module": "import cgl_tools.blender.menus.lumbermill.PublishItem as PublishItem; PublishItem.run()",
+                "name": "PublishItem",
+                "order": 2
+            },
+            "RenameObject": {
+                "label": "RenameObject",
+                "module": "import cgl_tools.blender.menus.lumbermill.RenameObject as RenameObject; RenameObject.run()",
+                "name": "RenameObject",
+                "order": 10
+            },
+            "Renamecollection": {
+                "label": "RenameCollection",
+                "module": "import cgl_tools.blender.menus.lumbermill.Renamecollection as Renamecollection; Renamecollection.run()",
+                "name": "Renamecollection",
+                "order": 7
+            },
+            "Render": {
+                "label": "Render",
+                "module": "import cgl_tools.blender.menus.lumbermill.Render as Render; Render.run()",
+                "name": "Render",
+                "order": 5
+            },
+            "Review": {
+                "label": "Review",
+                "module": "import cgl_tools.blender.menus.lumbermill.Review as Review; Review.run()",
+                "name": "Review",
+                "order": 6
+            },
+            "Turntable": {
+                "label": "Turntable",
+                "module": "import cgl_tools.blender.menus.lumbermill.Turntable as Turntable; Turntable.run()",
+                "name": "Turntable",
+                "order": 8
+            },
+            "VersionToLatest": {
+                "label": "VersionToLatest",
+                "module": "import cgl_tools.blender.menus.lumbermill.VersionToLatest as VersionToLatest; VersionToLatest.run()",
+                "name": "VersionToLatest",
+                "order": 9
+            },
+            "VersionUp": {
+                "label": "VersionUp",
+                "module": "import cgl_tools.blender.menus.lumbermill.VersionUp as VersionUp; VersionUp.run()",
+                "name": "VersionUp",
+                "order": 4
+            },
+            "order": 1
+        },
+        "utilities": {
+            "CorrectFileName": {
+                "label": "CorrectFileName",
+                "module": "import cgl_tools.blender.menus.utilities.CorrectFileName as CorrectFileName; CorrectFileName.run()",
+                "name": "CorrectFileName",
+                "order": 3
+            },
+            "DeleteDefaults": {
+                "label": "DeleteDefaults",
+                "module": "import cgl_tools.blender.menus.utilities.DeleteDefaults as DeleteDefaults; DeleteDefaults.run()",
+                "name": "DeleteDefaults",
+                "order": 6
+            },
+            "ImportAsset": {
+                "label": "ImportAsset",
+                "module": "import cgl_tools.blender.menus.utilities.ImportAsset as ImportAsset; ImportAsset.run()",
+                "name": "ImportAsset",
+                "order": 1
+            },
+            "OpenAsset": {
+                "label": "OpenAsset",
+                "module": "import cgl_tools.blender.menus.utilities.OpenAsset as OpenAsset; OpenAsset.run()",
+                "name": "OpenAsset",
+                "order": 4
+            },
+            "OpenShot": {
+                "label": "OpenShot",
+                "module": "import cgl_tools.blender.menus.utilities.OpenShot as OpenShot; OpenShot.run()",
+                "name": "OpenShot",
+                "order": 5
+            },
+            "SwitchUsers": {
+                "label": "SwitchUsers",
+                "module": "import cgl_tools.blender.menus.utilities.SwitchUsers as SwitchUsers; SwitchUsers.run()",
+                "name": "SwitchUsers",
+                "order": 2
+            },
+            "order": 7
+        }
+    }
+}

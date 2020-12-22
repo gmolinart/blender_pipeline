@@ -1,6 +1,6 @@
 import bpy
 
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 
 class FixCollectionName(bpy.types.Operator):
@@ -45,5 +45,5 @@ def run():
     :return:
     """
 
-    current_scene = lm.scene_object()
+    current_scene = alc.scene_object()
     rename_collection(current_scene)

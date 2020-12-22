@@ -19,32 +19,57 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="292dd7de-72be-4162-9c08-eb3914d873cb" name="Default Changelist" comment="updated">
-      <change afterPath="$PROJECT_DIR$/menus/Lighting/SplitScene.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menus/Modeling/FixMeshName.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menus/Rigging/RemoveDrivers.py" afterDir="false" />
+    <list default="true" id="292dd7de-72be-4162-9c08-eb3914d873cb" name="Default Changelist" comment="added import basemesh">
+      <change afterPath="$PROJECT_DIR$/menus.sync-conflict-20200805-192134-APUC2L3.cgl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus.sync-conflict-20200811-122352-JVOR3BS.cgl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus.sync-conflict-20200811-171621-APUC2L3.cgl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus.sync-conflict-20200814-134736-APUC2L3.cgl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Animation/GpMainLayers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Layout/PublishCameras.sync-conflict-20201215-130037-JVOR3BS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Layout/ReadLayout.sync-conflict-20201215-130037-JVOR3BS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Layout/ReadLayoutFromSelected.sync-conflict-20201215-125916-JVOR3BS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Lighting/ImportRig.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Modeling/ImportBaseMesh.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Navigation/CopyToTask.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Rigging/CorrectiveBlendShapes.sync-conflict-20200811-122352-JVOR3BS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Rigging/Rigging.sync-conflict-20200811-122352-JVOR3BS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Rigging/Rigging.sync-conflict-20200811-171621-APUC2L3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Rigging/SetupRigTest.sync-conflict-20200811-122353-JVOR3BS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/lumbermill/Build.sync-conflict-20201215-130037-JVOR3BS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/lumbermill/ImportAsset.sync-conflict-20201215-130036-JVOR3BS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/utilities/CopyToAnimProject.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/utilities/ImportAudio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/utilities/MoveToAnimProject.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/utilities/RenderToSource.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preflights.sync-conflict-20200804-134156-APUC2L3.cgl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preflights.sync-conflict-20200805-162318-APUC2L3.cgl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preflights/lay/CheckProject.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preflights/lay/CheckRelativePaths.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preflights/lay/ExportMsd.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preflights/lay/Publish.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preflights/mdl/Checknormals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/blender.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blender.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus.cgl" beforeDir="false" afterPath="$PROJECT_DIR$/menus.cgl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/Animation/Animation.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Animation/Animation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Animation/GreasePencil_.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Animation/WriteAnimationData.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Animation/WriteAnimationData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Layout/PublishCameras.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Layout/PublishCameras.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/Layout/ReadLayout.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Layout/ReadLayout.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/Layout/ReadLayoutFromSelected.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Layout/ReadLayoutFromSelected.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/Lighting/Lighting.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Lighting/Lighting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/Modeling/Modeling.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Modeling/Modeling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Navigation/Navigation.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Navigation/Navigation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/Rigging/Rigging.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Rigging/Rigging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Shading/DefaultShader.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Shading/DefaultShader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/lumbermill/FixCollectionName.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/switch rig/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/switch rig/switch rig.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/lumbermill/Build.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/lumbermill/Build.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/lumbermill/Render.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/lumbermill/Render.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/lumbermill/VersionUp.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/lumbermill/VersionUp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/utilities/FixCollectionName.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/utilities/FixCollectionName.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/utilities/SetupCollections.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/utilities/SetupCollections.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/utilities/ImportAsset.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/utilities/ImportAsset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/utilities/OpenShot.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/utilities/OpenShot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/utilities/utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/utilities/utilities.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preflights/mdl/RemoveEnvironments.py" beforeDir="false" afterPath="$PROJECT_DIR$/preflights/mdl/RemoveEnvironments.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preflights/mdl/~syncthing~Cleanscene.py.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preflights/mdl/~syncthing~Cleanturntable.py.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preflights/mdl/~syncthing~Collectionname.py.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preflights/rig/~syncthing~ParentMeshToRig.py.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights.cgl" beforeDir="false" afterPath="$PROJECT_DIR$/preflights.cgl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preflights/mdl/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/preflights/mdl/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +77,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1hBZrC561YLCjPBaUcJijAvfFov" />
@@ -64,15 +94,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Roaming/Blender Foundation/Blender/2.83/scripts/addons/skin_selection_LC.py" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\COMPANIES\_config\cgl_tools\blender\menus\Modeling" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -83,6 +117,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599486641195</updated>
+      <workItem from="1608639947495" duration="2118000" />
     </task>
     <task id="LOCAL-00001" summary="refformated code">
       <created>1601642898570</created>
@@ -203,8 +238,39 @@
       <option name="project" value="LOCAL" />
       <updated>1603331222981</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="updated">
+      <created>1604417914481</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1604417914481</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added copy to task and import rig, general stability fixes">
+      <created>1605864983242</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1605864983242</updated>
+    </task>
+    <task id="LOCAL-00020" summary="updated default shader and addes import audio">
+      <created>1606138456689</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1606138456689</updated>
+    </task>
+    <task id="LOCAL-00021" summary="added import basemesh">
+      <created>1606142128144</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1606142128144</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -235,94 +301,16 @@
     <MESSAGE value="reworked build and remove environments" />
     <MESSAGE value="deleted some unecessary files" />
     <MESSAGE value="updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated" />
+    <MESSAGE value="added copy to task and import rig, general stability fixes" />
+    <MESSAGE value="updated default shader and addes import audio" />
+    <MESSAGE value="added import basemesh" />
+    <option name="LAST_COMMIT_MESSAGE" value="added import basemesh" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-2967" y="355" key="#Plugins" timestamp="1600533268148">
-      <screen x="-3840" y="9" width="2560" height="1420" />
+    <state x="-2897" y="336" width="672" height="678" key="search.everywhere.popup" timestamp="1608642996110">
+      <screen x="-3840" y="18" width="2560" height="1409" />
     </state>
-    <state x="-2967" y="355" key="#Plugins/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1600533268148" />
-    <state x="-3104" y="369" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602704917407">
-      <screen x="-3840" y="9" width="2560" height="1420" />
-    </state>
-    <state x="-3104" y="369" key="#com.intellij.execution.impl.EditConfigurationsDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602704917407" />
-    <state x="-2820" y="335" key="#com.intellij.ide.util.MemberChooser" timestamp="1600277067647">
-      <screen x="-3840" y="9" width="2560" height="1420" />
-    </state>
-    <state x="-2820" y="335" key="#com.intellij.ide.util.MemberChooser/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1600277067647" />
-    <state x="765" y="241" key="#com.intellij.ide.util.MemberChooser/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@0.0.1920.1050" timestamp="1599698743760" />
-    <state x="-3747" y="102" width="2375" height="1224" key="DiffContextDialog" timestamp="1602851580438">
-      <screen x="-3840" y="9" width="2560" height="1420" />
-    </state>
-    <state x="-3747" y="102" width="2375" height="1224" key="DiffContextDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602851580438" />
-    <state x="970" y="1462" key="FileChooserDialogImpl" timestamp="1602674159462">
-      <screen x="307" y="1080" width="1600" height="1170" />
-    </state>
-    <state x="970" y="1462" key="FileChooserDialogImpl/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@307.1080.1600.1170" timestamp="1602674159462" />
-    <state x="-2779" y="469" key="FileChooserDialogImpl/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1602437834992" />
-    <state x="-2760" y="633" key="Github.CreateGistDialog" timestamp="1601642520381">
-      <screen x="-3840" y="9" width="2560" height="1409" />
-    </state>
-    <state x="-2760" y="633" key="Github.CreateGistDialog/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1601642520381" />
-    <state x="-2961" y="622" width="536" height="193" key="Github.ShareDialog" timestamp="1602704965211">
-      <screen x="-3840" y="9" width="2560" height="1420" />
-    </state>
-    <state x="-2961" y="622" key="Github.ShareDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602704965210" />
-    <state x="-2961" y="617" width="536" height="193" key="Github.ShareDialog/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1601642638195" />
-    <state x="-2781" y="340" width="1013" height="754" key="Github.UntrackedFilesDialog" timestamp="1602704973963">
-      <screen x="-3840" y="9" width="2560" height="1420" />
-    </state>
-    <state x="-2781" y="340" key="Github.UntrackedFilesDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602704973963" />
-    <state x="-2781" y="337" width="1013" height="754" key="Github.UntrackedFilesDialog/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1601642649247" />
-    <state x="-2788" y="333" key="RollbackChangesDialog" timestamp="1602851756229">
-      <screen x="-3840" y="9" width="2560" height="1420" />
-    </state>
-    <state x="-2788" y="333" key="RollbackChangesDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602851756229" />
-    <state x="-3028" y="360" key="SettingsEditor" timestamp="1602704939404">
-      <screen x="-3840" y="9" width="2560" height="1420" />
-    </state>
-    <state x="-3028" y="360" key="SettingsEditor/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602704939404" />
-    <state x="-2967" y="443" key="Vcs.Push.Dialog.v2" timestamp="1603331236232">
-      <screen x="-3840" y="9" width="2560" height="1409" />
-    </state>
-    <state x="-2967" y="443" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1603331236232" />
-    <state x="-3747" y="102" width="2375" height="1224" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1602852396400">
-      <screen x="-3840" y="9" width="2560" height="1420" />
-    </state>
-    <state x="-3747" y="102" width="2375" height="1224" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1602852396400" />
-    <state x="-3747" y="102" width="2375" height="1224" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@307.1080.1600.1170" timestamp="1602689775501" />
-    <state x="-3779" y="96" width="2373" height="1163" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603766959507">
-      <screen x="-3840" y="9" width="2560" height="1409" />
-    </state>
-    <state x="-7" y="0" width="1656" height="916" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1603031262893" />
-    <state x="-7" y="0" width="1076" height="725" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@0.0.1920.1050" timestamp="1602773775462" />
-    <state x="345" y="1204" width="1447" height="966" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@307.1080.1600.1170" timestamp="1602704691439" />
-    <state x="-3779" y="96" width="2373" height="1163" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050/-3840.9.2560.1409/0.2160.1600.1170@-3840.9.2560.1409" timestamp="1603460955680" />
-    <state x="-3779" y="96" width="2373" height="1163" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050/-3840.9.2560.1409/110.1080.1600.1170@-3840.9.2560.1409" timestamp="1603766959507" />
-    <state x="-3779" y="96" width="2373" height="1163" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1603378953237" />
-    <state x="-2926" y="329" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602439151935">
-      <screen x="-3840" y="9" width="2560" height="1409" />
-    </state>
-    <state x="-2926" y="329" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1602439151935" />
-    <state x="-2779" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603284069894">
-      <screen x="-3840" y="9" width="2560" height="1409" />
-    </state>
-    <state x="-2779" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1603284069894" />
-    <state x="-2861" y="300" width="602" height="828" key="find.popup" timestamp="1603289776410">
-      <screen x="-3840" y="9" width="2560" height="1409" />
-    </state>
-    <state x="-2861" y="300" width="602" height="828" key="find.popup/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1603289776410" />
-    <state x="-3009" y="233" width="896" height="910" key="search.everywhere.popup" timestamp="1604073219909">
-      <screen x="-3840" y="-72" width="2560" height="1409" />
-    </state>
-    <state x="-3009" y="233" width="896" height="910" key="search.everywhere.popup/-3840.-72.2560.1409/981.2160.1600.1170/0.0.2560.1409@-3840.-72.2560.1409" timestamp="1604073219909" />
-    <state x="-3009" y="316" width="896" height="917" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@-3840.9.2560.1420" timestamp="1603121367546" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@0.0.1920.1050" timestamp="1602350476090" />
-    <state x="826" y="1333" width="672" height="756" key="search.everywhere.popup/-3840.9.2560.1420/307.1080.1600.1170/0.0.1920.1050@307.1080.1600.1170" timestamp="1602704768937" />
-    <state x="-3009" y="314" width="896" height="910" key="search.everywhere.popup/0.0.1920.1050/-3840.9.2560.1409/0.2160.1600.1170@-3840.9.2560.1409" timestamp="1603461391515" />
-    <state x="-3009" y="314" width="896" height="910" key="search.everywhere.popup/0.0.1920.1050/-3840.9.2560.1409/110.1080.1600.1170@-3840.9.2560.1409" timestamp="1603766931117" />
-    <state x="-3009" y="314" width="896" height="910" key="search.everywhere.popup/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@-3840.9.2560.1409" timestamp="1603378828970" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-3840.9.2560.1409/307.1080.1600.1170@0.0.1920.1050" timestamp="1602592399805" />
+    <state x="-2897" y="336" width="672" height="678" key="search.everywhere.popup/0.0.2560.1409/-3840.18.2560.1409/0.2160.1600.1170@-3840.18.2560.1409" timestamp="1608642996110" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -331,6 +319,11 @@
           <url>file://$PROJECT_DIR$/menus/lumbermill/Renamecollection.py</url>
           <line>25</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/menus/Shading/SetupShaderColor.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -20,6 +20,7 @@ class utilities(bpy.types.Panel):
         self.layout.row().operator("object.open_shot")
         self.layout.row().operator("object.delete_defaults")
         self.layout.row().operator("object.import_references")
+        self.layout.row().operator("object.import_audio")
         self.layout.row().operator("object.delete_turntable")
         self.layout.row().operator("object.setup_collections")
         self.layout.row().operator("object.fix_collection_name")
@@ -35,3 +36,4 @@ class utilities(bpy.types.Panel):
         self.layout.row().operator("object.collection_to_asset")
         self.layout.row().operator("object.open_documentation")
         self.layout.row().operator("object.source_to_render")
+        self.layout.row().operator("object.copy_to_anim_project")

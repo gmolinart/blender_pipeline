@@ -1,11 +1,11 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 import os
 
 
 def get_users(self, context):
     scene = bpy.types.Scene.scene_enum
-    path_object = lm.LumberObject(get_shot_from_name(scene))
+    path_object = alc.LumberObject(get_shot_from_name(scene))
 
     users = os.listdir(path_object.split_after('task'))
 
@@ -21,11 +21,11 @@ def get_users(self, context):
 
 
 def get_items(self, context):
-    from cgl.plugins.blender import lumbermill as lm
+    from cgl.plugins.blender import alchemy as alc
     import os
 
-    scene = lm.scene_object()
-    project = lm.LumberObject(scene.split_after('project'))
+    scene = alc.scene_object()
+    project = alc.LumberObject(scene.split_after('project'))
     proj_shots = project.copy(scope='shots', context='source')
 
     print('_______________SHOTS___________')
@@ -63,7 +63,7 @@ def get_shot_from_name(keys=''):
     shot = keys.split(' ')[1]
     task = keys.split(' ')[3]
 
-    current_scene = lm.scene_object()
+    current_scene = alc.scene_object()
     dict_ = {'company': current_scene.company,
              'context': 'source',
              'project': current_scene.project,
@@ -75,7 +75,7 @@ def get_shot_from_name(keys=''):
              'resolution': 'high'
              }
 
-    path_object = lm.LumberObject(dict_)
+    path_object = alc.LumberObject(dict_)
     path_object.set_attr(filename='%s_%s_%s.%s' % (path_object.seq,
                                                    path_object.shot,
                                                    path_object.task,
@@ -91,7 +91,7 @@ def get_shot_from_name(keys=''):
     task = keys.split(' ')[2]
     user = keys.split(' ')[3]
 
-    current_scene = lm.scene_object()
+    current_scene = alc.scene_object()
     dict_ = {'company': current_scene.company,
              'context': 'source',
              'project': current_scene.project,
@@ -103,7 +103,7 @@ def get_shot_from_name(keys=''):
              'resolution': 'high'
              }
 
-    path_object = lm.LumberObject(dict_)
+    path_object = alc.LumberObject(dict_)
     default_asset = path_object.latest_version()
     return default_asset
 
@@ -126,7 +126,7 @@ class DialogUser(bpy.types.Operator):
         open_file = path_object.latest_version().copy(set_proper_filename=True).path_root
 
         message = 'selected {}'.format(open_file)
-        lm.open_file(open_file)
+        alc.open_file(open_file)
         self.report({'INFO'}, message)
 
         return {'FINISHED'}

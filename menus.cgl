@@ -167,6 +167,12 @@
                     "module": "import cgl_tools.blender.menus.Modeling.FixMeshName as FixMeshName; FixMeshName.run()",
                     "name": "FixMeshName",
                     "order": 9
+                },
+                {
+                    "label": "ImportBaseMesh",
+                    "module": "import cgl_tools.blender.menus.Modeling.ImportBaseMesh as ImportBaseMesh; ImportBaseMesh.run()",
+                    "name": "ImportBaseMesh",
+                    "order": 10
                 }
             ],
             "name": "Modeling"
@@ -300,10 +306,16 @@
                     "order": 21
                 },
                 {
+                    "label": "Edgard",
+                    "module": "import cgl_tools.blender.menus.Rigging.Edgard as Edgard; Edgard.run()",
+                    "name": "Edgard",
+                    "order": 22
+                },
+                {
                     "label": "RemoveDrivers",
                     "module": "import cgl_tools.blender.menus.Rigging.RemoveDrivers as RemoveDrivers; RemoveDrivers.run()",
                     "name": "RemoveDrivers",
-                    "order": 22
+                    "order": 23
                 }
             ],
             "name": "Rigging"
@@ -381,6 +393,24 @@
                     "module": "import cgl_tools.blender.menus.Animation.GreasePencilSwitch as GreasePencilSwitch; GreasePencilSwitch.run()",
                     "name": "GreasePencilSwitch",
                     "order": 12
+                },
+                {
+                    "label": "GpMainLayers",
+                    "module": "import cgl_tools.blender.menus.Animation.GpMainLayers as GpMainLayers; GpMainLayers.run()",
+                    "name": "GpMainLayers",
+                    "order": 13
+                },
+                {
+                    "label": "Interactive",
+                    "module": "import cgl_tools.blender.menus.Animation.Interactive as Interactive; Interactive.run()",
+                    "name": "Interactive",
+                    "order": 14
+                },
+                {
+                    "label": "CurrentFrame",
+                    "module": "import cgl_tools.blender.menus.Animation.CurrentFrame as CurrentFrame; CurrentFrame.run()",
+                    "name": "CurrentFrame",
+                    "order": 15
                 }
             ],
             "name": "Animation"
@@ -439,6 +469,12 @@
                     "module": "import cgl_tools.blender.menus.Lighting.SplitScene as SplitScene; SplitScene.run()",
                     "name": "SplitScene",
                     "order": 3
+                },
+                {
+                    "label": "ImportRig",
+                    "module": "import cgl_tools.blender.menus.Lighting.ImportRig as ImportRig; ImportRig.run()",
+                    "name": "ImportRig",
+                    "order": 4
                 }
             ],
             "name": "Lighting"
@@ -482,94 +518,106 @@
                     "order": 6
                 },
                 {
+                    "label": "ImportAudio",
+                    "module": "import cgl_tools.blender.menus.utilities.ImportAudio as ImportAudio; ImportAudio.run()",
+                    "name": "ImportAudio",
+                    "order": 7
+                },
+                {
                     "label": "DeleteTurntable",
                     "module": "import cgl_tools.blender.menus.utilities.DeleteTurntable as DeleteTurntable; DeleteTurntable.run()",
                     "name": "DeleteTurntable",
-                    "order": 7
+                    "order": 8
                 },
                 {
                     "label": "SetupCollections",
                     "module": "import cgl_tools.blender.menus.utilities.SetupCollections as SetupCollections; SetupCollections.run()",
                     "name": "SetupCollections",
-                    "order": 8
+                    "order": 9
                 },
                 {
                     "label": "FixCollectionName",
                     "module": "import cgl_tools.blender.menus.utilities.FixCollectionName as FixCollectionName; FixCollectionName.run()",
                     "name": "FixCollectionName",
-                    "order": 9
+                    "order": 10
                 },
                 {
                     "label": "RenameObject",
                     "module": "import cgl_tools.blender.menus.utilities.RenameObject as RenameObject; RenameObject.run()",
                     "name": "RenameObject",
-                    "order": 10
+                    "order": 11
                 },
                 {
                     "label": "CleanupScene",
                     "module": "import cgl_tools.blender.menus.utilities.CleanupScene as CleanupScene; CleanupScene.run()",
                     "name": "CleanupScene",
-                    "order": 11
+                    "order": 12
                 },
                 {
                     "label": "ShowInFolder",
                     "module": "import cgl_tools.blender.menus.utilities.ShowInFolder as ShowInFolder; ShowInFolder.run()",
                     "name": "ShowInFolder",
-                    "order": 12
+                    "order": 13
                 },
                 {
                     "label": "DeleteWorkspaces",
                     "module": "import cgl_tools.blender.menus.utilities.DeleteWorkspaces as DeleteWorkspaces; DeleteWorkspaces.run()",
                     "name": "DeleteWorkspaces",
-                    "order": 13
+                    "order": 14
                 },
                 {
                     "label": "SwitchUsers",
                     "module": "import cgl_tools.blender.menus.utilities.SwitchUsers as SwitchUsers; SwitchUsers.run()",
                     "name": "SwitchUsers",
-                    "order": 14
+                    "order": 15
                 },
                 {
                     "label": "SwitchTask",
                     "module": "import cgl_tools.blender.menus.utilities.SwitchTask as SwitchTask; SwitchTask.run()",
                     "name": "SwitchTask",
-                    "order": 15
+                    "order": 16
                 },
                 {
                     "label": "SwitchVersions",
                     "module": "import cgl_tools.blender.menus.utilities.SwitchVersions as SwitchVersions; SwitchVersions.run()",
                     "name": "SwitchVersions",
-                    "order": 16
+                    "order": 17
                 },
                 {
                     "label": "SwitchResolution",
                     "module": "import cgl_tools.blender.menus.utilities.SwitchResolution as SwitchResolution; SwitchResolution.run()",
                     "name": "SwitchResolution",
-                    "order": 17
+                    "order": 18
                 },
                 {
                     "label": "OpenSelected",
                     "module": "import cgl_tools.blender.menus.utilities.OpenSelected as OpenSelected; OpenSelected.run()",
                     "name": "OpenSelected",
-                    "order": 18
+                    "order": 19
                 },
                 {
                     "label": "CollectionToAsset",
                     "module": "import cgl_tools.blender.menus.utilities.CollectionToAsset as CollectionToAsset; CollectionToAsset.run()",
                     "name": "CollectionToAsset",
-                    "order": 19
+                    "order": 20
                 },
                 {
                     "label": "OpenDocumentation",
                     "module": "import cgl_tools.blender.menus.utilities.OpenDocumentation as OpenDocumentation; OpenDocumentation.run()",
                     "name": "OpenDocumentation",
-                    "order": 20
+                    "order": 21
                 },
                 {
                     "label": "SourceToRender",
                     "module": "import cgl_tools.blender.menus.utilities.SourceToRender as SourceToRender; SourceToRender.run()",
                     "name": "SourceToRender",
-                    "order": 21
+                    "order": 22
+                },
+                {
+                    "label": "CopyToAnimProject",
+                    "module": "import cgl_tools.blender.menus.utilities.CopyToAnimProject as CopyToAnimProject; CopyToAnimProject.run()",
+                    "name": "CopyToAnimProject",
+                    "order": 23
                 }
             ],
             "name": "utilities"
@@ -635,6 +683,12 @@
                     "module": "import cgl_tools.blender.menus.Navigation.CopyToUser as CopyToUser; CopyToUser.run()",
                     "name": "CopyToUser",
                     "order": 10
+                },
+                {
+                    "label": "CopyToTask",
+                    "module": "import cgl_tools.blender.menus.Navigation.CopyToTask as CopyToTask; CopyToTask.run()",
+                    "name": "CopyToTask",
+                    "order": 11
                 }
             ],
             "name": "Navigation"

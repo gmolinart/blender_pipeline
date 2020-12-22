@@ -1,5 +1,5 @@
 import bpy
-from  cgl.plugins.blender import lumbermill as lm
+from  cgl.plugins.blender import alchemy as alc
 
 class PublishItem(bpy.types.Operator):
     """
@@ -22,16 +22,16 @@ def run():
     This run statement is what's executed when your button is pressed in blender.
     :return:
     """
-    scene = lm.scene_object()
+    scene = alc.scene_object()
 
     if scene.context == 'source':
         if scene.resolution == 'high':
-            lm.launch_preflight()
+            alc.launch_preflight()
 
 
         else:
-            lm.confirm_prompt(message="This is a low resolution version , please publish high file")
+            alc.confirm_prompt(message="This is a low resolution version , please publish high file")
 
     else:
-        lm.confirm_prompt(message="files in the render context shouldn't be published please switch to source file")
+        alc.confirm_prompt(message="files in the render context shouldn't be published please switch to source file")
 
