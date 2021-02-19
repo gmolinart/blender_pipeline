@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 class DeleteTurntable(bpy.types.Operator):
     """
@@ -23,5 +23,5 @@ def run():
     :return:
     """
     print('Hello World!: button_template')
-    lm.clean_turntable()
+    alc.clean_turntable()
 

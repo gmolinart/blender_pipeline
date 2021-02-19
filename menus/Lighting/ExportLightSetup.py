@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 import os
 
 class ExportLightSetup(bpy.types.Operator):
@@ -19,7 +19,7 @@ class ExportLightSetup(bpy.types.Operator):
 
 
 def export_to_task(assetName, task):
-    task_to_export = lm.scene_object().copy(task=task,
+    task_to_export = alc.scene_object().copy(task=task,
                                             set_proper_filename=True,
                                             shot=assetName).next_major_version()
 
@@ -34,7 +34,7 @@ def export_to_task(assetName, task):
 
 
 def get_default_lighting():
-    current_scene = lm.scene_object()
+    current_scene = alc.scene_object()
     dict_ = {'company': current_scene.company,
              'context': 'source',
              'project': current_scene.project,
@@ -46,7 +46,7 @@ def get_default_lighting():
              'resolution': 'high'
              }
 
-    path_object = lm.LumberObject(dict_)
+    path_object = alc.PathObject(dict_)
     path_object.copy(set_proper_filename=True)
     # return (default_light)
 
@@ -61,7 +61,7 @@ def run():
     """
     collection = bpy.context.collection
     light_task = export_to_task(collection.name, task='light')
-    lm.save_file_as(light_task.path_root)
+    alc.save_file_as(light_task.path_root)
     bpy.ops.object.build()
     collection.name = bpy.context.scene.name
-    lm.save_file()
+    alc.save_file()

@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 from cgl.plugins.blender import utils as utils
 import json
 
@@ -26,7 +26,7 @@ def read_materials(path_object=None):
 
     :type path_object: object
     """
-    from cgl.plugins.blender import lumbermill as lm
+    from cgl.plugins.blender import alchemy as alc
     from cgl.core.utils.read_write import load_json
     """
     Reads the materials on the shdr task from defined from a json file
@@ -34,7 +34,7 @@ def read_materials(path_object=None):
     """
     import bpy
     if path_object is None:
-        path_object = lm.scene_object()
+        path_object = alc.scene_object()
 
     shaders = path_object.copy(task='shd', user='publish', set_proper_filename=True).latest_version()
     outFile = shaders.copy(ext='json').path_root
@@ -49,7 +49,7 @@ def read_materials(path_object=None):
         for material in data[obj].keys():
 
             if material not in bpy.data.materials:
-                lm.import_file(shaders.path_root, collection_name=material, type='MATERIAL', linked=False)
+                alc.import_file(shaders.path_root, collection_name=material, type='MATERIAL', linked=False)
 
             if material not in object.data.materials:
                 object.data.materials.append(bpy.data.materials[material])
@@ -78,4 +78,4 @@ def run():
 
         read_materials()
     except FileNotFoundError:
-        lm.confirm_prompt(message= 'the latest shader task is empty please export shader again')
+        alc.confirm_prompt(message= 'the latest shader task is empty please export shader again')

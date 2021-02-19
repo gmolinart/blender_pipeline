@@ -1,12 +1,12 @@
 import bpy
 import os
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 def get_items(self, context):
-    from cgl.plugins.blender import lumbermill as lm
+    from cgl.plugins.blender import alchemy as alc
     import os
 
-    scene = lm.scene_object()
+    scene = alc.scene_object()
 
     tasks = scene.glob_project_element('task')
     print(tasks)
@@ -27,19 +27,19 @@ class SwitchTask(bpy.types.Operator):
 
     def execute(self, context):
         self.report({'INFO'}, "Selected: %s" % self.selected_task)
-        new_user = lm.scene_object().copy(task=self.selected_task,set_proper_filename=True).latest_version().path_root
+        new_user = alc.scene_object().copy(task=self.selected_task,set_proper_filename=True).latest_version().path_root
         if os.path.isfile(new_user):
-            lm.open_file(new_user)
+            alc.open_file(new_user)
 
         else:
-            new_user = lm.scene_object().copy(task=self.selected_task,
+            new_user = alc.scene_object().copy(task=self.selected_task,
                                               user = 'publish',
                                               set_proper_filename=True).latest_version().path_root
             if os.path.isfile(new_user):
-                lm.open_file(new_user)
+                alc.open_file(new_user)
             else:
 
-                lm.confirm_prompt(message = 'file des not exist, please check manually  ')
+                alc.confirm_prompt(message = 'file des not exist, please check manually  ')
 
         return {'FINISHED'}
 

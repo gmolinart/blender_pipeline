@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 class CreateInstance(bpy.types.Operator):
     """
@@ -47,7 +47,7 @@ def run():
 
         settings.instance_collection = instanced_collection
         instance.name = obj.name.split('.')[0]
-        lm.confirm_prompt(message='Instance Created')
+        alc.confirm_prompt(message='Instance Created')
     else:
 
-        lm.confirm_prompt(message='instance created please select collection in the render section ')
+        alc.confirm_prompt(message='instance created please select collection in the render section ')

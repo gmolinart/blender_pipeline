@@ -1,5 +1,5 @@
 import bpy
-# from cgl.plugins.blender import lumbermill as lm
+# from cgl.plugins.blender import Alchemy as alc
 
 class ImportAudio(bpy.types.Operator):
     """
@@ -17,7 +17,7 @@ class ImportAudio(bpy.types.Operator):
         return {'FINISHED'}
 
 
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 import bpy
 
 
@@ -42,7 +42,7 @@ def run():
     :return:
     """
 
-    audio = lm.scene_object().copy(task='audio', ext='mp3', latest=True, set_proper_filename=True)
+    audio = alc.scene_object().copy(task='audio', ext='mp3', latest=True, set_proper_filename=True)
 
     import_audio(audio.path_root, audio.filename_base)
 

@@ -1,5 +1,4 @@
 import bpy
-# from cgl.plugins.blender import lumbermill as lm
 
 class IkFkSwitch(bpy.types.Operator):
     """

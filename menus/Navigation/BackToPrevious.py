@@ -1,5 +1,5 @@
 import bpy
-# from cgl.plugins.blender import lumbermill as lm
+# from cgl.plugins.blender import Alchemy as alc
 
 class BackToPrevious(bpy.types.Operator):
     """
@@ -24,7 +24,7 @@ def run():
     """
 
     from os.path import exists, basename
-    from cgl.plugins.blender import lumbermill as lm
+    from cgl.plugins.blender import alchemy as alc
     fp = bpy.utils.user_resource('CONFIG', "recent-files.txt")
     print(fp)
 
@@ -34,6 +34,6 @@ def run():
     except (IOError, OSError, FileNotFoundError):
         recent_files = []
 
-    lm.open_file(recent_files[0])
+    alc.open_file(recent_files[0])
 
 

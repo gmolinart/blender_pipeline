@@ -1,15 +1,15 @@
 import bpy
-# from cgl.plugins.blender import lumbermill as lm
+# from cgl.plugins.blender import Alchemy as alc
 
 
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 import os
 
 
 def get_users(self, context):
     scene = bpy.types.Scene.scene_enum
-    path_object = lm.LumberObject(get_shot_from_name(scene))
+    path_object = alc.PathObject(get_shot_from_name(scene))
 
     users = os.listdir(path_object.split_after('task'))
 
@@ -25,11 +25,11 @@ def get_users(self, context):
 
 
 def get_lights_setups(self, context):
-    from cgl.plugins.blender import lumbermill as lm
+    from cgl.plugins.blender import alchemy as alc
     import os
 
-    scene = lm.scene_object()
-    project = lm.LumberObject(scene.split_after('project'))
+    scene = alc.scene_object()
+    project = alc.PathObject(scene.split_after('project'))
     proj_shots = project.copy(scope='shots', context='source')
 
     print('_______________SHOTS___________')
@@ -67,7 +67,7 @@ def get_shot_from_name(keys=''):
     shot = keys.split(' ')[1]
     task = keys.split(' ')[3]
 
-    current_scene = lm.scene_object()
+    current_scene = alc.scene_object()
     dict_ = {'company': current_scene.company,
              'context': 'source',
              'project': current_scene.project,
@@ -79,7 +79,7 @@ def get_shot_from_name(keys=''):
              'resolution': 'high'
              }
 
-    path_object = lm.LumberObject(dict_)
+    path_object = alc.PathObject(dict_)
     path_object.set_attr(filename='%s_%s_%s.%s' % (path_object.seq,
                                                    path_object.shot,
                                                    path_object.task,
@@ -95,7 +95,7 @@ def get_shot_from_name(keys=''):
     task = keys.split(' ')[2]
     user = keys.split(' ')[3]
 
-    current_scene = lm.scene_object()
+    current_scene = alc.scene_object()
     dict_ = {'company': current_scene.company,
              'context': 'source',
              'project': current_scene.project,
@@ -107,7 +107,7 @@ def get_shot_from_name(keys=''):
              'resolution': 'high'
              }
 
-    path_object = lm.LumberObject(dict_)
+    path_object = alc.PathObject(dict_)
     default_asset = path_object.latest_version()
     return default_asset
 
@@ -133,7 +133,7 @@ class OpenLightShot(bpy.types.Operator):
 
         message = 'selected {}'.format(open_file.path_root)
 
-        lm.import_file(filepath=open_file.path_root, collection_name=path_object.filename_base, linked=False,
+        alc.import_file(filepath=open_file.path_root, collection_name=path_object.filename_base, linked=False,
                        append=False, type='COLLECTION')
         bpy.context.scene.collection.children.link(bpy.data.collections[path_object.filename_base])
         self.report({'INFO'}, message)

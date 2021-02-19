@@ -1,7 +1,7 @@
 import bpy
 
 
-# from cgl.plugins.blender import lumbermill as lm
+# from cgl.plugins.blender import Alchemy as alc
 
 class ImportReferences(bpy.types.Operator):
     """
@@ -23,9 +23,9 @@ def run():
     import bpy
     import os
 
-    from cgl.plugins.blender import lumbermill as lm
+    from cgl.plugins.blender import alchemy as alc
 
-    current_task = lm.scene_object()
+    current_task = alc.scene_object()
 
     ref = current_task.copy(task='ref', user='publish', filename='', context='render').latest_version()
 

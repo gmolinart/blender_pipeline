@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 class RenderWithAudio(bpy.types.Operator):
     """
@@ -23,7 +23,7 @@ def run():
     :return:
     """
 
-    lm.render(preview=True, audio=True)
+    alc.render(preview=True, audio=True)
 
     print('Hello World!: button_template')
 

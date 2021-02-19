@@ -1,7 +1,7 @@
 import os
 
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 
 def reorder_list(items, arg=''):
@@ -24,7 +24,7 @@ def reorder_list(items, arg=''):
 def get_task(self, context):
     scene = bpy.types.Scene.scene_enum
 
-    path_object = lm.LumberObject(get_asset_from_name(scene))
+    path_object = alc.PathObject(get_asset_from_name(scene))
     tasks = reorder_list(path_object.glob_project_element('task'), arg='rig')
     value = [(tasks[i], tasks[i], '') for i in range(len(tasks))]
 
@@ -33,7 +33,7 @@ def get_task(self, context):
 
 def get_users(self, context):
     scene = bpy.types.Scene.scene_enum
-    path_object = lm.LumberObject(get_asset_from_name(scene))
+    path_object = alc.PathObject(get_asset_from_name(scene))
 
     user_list = path_object.glob_project_element('user')
     if not user_list:
@@ -49,7 +49,7 @@ def get_users(self, context):
 
 def get_version(self, context):
     scene = bpy.types.Scene.scene_enum
-    path_object = lm.LumberObject(get_asset_from_name(scene))
+    path_object = alc.PathObject(get_asset_from_name(scene))
 
     versions = path_object.glob_project_element('version')
     version = versions.reverse()
@@ -83,7 +83,7 @@ class DialogUserB(bpy.types.Operator):
             pass
 
         if os.path.isfile((open_file)):
-            lm.reference_file(path_object.path_root, namespace=path_object.asset)
+            alc.reference_file(path_object.path_root, namespace=path_object.asset)
 
             name = path_object.asset
 
@@ -94,9 +94,9 @@ class DialogUserB(bpy.types.Operator):
                 objects.active = objects['{}:rig'.format(name)]
                 bpy.ops.object.proxy_make(object=rig)
         else:
-            lm.confirm_prompt(message= 'This file doesnt exist, please check for sync or review for errors')
+            alc.confirm_prompt(message= 'This file doesnt exist, please check for sync or review for errors')
 
-        # if lm.scene_object().type is not 'env':
+        # if alc.scene_object().type is not 'env':
         #     bpy.ops.object.setup_collections()
 
         self.report({'INFO'}, message)
@@ -112,11 +112,11 @@ bpy.utils.register_class(DialogUserB)
 
 
 def get_items(self, context):
-    from cgl.plugins.blender import lumbermill as lm
+    from cgl.plugins.blender import alchemy as alc
     import os
 
-    scene = lm.scene_object()
-    project = lm.LumberObject(scene.split_after('project'))
+    scene = alc.scene_object()
+    project = alc.PathObject(scene.split_after('project'))
     char = project.copy(scope='assets', seq='char')
 
     assets = ['char', 'prop', 'lib', 'veh', 'env']
@@ -154,7 +154,7 @@ def get_asset_from_name(keys=''):
 
     task = 'mdl'
 
-    current_scene = lm.scene_object()
+    current_scene = alc.scene_object()
     dict_ = {'company': current_scene.company,
              'context': 'source',
              'project': current_scene.project,
@@ -166,7 +166,7 @@ def get_asset_from_name(keys=''):
              'resolution': 'high'
              }
 
-    path_object = lm.LumberObject(dict_)
+    path_object = alc.PathObject(dict_)
     path_object.set_attr(filename='%s_%s_%s.%s' % (path_object.seq,
                                                    path_object.shot,
                                                    path_object.task,
@@ -192,7 +192,7 @@ class ImportAsset(bpy.types.Operator):
         bpy.types.Scene.scene_enum = self.my_enum + ' publish'
         bpy.ops.object.dialog_user_c('INVOKE_DEFAULT')
 
-        # lm.open_file(get_asset_from_name(self.my_enum).path_root)
+        # alc.open_file(get_asset_from_name(self.my_enum).path_root)
         return {'FINISHED'}
 
     def invoke(self, context, event):

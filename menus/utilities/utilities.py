@@ -4,12 +4,12 @@ import bpy
 class utilities(bpy.types.Panel):
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
-    bl_category = 'Lumbermill'
+    bl_category = 'Alchemy'
     bl_label = 'Utilities'
 
     def draw(self, context):
         """
-        in here we'll have all the buttons for the Panel in the order that lumbermill saves them in.
+        in here we'll have all the buttons for the Panel in the order that Alchemy saves them in.
         :param context:
         :return:
         """
@@ -36,4 +36,5 @@ class utilities(bpy.types.Panel):
         self.layout.row().operator("object.collection_to_asset")
         self.layout.row().operator("object.open_documentation")
         self.layout.row().operator("object.source_to_render")
+        self.layout.row().operator("object.render_to_source")
         self.layout.row().operator("object.copy_to_anim_project")

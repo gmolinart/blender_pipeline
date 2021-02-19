@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 from cgl.plugins.blender import utils as utils
 import json
 
@@ -20,7 +20,7 @@ class GetDefaultAction(bpy.types.Operator):
 
 
 def get_default_action():
-    current_scene = lm.scene_object()
+    current_scene = alc.scene_object()
     dict_ = {'company': current_scene.company,
              'context': 'source',
              'project': current_scene.project,
@@ -32,7 +32,7 @@ def get_default_action():
              'resolution': 'high'
              }
 
-    path_object = lm.LumberObject(dict_)
+    path_object = alc.PathObject(dict_)
     path_object.set_attr(filename='%s_%s_%s.%s' % (path_object.seq,
                                                    path_object.shot,
                                                    path_object.task,
@@ -47,7 +47,7 @@ def get_default_action():
             default_in_scene = True
 
     if not default_in_scene:
-        lm.import_file(filepath=default_action.path_root, linked=False, type='ANIM')
+        alc.import_file(filepath=default_action.path_root, linked=False, type='ANIM')
 
     return (default_action)
 

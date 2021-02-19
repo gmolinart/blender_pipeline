@@ -1,12 +1,12 @@
 import bpy
 import os
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 
 def get_items(self, context):
-    from cgl.plugins.blender import lumbermill as lm
+    from cgl.plugins.blender import alchemy as alc
 
-    scene = lm.scene_object()
+    scene = alc.scene_object()
 
     tasks = scene.glob_project_element('task')
     tasks.append('Base Mesh')
@@ -30,20 +30,20 @@ class ImportTask(bpy.types.Operator):
         self.report({'INFO'}, "Selected: %s" % self.selected_task)
 
         if self.selected_task == 'Base Mesh':
-            new_task = lm.scene_object().copy(context='render', task='mdl', type='lib', asset='baseMesh',
+            new_task = alc.scene_object().copy(context='render', task='mdl', type='lib', asset='baseMesh',
                                               user='publish',
                                               set_proper_filename=True).latest_version().path_root
         else:
 
-            new_task = lm.scene_object().copy(context='render', task=self.selected_task, user='publish',
+            new_task = alc.scene_object().copy(context='render', task=self.selected_task, user='publish',
                                               set_proper_filename=True).latest_version().path_root
         if os.path.isfile(new_task):
 
             print(new_task)
-            lm.import_file(new_task, linked=True, append=False)
+            alc.import_file(new_task, linked=True, append=False)
 
         else:
-            lm.confirm_prompt(
+            alc.confirm_prompt(
                 message='publish not found, please check if the task has been published or import manually  ')
 
         return {'FINISHED'}

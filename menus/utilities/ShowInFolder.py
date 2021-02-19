@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 class ShowInFolder(bpy.types.Operator):
     """
@@ -19,6 +19,6 @@ def run():
     :return:
     """
     print('Hello World!: button_template')
-    scene = lm.scene_object()
+    scene = alc.scene_object()
     scene.show_in_folder()
 

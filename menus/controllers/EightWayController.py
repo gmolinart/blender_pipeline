@@ -1,5 +1,5 @@
 import bpy
-# from cgl.plugins.blender import lumbermill as lm
+# from cgl.plugins.blender import Alchemy as lm
 
 class EightWayController(bpy.types.Operator):
     """

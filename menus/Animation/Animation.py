@@ -4,17 +4,16 @@ import bpy
 class Animation(bpy.types.Panel):
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
-    bl_category = 'Lumbermill'
+    bl_category = 'Alchemy'
     bl_label = 'Animation'
 
     def draw(self, context):
         """
-        in here we'll have all the buttons for the Panel in the order that lumbermill saves them in.
+        in here we'll have all the buttons for the Panel in the order that Alchemy saves them in.
         :param context:
         :return:
         """
         # ADD BUTTONS
-        self.layout.row().operator("object.publish")
         self.layout.row().operator("object.create_grease_pencil")
         self.layout.row().operator("object.copy_relationship")
         self.layout.row().operator("object.paste_relationship")
@@ -28,4 +27,4 @@ class Animation(bpy.types.Panel):
         self.layout.row().operator("object.grease_pencil_switch")
         self.layout.row().operator("object.gp_main_layers")
         self.layout.row().operator("object.interactive")
-        self.layout.row().operator("object.current_frame")
+        self.layout.row().operator("object.reset_rig_publish")

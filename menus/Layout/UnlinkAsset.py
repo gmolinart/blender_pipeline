@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 from cgl.core.utils.read_write import load_json
 
 
@@ -71,7 +71,7 @@ def unlink_asset(object):
 
         except AttributeError:
             pass
-        if filepath and lm.PathObject(filepath).type == 'env':
+        if filepath and alc.PathObject(filepath).type == 'env':
             remove_linked_environment_dependencies(libname.library)
 
         bpy.data.batch_remove(ids=(libname, obj))
@@ -80,7 +80,7 @@ def unlink_asset(object):
 def remove_linked_environment_dependencies(library):
     env = library
     bpy.ops.file.make_paths_absolute()
-    env_path = lm.LumberObject(env.filepath)
+    env_path = alc.PathObject(env.filepath)
     env_layout = env_path.copy(ext='json').path_root
 
     data = load_json(env_layout)

@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 import os
 class ExportToObj(bpy.types.Operator):
     """
@@ -28,7 +28,7 @@ def create_render_folder(scene):
 
 
 def export_obj(selected):
-    scene = lm.scene_object()
+    scene = alc.scene_object()
     obj_path = scene.copy(context='render', set_proper_filename=True, ext='obj')
 
     create_render_folder(scene)

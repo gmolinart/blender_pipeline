@@ -1,11 +1,11 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 
 def get_items(self, context):
-    from cgl.plugins.blender import lumbermill as lm
+    from cgl.plugins.blender import alchemy as alc
 
-    path_object = lm.scene_object()
+    path_object = alc.scene_object()
 
     versions = path_object.glob_project_element('version')
     version = versions.reverse()
@@ -28,8 +28,8 @@ class SwitchVersions(bpy.types.Operator):
 
     def execute(self, context):
         self.report({'INFO'}, "Selected: %s" % self.selected_versions)
-        new_user = lm.scene_object().copy(version=self.selected_versions).path_root
-        lm.open_file(new_user)
+        new_user = alc.scene_object().copy(version=self.selected_versions).path_root
+        alc.open_file(new_user)
         return {'FINISHED'}
 
     def invoke(self, context, event):

@@ -1,0 +1,249 @@
+{
+    "blender": [
+        {
+            "buttons": [
+                {
+                    "label": "CollectionName",
+                    "module": "cookbook.blender.pre_publish.mdl.CollectionName",
+                    "name": "CollectionName",
+                    "order": 1,
+                    "required": "True"
+                },
+                {
+                    "label": "WriteHirarchy",
+                    "module": "cookbook.blender.pre_publish.mdl.WriteHirarchy",
+                    "name": "WriteHirarchy",
+                    "order": 2,
+                    "required": "True"
+                },
+                {
+                    "label": "SaveCurrentScene",
+                    "module": "cookbook.blender.pre_publish.mdl.SaveCurrentScene",
+                    "name": "SaveCurrentScene",
+                    "order": 3,
+                    "required": "True"
+                },
+                {
+                    "label": "CleanTurntable",
+                    "module": "cookbook.blender.pre_publish.mdl.CleanTurntable",
+                    "name": "CleanTurntable",
+                    "order": 4,
+                    "required": "True"
+                },
+                {
+                    "label": "RemoveEnvironments",
+                    "module": "cookbook.blender.pre_publish.mdl.RemoveEnvironments",
+                    "name": "RemoveEnvironments",
+                    "order": 5,
+                    "required": "True"
+                },
+                {
+                    "label": "RemoveLinkedAssets",
+                    "module": "cookbook.blender.pre_publish.mdl.RemoveLinkedAssets",
+                    "name": "RemoveLinkedAssets",
+                    "order": 6,
+                    "required": "True"
+                },
+                {
+                    "label": "BakeModifiers",
+                    "module": "cookbook.blender.pre_publish.mdl.BakeModifiers",
+                    "name": "BakeModifiers",
+                    "order": 7,
+                    "required": "True"
+                },
+                {
+                    "label": "Resettransformations",
+                    "module": "cookbook.blender.pre_publish.mdl.Resettransformations",
+                    "name": "Resettransformations",
+                    "order": 8,
+                    "required": "True"
+                },
+                {
+                    "label": "ReadHirarachy",
+                    "module": "cookbook.blender.pre_publish.mdl.ReadHirarachy",
+                    "name": "ReadHirarachy",
+                    "order": 9,
+                    "required": "True"
+                },
+                {
+                    "label": "SetupMaterials",
+                    "module": "cookbook.blender.pre_publish.mdl.SetupMaterials",
+                    "name": "SetupMaterials",
+                    "order": 10,
+                    "required": "True"
+                },
+                {
+                    "label": "Publish",
+                    "module": "cookbook.blender.pre_publish.mdl.Publish",
+                    "name": "Publish",
+                    "order": 11,
+                    "required": "True"
+                }
+            ],
+            "name": "mdl"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "Publish",
+                    "module": "cookbook.blender.pre_publish.default.Publish",
+                    "name": "Publish",
+                    "order": 1,
+                    "required": "True"
+                }
+            ],
+            "name": "default"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "Savecurrentscene",
+                    "module": "cookbook.blender.pre_publish.rig.Savecurrentscene",
+                    "name": "Savecurrentscene",
+                    "order": 1,
+                    "required": "True"
+                },
+                {
+                    "label": "CleanTurntable",
+                    "module": "cookbook.blender.pre_publish.rig.CleanTurntable",
+                    "name": "CleanTurntable",
+                    "order": 2,
+                    "required": "True"
+                },
+                {
+                    "label": "CheckRigName",
+                    "module": "cookbook.blender.pre_publish.rig.CheckRigName",
+                    "name": "CheckRigName",
+                    "order": 3,
+                    "required": "True"
+                },
+                {
+                    "label": "Removeactions",
+                    "module": "cookbook.blender.pre_publish.rig.Removeactions",
+                    "name": "Removeactions",
+                    "order": 4,
+                    "required": "True"
+                },
+                {
+                    "label": "Parentmeshtorig",
+                    "module": "cookbook.blender.pre_publish.rig.Parentmeshtorig",
+                    "name": "Parentmeshtorig",
+                    "order": 5,
+                    "required": "True"
+                },
+                {
+                    "label": "Resetbones",
+                    "module": "cookbook.blender.pre_publish.rig.Resetbones",
+                    "name": "Resetbones",
+                    "order": 6,
+                    "required": "True"
+                },
+                {
+                    "label": "Publish",
+                    "module": "cookbook.blender.pre_publish.rig.Publish",
+                    "name": "Publish",
+                    "order": 7,
+                    "required": "True"
+                }
+            ],
+            "name": "rig"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "CheckProject",
+                    "module": "cookbook.blender.pre_publish.lay.CheckProject",
+                    "name": "CheckProject",
+                    "order": 1,
+                    "required": "True"
+                },
+                {
+                    "label": "CheckRelativePaths",
+                    "module": "cookbook.blender.pre_publish.lay.CheckRelativePaths",
+                    "name": "CheckRelativePaths",
+                    "order": 2,
+                    "required": "True"
+                },
+                {
+                    "label": "ExportMsd",
+                    "module": "cookbook.blender.pre_publish.lay.ExportMsd",
+                    "name": "ExportMsd",
+                    "order": 3,
+                    "required": "True"
+                },
+                {
+                    "label": "Publish",
+                    "module": "cookbook.blender.pre_publish.mdl.Publish",
+                    "name": "Publish",
+                    "order": 4,
+                    "required": "True"
+                }
+            ],
+            "name": "lay"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "ParentRigToAnimGroup",
+                    "module": "cookbook.blender.pre_publish.anim.ParentRigToAnimGroup",
+                    "name": "ParentRigToAnimGroup",
+                    "order": 1,
+                    "required": "True"
+                },
+                {
+                    "label": "WriteAlembic",
+                    "module": "cookbook.blender.pre_publish.anim.WriteAlembic",
+                    "name": "WriteAlembic",
+                    "order": 2,
+                    "required": "True"
+                },
+                {
+                    "label": "Publish",
+                    "module": "cookbook.blender.pre_publish.anim.Publish",
+                    "name": "Publish",
+                    "order": 3,
+                    "required": "True"
+                }
+            ],
+            "name": "anim"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "ExportAlembic",
+                    "module": "cookbook.blender.pre_publish.tex.ExportAlembic",
+                    "name": "ExportAlembic",
+                    "order": 1,
+                    "required": "True"
+                },
+                {
+                    "label": "ExportTextures",
+                    "module": "cookbook.blender.pre_publish.tex.ExportTextures",
+                    "name": "ExportTextures",
+                    "order": 2,
+                    "required": "True"
+                }
+            ],
+            "name": "tex"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "WriteMsd",
+                    "module": "cookbook.blender.pre_publish.shd.WriteMsd",
+                    "name": "WriteMsd",
+                    "order": 1,
+                    "required": "True"
+                },
+                {
+                    "label": "Publish",
+                    "module": "cookbook.blender.pre_publish.mdl.Publish",
+                    "name": "Publish",
+                    "order": 2,
+                    "required": "True"
+                }
+            ],
+            "name": "shd"
+        }
+    ]
+}

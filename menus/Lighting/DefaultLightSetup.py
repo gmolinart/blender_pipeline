@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 class DefaultLightSetup(bpy.types.Operator):
     """
@@ -18,7 +18,7 @@ class DefaultLightSetup(bpy.types.Operator):
 
 
 def get_default_lighting():
-    current_scene = lm.scene_object()
+    current_scene = alc.scene_object()
     dict_ = {'company': current_scene.company,
              'context': 'source',
              'project': current_scene.project,
@@ -30,7 +30,7 @@ def get_default_lighting():
              'resolution': 'high'
              }
 
-    path_object = lm.LumberObject(dict_)
+    path_object = alc.PathObject(dict_)
     path_object.set_attr(filename='%s_%s_%s.%s' % (path_object.seq,
                                                    path_object.shot,
                                                    path_object.task,
@@ -45,7 +45,7 @@ def get_default_lighting():
             default_in_scene = True
 
     if not default_in_scene:
-        lm.import_file(filepath=default_light.path_root, collection_name= path_object.filename_base, linked=False, append= False, type='COLLECTION' )
+        alc.import_file(filepath=default_light.path_root, collection_name= path_object.filename_base, linked=False, append= False, type='COLLECTION' )
 
     bpy.context.scene.collection.children.link(bpy.data.collections[path_object.filename_base])
 

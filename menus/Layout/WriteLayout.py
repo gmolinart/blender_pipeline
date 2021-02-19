@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 from cgl.plugins.blender import utils as utils
 import os
 
@@ -24,7 +24,7 @@ def write_layout(outFile=None):
     :param outFile:
     :return:
     """
-    from cgl.plugins.blender.lumbermill import scene_object, LumberObject
+    from cgl.plugins.blender.alchemy import scene_object, PathObject
     from cgl.core.utils.read_write import save_json
     import bpy
     from pathlib import Path
@@ -56,7 +56,7 @@ def write_layout(outFile=None):
 
                     libraryPath = bpy.path.abspath(collection_library.filepath)
                     filename = Path(bpy.path.abspath(libraryPath)).__str__()
-                    libObject = LumberObject(filename)
+                    libObject = PathObject(filename)
 
                     data[name] = {'name': libObject.asset,
                                   'source_path': libObject.path,
@@ -90,10 +90,10 @@ def run():
     Writes out the current scene to a json file
     :return:
     """
-    current_scene = lm.scene_object().copy(context='render')
+    current_scene = alc.scene_object().copy(context='render')
     folder = current_scene.copy(filename='')
 
-    outfile = current_scene = lm.scene_object().copy(context='render',
+    outfile = current_scene = alc.scene_object().copy(context='render',
                                                      ext='json',
                                                      set_proper_filename=True)
 

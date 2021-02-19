@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 class CorrectFileName(bpy.types.Operator):
     """
@@ -19,7 +19,7 @@ def run():
     :return:
     """
 
-    path_object = lm.scene_object()
-    lm.save_file_as(path_object.copy(set_proper_filename=True).path_root)
+    path_object = alc.scene_object()
+    alc.save_file_as(path_object.copy(set_proper_filename=True).path_root)
     print('filename fixed')
 

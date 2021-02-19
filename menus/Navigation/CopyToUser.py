@@ -1,13 +1,14 @@
 import os
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 from shutil import copyfile
 
 def get_name_from_user():
-    from cgl.core.config import app_config
+    # from cgl.core.config import app_config
+    from cgl.core.config.config import ProjectConfig
     import getpass
 
-    CONFIG = app_config()
+    CONFIG = ProjectConfig().project_config
     user = getpass.getuser().lower()
     current_user = CONFIG['project_management']['ftrack']['users'][user]['first']
     print(current_user)
@@ -15,8 +16,8 @@ def get_name_from_user():
 
 
 def get_items(self, context):
-    from cgl.plugins.blender import lumbermill as lm
-    scene = lm.scene_object()
+    from cgl.plugins.blender import alchemy as alc
+    scene = alc.scene_object()
 
     users = scene.glob_project_element('user')
     current_user = get_name_from_user()
@@ -40,7 +41,7 @@ class CopyToUser(bpy.types.Operator):
 
     def execute(self, context):
         self.report({'INFO'}, "Selected: %s" % self.my_enum)
-        new_user = lm.scene_object()
+        new_user = alc.scene_object()
 
         user_version = new_user.copy(user=self.my_enum)
         user_version_dir = user_version.copy(filename='')
@@ -49,15 +50,15 @@ class CopyToUser(bpy.types.Operator):
             new_version = new_version.new_minor_version_object()
 
         os.makedirs(new_version.path_root)
-        lm.save_file_as(new_version.copy(set_proper_filename=True).path_root)
-        lm.open_file(new_version.copy(set_proper_filename=True).path_root)
-        if os.path.isfile(lm.scene_object().copy(extension = 'json').path_root):
+        alc.save_file_as(new_version.copy(set_proper_filename=True).path_root)
+        alc.open_file(new_version.copy(set_proper_filename=True).path_root)
+        if os.path.isfile(alc.scene_object().copy(extension = 'json').path_root):
             print("______________Json File Saved____________")
-            copyfile(lm.scene_object().copy(extension = 'json').path_root,
+            copyfile(alc.scene_object().copy(extension = 'json').path_root,
                      new_version.copy(set_proper_filename=True,ext = 'json').path_root)
         else:
             print("______________No Json File on: ____________")
-            print(lm.scene_object().copy(extension = 'json').path_root)
+            print(alc.scene_object().copy(extension = 'json').path_root)
 
         return {'FINISHED'}
 

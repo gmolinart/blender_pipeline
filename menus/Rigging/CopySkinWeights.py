@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 class CopySkinWeights(bpy.types.Operator):
     """
@@ -116,5 +116,5 @@ def run():
         bpy.ops.object.cleanup_weights()
 
     else:
-        lm.confirm_prompt(message='please select source and destination mesh')
+        alc.confirm_prompt(message='please select source and destination mesh')
 

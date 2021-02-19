@@ -15,7 +15,11 @@ class FixCollectionName(bpy.types.Operator):
         return {'FINISHED'}
 
 
-def rename_collection(current_scene):
+def rename_collection(current_scene = None):
+
+    if current_scene == None:
+        current_scene = alc.scene_object()
+
     if current_scene.scope == 'assets':
         name = current_scene.asset
     else:
@@ -45,5 +49,4 @@ def run():
     :return:
     """
 
-    current_scene = alc.scene_object()
-    rename_collection(current_scene)
+    rename_collection()

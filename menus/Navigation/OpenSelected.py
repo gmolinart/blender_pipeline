@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 from pathlib import Path
 
 class OpenSelected(bpy.types.Operator):
@@ -35,9 +35,9 @@ def open_selected_library():
     libraryPath = bpy.path.abspath(library.filepath)
     filename = Path(bpy.path.abspath(libraryPath)).__str__()
 
-    lumber_object = lm.LumberObject(filename)
-    lm.save_file()
-    lm.open_file(lumber_object.copy(context = 'source').path_root)
+    lumber_object = alc.PathObject(filename)
+    alc.save_file()
+    alc.open_file(lumber_object.copy(context = 'source').path_root)
     #latestVersion = lumber_object.latest_version().path_root
 
 

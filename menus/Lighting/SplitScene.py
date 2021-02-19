@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 
 class SplitScene(bpy.types.Operator):
@@ -41,7 +41,7 @@ def get_division_list():
 
 
 def get_scene_name(item):
-    scene_name = "{}_{}".format(lm.scene_object().filename_base, item)
+    scene_name = "{}_{}".format(alc.scene_object().filename_base, item)
     return (scene_name)
 
 
@@ -53,12 +53,12 @@ def split_scene():
         bpy.ops.scene.new(type='LINK_COPY')
         bpy.context.scene.name = get_scene_name(i)
 
-        bpy.context.window.scene = bpy.data.scenes[lm.scene_object().filename_base]
+        bpy.context.window.scene = bpy.data.scenes[alc.scene_object().filename_base]
 
 
 def keep_single_user_collection(obj, assetName=None):
     if not assetName:
-        assetName = lm.scene_object().shot
+        assetName = alc.scene_object().shot
 
     try:
         bpy.data.collections[assetName].objects.link(obj)
@@ -85,13 +85,13 @@ def delete_elements():
             if not collection.name == item_to_keep:
                 bpy.context.scene.collection.children.unlink(bpy.data.collections[collection.name])
 
-        bpy.context.window.scene = bpy.data.scenes[lm.scene_object().filename_base]
+        bpy.context.window.scene = bpy.data.scenes[alc.scene_object().filename_base]
 
 
 def delete_duplicate_scenes():
     scenes = bpy.data.scenes
     for scene in scenes:
-        if not scene.name == lm.scene_object().filename_base:
+        if not scene.name == alc.scene_object().filename_base:
             bpy.context.window.scene = scene
             bpy.ops.scene.delete()
 
@@ -102,10 +102,10 @@ def cleanup_scene(assetName):
     '''
 
     if not assetName:
-        assetName = lm.scene_object().shot
+        assetName = alc.scene_object().shot
 
     rig_collection = bpy.data.collections[assetName]
-    sceneName = lm.scene_object().filename_base
+    sceneName = alc.scene_object().filename_base
     scenes = []
     for scene in bpy.data.scenes:
         scenes.append(scene.name)
@@ -145,7 +145,7 @@ def cleanup_scene(assetName):
         bpy.data.actions.remove(action)
 
     scene_collections = bpy.context.scene.collection
-    scene = lm.scene_object()
+    scene = alc.scene_object()
 
     if scene.type == 'prop':
 

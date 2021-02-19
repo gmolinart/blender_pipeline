@@ -1,11 +1,11 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 
 def get_items(self, context):
-    from cgl.plugins.blender import lumbermill as lm
+    from cgl.plugins.blender import alchemy as alc
 
-    scene = lm.scene_object()
+    scene = alc.scene_object()
 
     resolution = scene.glob_project_element('resolution')
     print(resolution)
@@ -27,8 +27,8 @@ class SwitchResolution(bpy.types.Operator):
 
     def execute(self, context):
         self.report({'INFO'}, "Selected: %s" % self.selected_resolution)
-        resolution = lm.scene_object().copy(resolution=self.selected_resolution).path_root
-        lm.open_file(resolution)
+        resolution = alc.scene_object().copy(resolution=self.selected_resolution).path_root
+        alc.open_file(resolution)
         return {'FINISHED'}
 
     def invoke(self, context, event):

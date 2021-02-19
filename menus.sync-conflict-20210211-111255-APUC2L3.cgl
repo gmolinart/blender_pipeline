@@ -1,0 +1,720 @@
+{
+    "blender": [
+        {
+            "buttons": [
+                {
+                    "label": "Launch",
+                    "module": "import cookbook.blender.menus.Alchemy.Launch as Launch; Launch.run()",
+                    "name": "Launch",
+                    "order": 1
+                },
+                {
+                    "label": "PublishItem",
+                    "module": "import cookbook.blender.menus.Alchemy.PublishItem as PublishItem; PublishItem.run()",
+                    "name": "PublishItem",
+                    "order": 2
+                },
+                {
+                    "label": "Build",
+                    "module": "import cookbook.blender.menus.Alchemy.Build as Build; Build.run()",
+                    "name": "Build",
+                    "order": 3
+                },
+                {
+                    "label": "VersionUp",
+                    "module": "import cookbook.blender.menus.Alchemy.VersionUp as VersionUp; VersionUp.run()",
+                    "name": "VersionUp",
+                    "order": 4
+                },
+                {
+                    "label": "Render",
+                    "module": "import cookbook.blender.menus.Alchemy.Render as Render; Render.run()",
+                    "name": "Render",
+                    "order": 5
+                },
+                {
+                    "label": "Review",
+                    "module": "import cookbook.blender.menus.Alchemy.Review as Review; Review.run()",
+                    "name": "Review",
+                    "order": 6
+                },
+                {
+                    "label": "Turntable",
+                    "module": "import cookbook.blender.menus.Alchemy.Turntable as Turntable; Turntable.run()",
+                    "name": "Turntable",
+                    "order": 7
+                },
+                {
+                    "label": "VersionToLatest",
+                    "module": "import cookbook.blender.menus.Alchemy.VersionToLatest as VersionToLatest; VersionToLatest.run()",
+                    "name": "VersionToLatest",
+                    "order": 8
+                }
+            ],
+            "name": "Alchemy"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "ReadLayout",
+                    "module": "import cookbook.blender.menus.Layout.ReadLayout as ReadLayout; ReadLayout.run()",
+                    "name": "ReadLayout",
+                    "order": 1
+                },
+                {
+                    "label": "WriteLayout",
+                    "module": "import cookbook.blender.menus.Layout.WriteLayout as WriteLayout; WriteLayout.run()",
+                    "name": "WriteLayout",
+                    "order": 2
+                },
+                {
+                    "label": "PublishCameras",
+                    "module": "import cookbook.blender.menus.Layout.PublishCameras as PublishCameras; PublishCameras.run()",
+                    "name": "PublishCameras",
+                    "order": 3
+                },
+                {
+                    "label": "RenameCameras",
+                    "module": "import cookbook.blender.menus.Layout.RenameCameras as RenameCameras; RenameCameras.run()",
+                    "name": "RenameCameras",
+                    "order": 4
+                },
+                {
+                    "label": "SwitchSelectedResolution",
+                    "module": "import cookbook.blender.menus.Layout.SwitchSelectedResolution as SwitchSelectedResolution; SwitchSelectedResolution.run()",
+                    "name": "SwitchSelectedResolution",
+                    "order": 5
+                },
+                {
+                    "label": "SwitchSelectedUser",
+                    "module": "import cookbook.blender.menus.Layout.SwitchSelectedUser as SwitchSelectedUser; SwitchSelectedUser.run()",
+                    "name": "SwitchSelectedUser",
+                    "order": 6
+                },
+                {
+                    "label": "SwitchSelectedVersion",
+                    "module": "import cookbook.blender.menus.Layout.SwitchSelectedVersion as SwitchSelectedVersion; SwitchSelectedVersion.run()",
+                    "name": "SwitchSelectedVersion",
+                    "order": 7
+                },
+                {
+                    "label": "UnlinkAsset",
+                    "module": "import cookbook.blender.menus.Layout.UnlinkAsset as UnlinkAsset; UnlinkAsset.run()",
+                    "name": "UnlinkAsset",
+                    "order": 8
+                },
+                {
+                    "label": "ReadLayoutFromSelected",
+                    "module": "import cookbook.blender.menus.Layout.ReadLayoutFromSelected as ReadLayoutFromSelected; ReadLayoutFromSelected.run()",
+                    "name": "ReadLayoutFromSelected",
+                    "order": 9
+                }
+            ],
+            "name": "Layout"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "Checknormals",
+                    "module": "import cookbook.blender.menus.Modeling.Checknormals as Checknormals; Checknormals.run()",
+                    "name": "Checknormals",
+                    "order": 1
+                },
+                {
+                    "label": "CreateLow",
+                    "module": "import cookbook.blender.menus.Modeling.CreateLow as CreateLow; CreateLow.run()",
+                    "name": "CreateLow",
+                    "order": 2
+                },
+                {
+                    "label": "PublishLow",
+                    "module": "import cookbook.blender.menus.Modeling.PublishLow as PublishLow; PublishLow.run()",
+                    "name": "PublishLow",
+                    "order": 3
+                },
+                {
+                    "label": "CenterReset",
+                    "module": "import cookbook.blender.menus.Modeling.CenterReset as CenterReset; CenterReset.run()",
+                    "name": "CenterReset",
+                    "order": 4
+                },
+                {
+                    "label": "ExportToObj",
+                    "module": "import cookbook.blender.menus.Modeling.ExportToObj as ExportToObj; ExportToObj.run()",
+                    "name": "ExportToObj",
+                    "order": 5
+                },
+                {
+                    "label": "WriteMeshList",
+                    "module": "import cookbook.blender.menus.Modeling.WriteMeshList as WriteMeshList; WriteMeshList.run()",
+                    "name": "WriteMeshList",
+                    "order": 6
+                },
+                {
+                    "label": "UpdateResolutions",
+                    "module": "import cookbook.blender.menus.Modeling.UpdateResolutions as UpdateResolutions; UpdateResolutions.run()",
+                    "name": "UpdateResolutions",
+                    "order": 7
+                },
+                {
+                    "label": "CopyLatestLow",
+                    "module": "import cookbook.blender.menus.Modeling.CopyLatestLow as CopyLatestLow; CopyLatestLow.run()",
+                    "name": "CopyLatestLow",
+                    "order": 8
+                },
+                {
+                    "label": "FixMeshName",
+                    "module": "import cookbook.blender.menus.Modeling.FixMeshName as FixMeshName; FixMeshName.run()",
+                    "name": "FixMeshName",
+                    "order": 9
+                },
+                {
+                    "label": "ImportBaseMesh",
+                    "module": "import cookbook.blender.menus.Modeling.ImportBaseMesh as ImportBaseMesh; ImportBaseMesh.run()",
+                    "name": "ImportBaseMesh",
+                    "order": 10
+                }
+            ],
+            "name": "Modeling"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "SimpleController",
+                    "module": "import cookbook.blender.menus.Rigging.SimpleController as SimpleController; SimpleController.run()",
+                    "name": "SimpleController",
+                    "order": 1
+                },
+                {
+                    "label": "Fixrignames",
+                    "module": "import cookbook.blender.menus.Rigging.Fixrignames as Fixrignames; Fixrignames.run()",
+                    "name": "Fixrignames",
+                    "order": 2
+                },
+                {
+                    "label": "ParentMeshToRig",
+                    "module": "import cookbook.blender.menus.Rigging.ParentMeshToRig as ParentMeshToRig; ParentMeshToRig.run()",
+                    "name": "ParentMeshToRig",
+                    "order": 3
+                },
+                {
+                    "label": "Checkshaders",
+                    "module": "import cookbook.blender.menus.Rigging.Checkshaders as Checkshaders; Checkshaders.run()",
+                    "name": "Checkshaders",
+                    "order": 4
+                },
+                {
+                    "label": "CleanupRig",
+                    "module": "import cookbook.blender.menus.Rigging.CleanupRig as CleanupRig; CleanupRig.run()",
+                    "name": "CleanupRig",
+                    "order": 5
+                },
+                {
+                    "label": "ResetArmature",
+                    "module": "import cookbook.blender.menus.Rigging.ResetArmature as ResetArmature; ResetArmature.run()",
+                    "name": "ResetArmature",
+                    "order": 6
+                },
+                {
+                    "label": "CreateHooks",
+                    "module": "import cookbook.blender.menus.Rigging.CreateHooks as CreateHooks; CreateHooks.run()",
+                    "name": "CreateHooks",
+                    "order": 7
+                },
+                {
+                    "label": "RemoveConstraints",
+                    "module": "import cookbook.blender.menus.Rigging.RemoveConstraints as RemoveConstraints; RemoveConstraints.run()",
+                    "name": "RemoveConstraints",
+                    "order": 8
+                },
+                {
+                    "label": "RemoveModifiers",
+                    "module": "import cookbook.blender.menus.Rigging.RemoveModifiers as RemoveModifiers; RemoveModifiers.run()",
+                    "name": "RemoveModifiers",
+                    "order": 9
+                },
+                {
+                    "label": "CorrectiveBlendShapes",
+                    "module": "import cookbook.blender.menus.Rigging.CorrectiveBlendShapes as CorrectiveBlendShapes; CorrectiveBlendShapes.run()",
+                    "name": "CorrectiveBlendShapes",
+                    "order": 10
+                },
+                {
+                    "label": "SetupRigTest",
+                    "module": "import cookbook.blender.menus.Rigging.SetupRigTest as SetupRigTest; SetupRigTest.run()",
+                    "name": "SetupRigTest",
+                    "order": 11
+                },
+                {
+                    "label": "GetDefaultAction",
+                    "module": "import cookbook.blender.menus.Rigging.GetDefaultAction as GetDefaultAction; GetDefaultAction.run()",
+                    "name": "GetDefaultAction",
+                    "order": 12
+                },
+                {
+                    "label": "GetDefaultCamera",
+                    "module": "import cookbook.blender.menus.Rigging.GetDefaultCamera as GetDefaultCamera; GetDefaultCamera.run()",
+                    "name": "GetDefaultCamera",
+                    "order": 13
+                },
+                {
+                    "label": "AddControllers",
+                    "module": "import cookbook.blender.menus.Rigging.AddControllers as AddControllers; AddControllers.run()",
+                    "name": "AddControllers",
+                    "order": 14
+                },
+                {
+                    "label": "SetColorFromParent",
+                    "module": "import cookbook.blender.menus.Rigging.SetColorFromParent as SetColorFromParent; SetColorFromParent.run()",
+                    "name": "SetColorFromParent",
+                    "order": 15
+                },
+                {
+                    "label": "DefaultControllerShape",
+                    "module": "import cookbook.blender.menus.Rigging.DefaultControllerShape as DefaultControllerShape; DefaultControllerShape.run()",
+                    "name": "DefaultControllerShape",
+                    "order": 16
+                },
+                {
+                    "label": "MeshToMdlTask",
+                    "module": "import cookbook.blender.menus.Rigging.MeshToMdlTask as MeshToMdlTask; MeshToMdlTask.run()",
+                    "name": "MeshToMdlTask",
+                    "order": 17
+                },
+                {
+                    "label": "CleanupWeights",
+                    "module": "import cookbook.blender.menus.Rigging.CleanupWeights as CleanupWeights; CleanupWeights.run()",
+                    "name": "CleanupWeights",
+                    "order": 18
+                },
+                {
+                    "label": "MirrorVertexGroups",
+                    "module": "import cookbook.blender.menus.Rigging.MirrorVertexGroups as MirrorVertexGroups; MirrorVertexGroups.run()",
+                    "name": "MirrorVertexGroups",
+                    "order": 19
+                },
+                {
+                    "label": "RemoveMeshControllers",
+                    "module": "import cookbook.blender.menus.Rigging.RemoveMeshControllers as RemoveMeshControllers; RemoveMeshControllers.run()",
+                    "name": "RemoveMeshControllers",
+                    "order": 20
+                },
+                {
+                    "label": "CopySkinWeights",
+                    "module": "import cookbook.blender.menus.Rigging.CopySkinWeights as CopySkinWeights; CopySkinWeights.run()",
+                    "name": "CopySkinWeights",
+                    "order": 21
+                },
+                {
+                    "label": "Edgard",
+                    "module": "import cookbook.blender.menus.Rigging.Edgard as Edgard; Edgard.run()",
+                    "name": "Edgard",
+                    "order": 22
+                },
+                {
+                    "label": "RemoveDrivers",
+                    "module": "import cookbook.blender.menus.Rigging.RemoveDrivers as RemoveDrivers; RemoveDrivers.run()",
+                    "name": "RemoveDrivers",
+                    "order": 23
+                }
+            ],
+            "name": "Rigging"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "CreateGreasePencil",
+                    "module": "import cookbook.blender.menus.Animation.CreateGreasePencil as CreateGreasePencil; CreateGreasePencil.run()",
+                    "name": "CreateGreasePencil",
+                    "order": 1
+                },
+                {
+                    "label": "CopyRelationship",
+                    "module": "import cookbook.blender.menus.Animation.CopyRelationship as CopyRelationship; CopyRelationship.run()",
+                    "name": "CopyRelationship",
+                    "order": 2
+                },
+                {
+                    "label": "PasteRelationship",
+                    "module": "import cookbook.blender.menus.Animation.PasteRelationship as PasteRelationship; PasteRelationship.run()",
+                    "name": "PasteRelationship",
+                    "order": 3
+                },
+                {
+                    "label": "IkFkSwitch",
+                    "module": "import cookbook.blender.menus.Animation.IkFkSwitch as IkFkSwitch; IkFkSwitch.run()",
+                    "name": "IkFkSwitch",
+                    "order": 4
+                },
+                {
+                    "label": "SwitchProxy",
+                    "module": "import cookbook.blender.menus.Animation.SwitchProxy as SwitchProxy; SwitchProxy.run()",
+                    "name": "SwitchProxy",
+                    "order": 5
+                },
+                {
+                    "label": "SwitchRig",
+                    "module": "import cookbook.blender.menus.Animation.SwitchRig as SwitchRig; SwitchRig.run()",
+                    "name": "SwitchRig",
+                    "order": 6
+                },
+                {
+                    "label": "SwitchExtras",
+                    "module": "import cookbook.blender.menus.Animation.SwitchExtras as SwitchExtras; SwitchExtras.run()",
+                    "name": "SwitchExtras",
+                    "order": 7
+                },
+                {
+                    "label": "WriteAnimationData",
+                    "module": "import cookbook.blender.menus.Animation.WriteAnimationData as WriteAnimationData; WriteAnimationData.run()",
+                    "name": "WriteAnimationData",
+                    "order": 8
+                },
+                {
+                    "label": "RenderWithAudio",
+                    "module": "import cookbook.blender.menus.Animation.RenderWithAudio as RenderWithAudio; RenderWithAudio.run()",
+                    "name": "RenderWithAudio",
+                    "order": 9
+                },
+                {
+                    "label": "Publish",
+                    "module": "import cookbook.blender.menus.Animation.Publish as Publish; Publish.run()",
+                    "name": "Publish",
+                    "order": 10
+                },
+                {
+                    "label": "GreasePencilSwitch",
+                    "module": "import cookbook.blender.menus.Animation.GreasePencilSwitch as GreasePencilSwitch; GreasePencilSwitch.run()",
+                    "name": "GreasePencilSwitch",
+                    "order": 11
+                },
+                {
+                    "label": "GpMainLayers",
+                    "module": "import cookbook.blender.menus.Animation.GpMainLayers as GpMainLayers; GpMainLayers.run()",
+                    "name": "GpMainLayers",
+                    "order": 12
+                },
+                {
+                    "label": "Interactive",
+                    "module": "import cookbook.blender.menus.Animation.Interactive as Interactive; Interactive.run()",
+                    "name": "Interactive",
+                    "order": 13
+                },
+                {
+                    "label": "ResetRigPublish",
+                    "module": "import cookbook.blender.menus.Animation.ResetRigPublish as ResetRigPublish; ResetRigPublish.run()",
+                    "name": "ResetRigPublish",
+                    "order": 14
+                }
+            ],
+            "name": "Animation"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "DefaultShader",
+                    "module": "import cookbook.blender.menus.Shading.DefaultShader as DefaultShader; DefaultShader.run()",
+                    "name": "DefaultShader",
+                    "order": 1
+                },
+                {
+                    "label": "PublishTextures",
+                    "module": "import cookbook.blender.menus.Shading.PublishTextures as PublishTextures; PublishTextures.run()",
+                    "name": "PublishTextures",
+                    "order": 2
+                },
+                {
+                    "label": "RenameMaterials",
+                    "module": "import cookbook.blender.menus.Shading.RenameMaterials as RenameMaterials; RenameMaterials.run()",
+                    "name": "RenameMaterials",
+                    "order": 3
+                },
+                {
+                    "label": "SetupShaderColor",
+                    "module": "import cookbook.blender.menus.Shading.SetupShaderColor as SetupShaderColor; SetupShaderColor.run()",
+                    "name": "SetupShaderColor",
+                    "order": 4
+                },
+                {
+                    "label": "SaveMaterials",
+                    "module": "import cookbook.blender.menus.Shading.SaveMaterials as SaveMaterials; SaveMaterials.run()",
+                    "name": "SaveMaterials",
+                    "order": 5
+                },
+                {
+                    "label": "LoadMaterials",
+                    "module": "import cookbook.blender.menus.Shading.LoadMaterials as LoadMaterials; LoadMaterials.run()",
+                    "name": "LoadMaterials",
+                    "order": 6
+                },
+                {
+                    "label": "AddToShaderGroup",
+                    "module": "import cookbook.blender.menus.Shading.AddToShaderGroup as AddToShaderGroup; AddToShaderGroup.run()",
+                    "name": "AddToShaderGroup",
+                    "order": 7
+                }
+            ],
+            "name": "Shading"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "DefaultLightSetup",
+                    "module": "import cookbook.blender.menus.Lighting.DefaultLightSetup as DefaultLightSetup; DefaultLightSetup.run()",
+                    "name": "DefaultLightSetup",
+                    "order": 1
+                },
+                {
+                    "label": "ImportAllObjects",
+                    "module": "import cookbook.blender.menus.Lighting.ImportAllObjects as ImportAllObjects; ImportAllObjects.run()",
+                    "name": "ImportAllObjects",
+                    "order": 2
+                },
+                {
+                    "label": "SplitScene",
+                    "module": "import cookbook.blender.menus.Lighting.SplitScene as SplitScene; SplitScene.run()",
+                    "name": "SplitScene",
+                    "order": 3
+                },
+                {
+                    "label": "ImportRig",
+                    "module": "import cookbook.blender.menus.Lighting.ImportRig as ImportRig; ImportRig.run()",
+                    "name": "ImportRig",
+                    "order": 4
+                }
+            ],
+            "name": "Lighting"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "ImportAsset",
+                    "module": "import cookbook.blender.menus.utilities.ImportAsset as ImportAsset; ImportAsset.run()",
+                    "name": "ImportAsset",
+                    "order": 1
+                },
+                {
+                    "label": "CorrectFileName",
+                    "module": "import cookbook.blender.menus.utilities.CorrectFileName as CorrectFileName; CorrectFileName.run()",
+                    "name": "CorrectFileName",
+                    "order": 2
+                },
+                {
+                    "label": "OpenAsset",
+                    "module": "import cookbook.blender.menus.utilities.OpenAsset as OpenAsset; OpenAsset.run()",
+                    "name": "OpenAsset",
+                    "order": 3
+                },
+                {
+                    "label": "OpenShot",
+                    "module": "import cookbook.blender.menus.utilities.OpenShot as OpenShot; OpenShot.run()",
+                    "name": "OpenShot",
+                    "order": 4
+                },
+                {
+                    "label": "DeleteDefaults",
+                    "module": "import cookbook.blender.menus.utilities.DeleteDefaults as DeleteDefaults; DeleteDefaults.run()",
+                    "name": "DeleteDefaults",
+                    "order": 5
+                },
+                {
+                    "label": "ImportReferences",
+                    "module": "import cookbook.blender.menus.utilities.ImportReferences as ImportReferences; ImportReferences.run()",
+                    "name": "ImportReferences",
+                    "order": 6
+                },
+                {
+                    "label": "ImportAudio",
+                    "module": "import cookbook.blender.menus.utilities.ImportAudio as ImportAudio; ImportAudio.run()",
+                    "name": "ImportAudio",
+                    "order": 7
+                },
+                {
+                    "label": "DeleteTurntable",
+                    "module": "import cookbook.blender.menus.utilities.DeleteTurntable as DeleteTurntable; DeleteTurntable.run()",
+                    "name": "DeleteTurntable",
+                    "order": 8
+                },
+                {
+                    "label": "SetupCollections",
+                    "module": "import cookbook.blender.menus.utilities.SetupCollections as SetupCollections; SetupCollections.run()",
+                    "name": "SetupCollections",
+                    "order": 9
+                },
+                {
+                    "label": "FixCollectionName",
+                    "module": "import cookbook.blender.menus.utilities.FixCollectionName as FixCollectionName; FixCollectionName.run()",
+                    "name": "FixCollectionName",
+                    "order": 10
+                },
+                {
+                    "label": "RenameObject",
+                    "module": "import cookbook.blender.menus.utilities.RenameObject as RenameObject; RenameObject.run()",
+                    "name": "RenameObject",
+                    "order": 11
+                },
+                {
+                    "label": "CleanupScene",
+                    "module": "import cookbook.blender.menus.utilities.CleanupScene as CleanupScene; CleanupScene.run()",
+                    "name": "CleanupScene",
+                    "order": 12
+                },
+                {
+                    "label": "ShowInFolder",
+                    "module": "import cookbook.blender.menus.utilities.ShowInFolder as ShowInFolder; ShowInFolder.run()",
+                    "name": "ShowInFolder",
+                    "order": 13
+                },
+                {
+                    "label": "DeleteWorkspaces",
+                    "module": "import cookbook.blender.menus.utilities.DeleteWorkspaces as DeleteWorkspaces; DeleteWorkspaces.run()",
+                    "name": "DeleteWorkspaces",
+                    "order": 14
+                },
+                {
+                    "label": "SwitchUsers",
+                    "module": "import cookbook.blender.menus.utilities.SwitchUsers as SwitchUsers; SwitchUsers.run()",
+                    "name": "SwitchUsers",
+                    "order": 15
+                },
+                {
+                    "label": "SwitchTask",
+                    "module": "import cookbook.blender.menus.utilities.SwitchTask as SwitchTask; SwitchTask.run()",
+                    "name": "SwitchTask",
+                    "order": 16
+                },
+                {
+                    "label": "SwitchVersions",
+                    "module": "import cookbook.blender.menus.utilities.SwitchVersions as SwitchVersions; SwitchVersions.run()",
+                    "name": "SwitchVersions",
+                    "order": 17
+                },
+                {
+                    "label": "SwitchResolution",
+                    "module": "import cookbook.blender.menus.utilities.SwitchResolution as SwitchResolution; SwitchResolution.run()",
+                    "name": "SwitchResolution",
+                    "order": 18
+                },
+                {
+                    "label": "OpenSelected",
+                    "module": "import cookbook.blender.menus.utilities.OpenSelected as OpenSelected; OpenSelected.run()",
+                    "name": "OpenSelected",
+                    "order": 19
+                },
+                {
+                    "label": "CollectionToAsset",
+                    "module": "import cookbook.blender.menus.utilities.CollectionToAsset as CollectionToAsset; CollectionToAsset.run()",
+                    "name": "CollectionToAsset",
+                    "order": 20
+                },
+                {
+                    "label": "OpenDocumentation",
+                    "module": "import cookbook.blender.menus.utilities.OpenDocumentation as OpenDocumentation; OpenDocumentation.run()",
+                    "name": "OpenDocumentation",
+                    "order": 21
+                },
+                {
+                    "label": "SourceToRender",
+                    "module": "import cookbook.blender.menus.utilities.SourceToRender as SourceToRender; SourceToRender.run()",
+                    "name": "SourceToRender",
+                    "order": 22
+                },
+                {
+                    "label": "RenderToSource",
+                    "module": "import cookbook.blender.menus.utilities.RenderToSource as RenderToSource; RenderToSource.run()",
+                    "name": "RenderToSource",
+                    "order": 23
+                },
+                {
+                    "label": "CopyToAnimProject",
+                    "module": "import cookbook.blender.menus.utilities.CopyToAnimProject as CopyToAnimProject; CopyToAnimProject.run()",
+                    "name": "CopyToAnimProject",
+                    "order": 24
+                }
+            ],
+            "name": "utilities"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "OpenSelected",
+                    "module": "import cookbook.blender.menus.navigation.OpenSelected as OpenSelected; OpenSelected.run()",
+                    "name": "OpenSelected",
+                    "order": 1
+                },
+                {
+                    "label": "OpenShot",
+                    "module": "import cookbook.blender.menus.navigation.OpenShot as OpenShot; OpenShot.run()",
+                    "name": "OpenShot",
+                    "order": 2
+                },
+                {
+                    "label": "OpenAsset",
+                    "module": "import cookbook.blender.menus.navigation.OpenAsset as OpenAsset; OpenAsset.run()",
+                    "name": "OpenAsset",
+                    "order": 3
+                },
+                {
+                    "label": "SwitchResolution",
+                    "module": "import cookbook.blender.menus.navigation.SwitchResolution as SwitchResolution; SwitchResolution.run()",
+                    "name": "SwitchResolution",
+                    "order": 4
+                },
+                {
+                    "label": "SwitchVersions",
+                    "module": "import cookbook.blender.menus.navigation.SwitchVersions as SwitchVersions; SwitchVersions.run()",
+                    "name": "SwitchVersions",
+                    "order": 5
+                },
+                {
+                    "label": "SwitchUsers",
+                    "module": "import cookbook.blender.menus.navigation.SwitchUsers as SwitchUsers; SwitchUsers.run()",
+                    "name": "SwitchUsers",
+                    "order": 6
+                },
+                {
+                    "label": "SwitchContext",
+                    "module": "import cookbook.blender.menus.navigation.SwitchContext as SwitchContext; SwitchContext.run()",
+                    "name": "SwitchContext",
+                    "order": 7
+                },
+                {
+                    "label": "SwitchTask",
+                    "module": "import cookbook.blender.menus.navigation.SwitchTask as SwitchTask; SwitchTask.run()",
+                    "name": "SwitchTask",
+                    "order": 8
+                },
+                {
+                    "label": "BackToPrevious",
+                    "module": "import cookbook.blender.menus.navigation.BackToPrevious as BackToPrevious; BackToPrevious.run()",
+                    "name": "BackToPrevious",
+                    "order": 9
+                },
+                {
+                    "label": "CopyToUser",
+                    "module": "import cookbook.blender.menus.Navigation.CopyToUser as CopyToUser; CopyToUser.run()",
+                    "name": "CopyToUser",
+                    "order": 10
+                },
+                {
+                    "label": "CopyToTask",
+                    "module": "import cookbook.blender.menus.Navigation.CopyToTask as CopyToTask; CopyToTask.run()",
+                    "name": "CopyToTask",
+                    "order": 11
+                }
+            ],
+            "name": "Navigation"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "CreateInstance",
+                    "module": "import cookbook.blender.menus.Fx.CreateInstance as CreateInstance; CreateInstance.run()",
+                    "name": "CreateInstance",
+                    "order": 1
+                }
+            ],
+            "name": "Fx"
+        }
+    ]
+}

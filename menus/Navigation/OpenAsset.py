@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 import os
 
 def reorder_list(items, arg=''):
@@ -22,8 +22,7 @@ def reorder_list(items, arg=''):
 def get_users(self, context):
     import os
     scene = bpy.types.Scene.scene_enum
-    path_object = lm.LumberObject(get_asset_from_name(scene))
-    print(1111111111111)
+    path_object = alc.PathObject(get_asset_from_name(scene))
     print(path_object.path_root)
 
     user_list = path_object.glob_project_element('user')
@@ -62,11 +61,11 @@ class DialogUserB(bpy.types.Operator):
 
         message = 'selected {}'.format(open_file)
         if os.path.isfile(open_file):
-            lm.open_file(open_file)
+            alc.open_file(open_file)
         else:
 
-            #lm.confirm_prompt(message='this file has an incorrect file name, consider  opening it and renaming it on the utils')
-            #lm.LumberObject(open_file).show_in_folder()
+            #alc.confirm_prompt(message='this file has an incorrect file name, consider  opening it and renaming it on the utils')
+            #alc.PathObject(open_file).show_in_folder()
             open_available_file(open_file)
 
         self.report({'INFO'}, message)
@@ -84,7 +83,7 @@ bpy.utils.register_class(DialogUserB)
 def open_available_file(path_object):
     import os
     print(3333333333)
-    filename = lm.LumberObject(path_object).copy(filename='')
+    filename = alc.PathObject(path_object).copy(filename='')
     print(filename.path_root)
     found = False
     files = os.listdir(filename.path_root)
@@ -97,19 +96,19 @@ def open_available_file(path_object):
                 print(path_object)
                 new_file = filename.copy(filename=file).path_root
                 os.rename(new_file,path_object)
-                lm.open_file(path_object)
+                alc.open_file(path_object)
 
 
     else:
-        lm.confirm_prompt(message='No file found')
+        alc.confirm_prompt(message='No file found')
 
 
 def get_items(self, context):
-    from cgl.plugins.blender import lumbermill as lm
+    from cgl.plugins.blender import alchemy as alc
     import os
 
-    scene = lm.scene_object()
-    project = lm.LumberObject(scene.split_after('project'))
+    scene = alc.scene_object()
+    project = alc.PathObject(scene.split_after('project'))
     char = project.copy(scope='assets', seq='char')
 
     assets = ['char', 'prop', 'lib', 'veh', 'env']
@@ -148,7 +147,7 @@ def get_asset_from_name(keys=''):
 
     task = 'mdl'
 
-    current_scene = lm.scene_object()
+    current_scene = alc.scene_object()
     dict_ = {'company': current_scene.company,
              'context': 'source',
              'project': current_scene.project,
@@ -160,7 +159,7 @@ def get_asset_from_name(keys=''):
              'resolution': 'high'
              }
 
-    path_object = lm.LumberObject(dict_)
+    path_object = alc.PathObject(dict_)
     path_object.set_attr(filename='%s_%s_%s.%s' % (path_object.seq,
                                                    path_object.shot,
                                                    path_object.task,
@@ -197,7 +196,7 @@ class OpenAsset(bpy.types.Operator):
         bpy.types.Scene.scene_enum = self.my_enum + ' publish'
         bpy.ops.object.dialog_user_b('INVOKE_DEFAULT')
 
-        # lm.open_file(get_asset_from_name(self.my_enum).path_root)
+        # alc.open_file(get_asset_from_name(self.my_enum).path_root)
         return {'FINISHED'}
 
     def invoke(self, context, event):

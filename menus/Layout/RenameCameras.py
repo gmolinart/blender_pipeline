@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 class RenameCameras(bpy.types.Operator):
     """
@@ -20,7 +20,7 @@ class RenameCameras(bpy.types.Operator):
 
 def rename_cameras():
     selected_cam = bpy.context.selected_objects
-    currentScene = lm.scene_object()
+    currentScene = alc.scene_object()
     shotIncrement = 10
     for camera in selected_cam:
         if camera.type == 'CAMERA':

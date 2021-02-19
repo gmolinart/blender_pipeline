@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 
 class WriteAnimationData(bpy.types.Operator):
@@ -25,18 +25,18 @@ def renanme_action():
         action = selected_object.animation_data.action
         if action:
 
-            currentScene = lm.scene_object()
+            currentScene = alc.scene_object()
 
             newActionName = '_'.join([currentScene.filename_base, selected_object.name, currentScene.version])
             action.name = newActionName
             print(newActionName)
 
         else:
-            lm.confirm_prompt(message='No action linked to object')
+            alc.confirm_prompt(message='No action linked to object')
 
 
 def write_anim(outFile=None):
-    from cgl.plugins.blender.lumbermill import scene_object, LumberObject, import_file
+    from cgl.plugins.blender.alchemy import scene_object, PathObject, import_file
     from cgl.core.utils.read_write import load_json, save_json
     import bpy
     from pathlib import Path
@@ -73,9 +73,9 @@ def write_anim(outFile=None):
                              obj.matrix_world.to_scale().z]
         libraryPath = bpy.path.abspath(obj.proxy_collection.instance_collection.library.filepath)
         filename = Path(bpy.path.abspath(libraryPath)).__str__()
-        libObject = LumberObject(filename)
+        libObject = PathObject(filename)
 
-    sourcePath = lm.scene_object()
+    sourcePath = alc.scene_object()
 
     data[name] = {'name': libObject.asset,
                   'source_path': libObject.path,
@@ -97,7 +97,7 @@ def run():
     renanme_action()
 
     write_anim()
-    lm.save_file()
+    alc.save_file()
 
 
 if __name__ == "__main__":

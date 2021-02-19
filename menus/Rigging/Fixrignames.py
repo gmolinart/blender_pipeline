@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 class Fixrignames(bpy.types.Operator):
     """
@@ -28,8 +28,8 @@ def fix_rig_names(selection=''):
     else:
         selection = bpy.data.objects[selection]
 
-    currentScene = lm.scene_object()
-    assetName = lm.scene_object().shot
+    currentScene = alc.scene_object()
+    assetName = alc.scene_object().shot
     selection.name = '{}_rig'.format(assetName)
     selection.data.name = '{}_rig'.format(assetName)
     try:
@@ -42,7 +42,7 @@ def fix_rig_names(selection=''):
 
     try :
         children_obj = selection.parent.children
-        if lm.scene_object().type == 'char':
+        if alc.scene_object().type == 'char':
 
             for children in children_obj:
                 if children != selection:

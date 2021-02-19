@@ -2,7 +2,7 @@ import bpy
 import re
 
 
-# from cgl.plugins.blender import lumbermill as lm
+# from cgl.plugins.blender import Alchemy as lm
 
 class CleanupWeights(bpy.types.Operator):
     """

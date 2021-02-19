@@ -5,7 +5,7 @@ import os
 
 def get_users(self, context):
     scene = bpy.types.Scene.scene_enum
-    path_object = alc.LumberObject(get_shot_from_name(scene))
+    path_object = alc.PathObject(get_shot_from_name(scene))
 
     users = os.listdir(path_object.split_after('task'))
 
@@ -25,8 +25,8 @@ def get_items(self, context):
     import os
 
     scene = alc.scene_object()
-    project = alc.LumberObject(scene.split_after('project'))
-    proj_shots = project.copy(scope='shots', context='source')
+    project = alc.PathObject(scene.split_after('branch'))
+    proj_shots = project.copy(scope='shots', context='source',branch = 'branch',variant = 'default')
 
     print('_______________SHOTS___________')
 
@@ -75,7 +75,7 @@ def get_shot_from_name(keys=''):
              'resolution': 'high'
              }
 
-    path_object = alc.LumberObject(dict_)
+    path_object = alc.PathObject(dict_)
     path_object.set_attr(filename='%s_%s_%s.%s' % (path_object.seq,
                                                    path_object.shot,
                                                    path_object.task,
@@ -103,7 +103,7 @@ def get_shot_from_name(keys=''):
              'resolution': 'high'
              }
 
-    path_object = alc.LumberObject(dict_)
+    path_object = alc.PathObject(dict_)
     default_asset = path_object.latest_version()
     return default_asset
 

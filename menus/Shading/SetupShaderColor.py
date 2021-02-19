@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 class SetupShaderColor(bpy.types.Operator):
     """
     assigns the viewpor preview button from the material of selected object
@@ -126,8 +126,8 @@ def get_selection(selection=None):
         try:
             selection = bpy.context.selected_objects
         except:
-            currentScene = lm.scene_object()
-            assetName = lm.scene_object().shot
+            currentScene = alc.scene_object()
+            assetName = alc.scene_object().shot
             obj_in_collection = bpy.data.collections[assetName].all_objects
 
     if not selection:

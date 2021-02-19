@@ -1,5 +1,5 @@
 import bpy
-# from cgl.plugins.blender import lumbermill as lm
+# from cgl.plugins.blender import Alchemy as alc
 
 class CopyLatestLow(bpy.types.Operator):
     """
@@ -18,16 +18,16 @@ class CopyLatestLow(bpy.types.Operator):
 
 
 from cgl.plugins.preflight.preflight_check import PreflightCheck
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 import bpy
 import os
 from cgl.core.utils.general import split_all, cgl_copy
 
 
 def get_items():
-    from cgl.plugins.blender import lumbermill as lm
+    from cgl.plugins.blender import alchemy as alc
 
-    path_object = lm.scene_object()
+    path_object = alc.scene_object()
 
     versions = path_object.glob_project_element('version')
     version = versions.reverse()
@@ -40,7 +40,7 @@ def get_items():
 
 def copy_latest_low():
     versions = get_items()
-    scene = lm.scene_object()
+    scene = alc.scene_object()
     low_found = None
     for i in versions:
         if not low_found:

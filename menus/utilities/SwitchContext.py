@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 class SwitchContext(bpy.types.Operator):
     """
@@ -18,7 +18,7 @@ class SwitchContext(bpy.types.Operator):
 def switch_context():
     import os
 
-    scene = lm.scene_object()
+    scene = alc.scene_object()
 
     if scene.context == 'source':
 
@@ -29,13 +29,13 @@ def switch_context():
 
     if os.path.isdir(newpath.copy(filename='').path_root):
 
-        lm.open_file(newpath.path_root)
+        alc.open_file(newpath.path_root)
 
 
 
 
     else:
-        lm.confirm_prompt(message='ERROR no such directory')
+        alc.confirm_prompt(message='ERROR no such directory')
 
 
 def run():

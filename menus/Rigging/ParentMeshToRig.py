@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 
 class ParentMeshToRig(bpy.types.Operator):
@@ -17,7 +17,7 @@ class ParentMeshToRig(bpy.types.Operator):
 
 def unlink_from_non_asset_collections(obj, assetName=None):
     if not assetName:
-        assetName = lm.scene_object().shot
+        assetName = alc.scene_object().shot
 
     try:
         bpy.data.collections[assetName].objects.link(obj)
@@ -45,7 +45,7 @@ def create_mesh_group(meshGroupName, rig):
 
 def parent_mesh_to_rig(assetName=''):
     if not assetName:
-        assetName = lm.scene_object().shot
+        assetName = alc.scene_object().shot
 
     rigname = '{}_rig'.format(assetName)
     rig = bpy.data.objects[rigname]

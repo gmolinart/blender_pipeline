@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 class ImportBaseMesh(bpy.types.Operator):
     """
@@ -22,11 +22,11 @@ def run():
     This run statement is what's executed when your button is pressed in blender.
     :return:
     """
-    baseMesh = lm.scene_object().copy(asset='baseMesh', task='mdl', user='publish', latest=True,
+    baseMesh = alc.scene_object().copy(asset='baseMesh', task='mdl', user='publish', latest=True,
                                       set_proper_filename=True, type='lib')
     print(baseMesh.path_root)
 
-    lm.import_file(baseMesh.path_root)
+    alc.import_file(baseMesh.path_root)
 
     bpy.ops.object.make_local(type='ALL')
 

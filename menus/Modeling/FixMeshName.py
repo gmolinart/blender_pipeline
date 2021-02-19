@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 class FixMeshName(bpy.types.Operator):
     """
@@ -26,8 +26,8 @@ def run():
     selection = bpy.context.selected_objects
 
     if not selection :
-        lm.confirm_prompt(message='please select an object')
+        alc.confirm_prompt(message='please select an object')
     for obj in selection:
         obj.data.name = '{}_mesh'.format(obj.name)
 
-    lm.confirm_prompt(message='Mesh data renamed!')
+    alc.confirm_prompt(message='Mesh data renamed!')

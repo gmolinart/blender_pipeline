@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 from cgl.plugins.blender import utils as utils
 
 try:
@@ -27,7 +27,7 @@ class DefaultShader(bpy.types.Operator):
 
 
 def get_default_shader():
-    current_scene = lm.scene_object()
+    current_scene = alc.scene_object()
     dict = {'company': current_scene.company,
             'context': 'render',
             'project': current_scene.project,
@@ -42,9 +42,8 @@ def get_default_shader():
             'ext': 'blend'
             }
 
-    path_object = lm.LumberObject(dict)
+    path_object = alc.PathObject(dict)
 
-    print(path_object.path_root)
     path_object = path_object.copy(set_proper_filename=True)
 
     # print(default_shader.path_root)
@@ -55,7 +54,17 @@ def get_default_shader():
     #         default_in_scene = True
 
     if not default_in_scene:
-        lm.import_file(filepath=path_object.path_root, linked=False, type='GROUP')
+        from cgl.plugins.blender.tasks import shd
+        from importlib import reload
+        import os
+
+        if os.path.isdir(path_object.path_root):
+
+            reload(shd)
+            print()
+            shd.import_materials(path_object.path_root)
+        else:
+            print('NO DEFAULT SHADER FOUND')
 
 
 def delete_duplicate_groups(node_name):
@@ -190,10 +199,10 @@ def run():
         for i in failed_items:
             print(i)
 
-        lm.confirm_prompt(message='Failed materials : {}'.format(failed_items))
+        alc.confirm_prompt(message='Failed materials : {}'.format(failed_items))
 
     else:
-        lm.confirm_prompt(message='Default shader assigned')
+        alc.confirm_prompt(message='Default shader assigned')
 
     delete_duplicate_groups('DEFAULTSHADER')
     delete_duplicate_groups('toon_material')

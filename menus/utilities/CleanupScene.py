@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 
 class CleanupScene(bpy.types.Operator):
@@ -25,10 +25,10 @@ def cleanup_scene(assetName):
     '''
 
     if not assetName:
-        assetName = lm.scene_object().shot
+        assetName = alc.scene_object().shot
 
     rig_collection = bpy.data.collections[assetName]
-    sceneName = lm.scene_object().filename_base
+    sceneName = alc.scene_object().filename_base
     scenes = []
     for scene in bpy.data.scenes:
         scenes.append(scene.name)
@@ -73,7 +73,7 @@ def cleanup_scene(assetName):
         bpy.data.actions.remove(action)
 
     scene_collections = bpy.context.scene.collection
-    scene = lm.scene_object()
+    scene = alc.scene_object()
 
     if scene.type == 'prop':
 

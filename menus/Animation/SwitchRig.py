@@ -1,7 +1,7 @@
 import bpy
 
 
-# from cgl.plugins.blender import lumbermill as lm
+# from cgl.plugins.blender import Alchemy as alc
 
 
 def get_rigs():
@@ -15,7 +15,7 @@ def get_rigs():
 
 
 def get_items(self, context):
-    from cgl.plugins.blender import lumbermill as lm
+    from cgl.plugins.blender import alchemy as alc
     import os
 
     tasks = get_rigs()

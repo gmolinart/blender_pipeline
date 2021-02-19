@@ -1,7 +1,7 @@
 import os
 
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 
 class MeshToMdlTask(bpy.types.Operator):
@@ -22,7 +22,7 @@ class MeshToMdlTask(bpy.types.Operator):
 
 def parent_mesh_to_rig(assetName=''):
     if assetName == '':
-        assetName = lm.scene_object().shot
+        assetName = alc.scene_object().shot
     rigname = '{}_rig'.format(assetName)
     meshGroupName = '{}_mesh_grp'.format(assetName)
 
@@ -64,13 +64,13 @@ def parent_mesh_to_rig(assetName=''):
 
 
 def export_to_task(task):
-    task_to_export = lm.scene_object().copy(task=task,
+    task_to_export = alc.scene_object().copy(task=task,
                                             set_proper_filename=True).next_major_version()
 
     if not os.path.isdir(task_to_export.copy(filename='').path_root):
         os.makedirs(task_to_export.copy(filename='').path_root)
 
-    lm.save_file_as(task_to_export.path_root)
+    alc.save_file_as(task_to_export.path_root)
     bpy.ops.object.build()
 
 
@@ -91,7 +91,7 @@ def delete_group_objects():
 def check_required_elements(assetName=''):
     try:
         if assetName == '':
-            assetName = lm.scene_object().shot
+            assetName = alc.scene_object().shot
         rigname = '{}_rig'.format(assetName)
         meshGroupName = '{}_mesh_grp'.format(assetName)
         meshGrp = bpy.data.objects[meshGroupName]
@@ -104,7 +104,7 @@ def check_required_elements(assetName=''):
 
 def convert_main_collection_name_to_task(task, assetName=''):
     if assetName == '':
-        assetName = lm.scene_object().shot
+        assetName = alc.scene_object().shot
 
     for collection in bpy.data.collections:
         if collection.name == assetName:
@@ -120,7 +120,7 @@ def run():
     This run statement is what's executed when your button is pressed in blender.
     :return:
     """
-    scene = lm.scene_object()
+    scene = alc.scene_object()
     if not scene.user == 'publish':
         check_required_elements()
         convert_main_collection_name_to_task('rig')

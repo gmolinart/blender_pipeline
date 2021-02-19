@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 
 class CreateLow(bpy.types.Operator):
@@ -20,10 +20,10 @@ class CreateLow(bpy.types.Operator):
 
 def parent_mesh_to_collection(collection_name='', low=False, objects=None):
     if collection_name == '':
-        collection_name = lm.scene_object().shot
+        collection_name = alc.scene_object().shot
 
     if low:
-        collection_name = '{}_low'.format(lm.scene_object().shot)
+        collection_name = '{}_low'.format(alc.scene_object().shot)
 
     meshes = []
     if not objects:
@@ -52,7 +52,7 @@ def parent_mesh_to_collection(collection_name='', low=False, objects=None):
 
 def create_low_collection(collection_name=''):
     if collection_name == '':
-        scene = lm.scene_object().shot
+        scene = alc.scene_object().shot
         collection_name = '{}_low'.format(scene)
 
     if collection_name not in bpy.data.collections:

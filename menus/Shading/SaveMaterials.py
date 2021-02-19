@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 from cgl.plugins.blender import utils as utils
 from cgl.core.utils.read_write import save_json
 import os
@@ -32,10 +32,10 @@ def run():
     outFile = path_object.copy(ext='json').path_root
     print(path_object.path_root)
     save_json(outFile, data=utils.get_materials_dictionary())
-    lm.save_file_as(path_object.copy(set_proper_filename=True).path_root)
+    alc.save_file_as(path_object.copy(set_proper_filename=True).path_root)
     bpy.ops.object.build()
-    lm.save_file()
-    lm.confirm_prompt(message='Shaders Exported !!')
+    alc.save_file()
+    alc.confirm_prompt(message='Shaders Exported !!')
 
 
 if __name__ == "__main__":

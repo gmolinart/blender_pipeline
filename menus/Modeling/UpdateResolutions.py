@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 import os
 from cgl.core.utils.general import split_all, cgl_copy
 
@@ -29,7 +29,7 @@ def check_resolution(scene, res):
 
 
 def get_latest_low():
-    scene = lm.scene_object()
+    scene = alc.scene_object()
     versions = scene.glob_project_element('version')
     version = versions.reverse()
 
@@ -45,7 +45,7 @@ def get_latest_low():
 
 
 def get_latest_high():
-    scene = lm.scene_object()
+    scene = alc.scene_object()
     versions = scene.glob_project_element('version')
     version = versions.reverse()
 
@@ -61,14 +61,14 @@ def get_latest_high():
 
 
 def copy_latest_low():
-    scene = lm.scene_object()
+    scene = alc.scene_object()
     latest_low_folder = get_latest_low().copy(filename=None, ext=None).path_root
     current_low_folder = scene.copy(filename=None, ext=None, resolution='low').path_root
     cgl_copy(latest_low_folder, current_low_folder)
 
 
 def copy_latest_high():
-    scene = lm.scene_object()
+    scene = alc.scene_object()
     latest_high_folder = get_latest_high().copy(filename=None, ext=None).path_root
     current_high_folder = scene.copy(filename=None, ext=None, resolution='high').path_root
     cgl_copy(latest_high_folder, current_high_folder)
@@ -81,6 +81,6 @@ def run():
     This run statement is what's executed when your button is pressed in blender.
     :return:
     """
-    scene = lm.scene_object()
+    scene = alc.scene_object()
     copy_latest_low()
     copy_latest_high()

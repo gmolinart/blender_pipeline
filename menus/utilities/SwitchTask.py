@@ -1,11 +1,11 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 def get_items(self, context):
-    from cgl.plugins.blender import lumbermill as lm
+    from cgl.plugins.blender import alchemy as alc
     import os
 
-    scene = lm.scene_object()
+    scene = alc.scene_object()
 
     tasks = scene.glob_project_element('task')
     print(tasks)
@@ -26,8 +26,8 @@ class SwitchTask(bpy.types.Operator):
 
     def execute(self, context):
         self.report({'INFO'}, "Selected: %s" % self.selected_task)
-        new_user = lm.scene_object().copy(task=self.selected_task, user ='publish',set_proper_filename=True).latest_version().path_root
-        lm.open_file(new_user)
+        new_user = alc.scene_object().copy(task=self.selected_task, user ='publish',set_proper_filename=True).latest_version().path_root
+        alc.open_file(new_user)
         return {'FINISHED'}
 
     def invoke(self, context, event):

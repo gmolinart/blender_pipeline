@@ -1,13 +1,13 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 
 def get_items(self, context):
-    from cgl.plugins.blender import lumbermill as lm
+    from cgl.plugins.blender import alchemy as alc
     import os
 
-    scene = lm.scene_object()
-    project = lm.LumberObject(scene.split_after('project'))
+    scene = alc.scene_object()
+    project = alc.PathObject(scene.split_after('project'))
     char = project.copy(scope='assets', seq='char')
 
     assets = ['char', 'prop', 'lib', 'veh', 'env']
@@ -55,7 +55,7 @@ def get_asset_from_name(keys=''):
     else:
         task = 'mdl'
 
-    current_scene = lm.scene_object()
+    current_scene = alc.scene_object()
     dict_ = {'company': current_scene.company,
              'context': 'source',
              'project': current_scene.project,
@@ -67,7 +67,7 @@ def get_asset_from_name(keys=''):
              'resolution': 'high'
              }
 
-    path_object = lm.LumberObject(dict_)
+    path_object = alc.PathObject(dict_)
     path_object.set_attr(filename='%s_%s_%s.%s' % (path_object.seq,
                                                    path_object.shot,
                                                    path_object.task,
@@ -90,7 +90,7 @@ class OpenItem(bpy.types.Operator):
 
     def execute(self, context):
         self.report({'INFO'}, "Selected: %s" % self.my_enum)
-        lm.open_file(get_asset_from_name(self.my_enum).path_root)
+        alc.open_file(get_asset_from_name(self.my_enum).path_root)
         return {'FINISHED'}
 
     def invoke(self, context, event):

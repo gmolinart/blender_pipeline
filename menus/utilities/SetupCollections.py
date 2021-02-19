@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 from cgl.core.utils.read_write import load_json
 
 
@@ -47,7 +47,7 @@ def parent_linked_environment_assets(library):
     import os
     env = library
     bpy.ops.file.make_paths_absolute()
-    env_path = lm.LumberObject(env.filepath)
+    env_path = alc.PathObject(env.filepath)
     env_layout = env_path.copy(ext='json').path_root
     asset_collection = create_collection('env')
 
@@ -66,7 +66,7 @@ def parent_linked_environment_assets(library):
 
 def keep_single_user_collection(obj, assetName=None):
     if not assetName:
-        assetName = lm.scene_object().shot
+        assetName = alc.scene_object().shot
 
     try:
         bpy.data.collections[assetName].objects.link(obj)
@@ -90,7 +90,7 @@ def reparent_collections(view_layer):
                 print(collection.library)
                 if collection.library:
 
-                    path_object = lm.LumberObject(collection.library.filepath)
+                    path_object = alc.PathObject(collection.library.filepath)
 
                     if path_object.asset:
 
@@ -196,7 +196,7 @@ def run():
     parent_object(view_layer, 'armature', 'ARMATURE')
     create_characters_collections()
     for lib in bpy.data.libraries:
-        type = lm.LumberObject(return_lib_path(lib)).type
+        type = alc.PathObject(return_lib_path(lib)).type
         if type == 'env':
             print('________________________env library found:')
             print(lib)

@@ -1,7 +1,7 @@
 import bpy
 
 
-# from cgl.plugins.blender import lumbermill as lm
+# from cgl.plugins.blender import Alchemy as lm
 
 class CorrectiveBlendShapes(bpy.types.Operator):
     """
@@ -35,7 +35,7 @@ def create_drive():
     import bpy
 
 
-# from cgl.plugins.blender import lumbermill as lm
+# from cgl.plugins.blender import Alchemy as lm
 
 class CorrectiveBlendShapes(bpy.types.Operator):
     """

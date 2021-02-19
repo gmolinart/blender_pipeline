@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 import os
 
 
@@ -20,7 +20,7 @@ class CollectionToAsset(bpy.types.Operator):
 
 
 def export_to_task(assetName, task):
-    task_to_export = lm.scene_object().copy(task=task,
+    task_to_export = alc.scene_object().copy(task=task,
                                             set_proper_filename=True,
                                             type = 'prop',
                                             shot=assetName).next_major_version()
@@ -28,7 +28,7 @@ def export_to_task(assetName, task):
     if not os.path.isdir(task_to_export.copy(filename='').path_root):
         os.makedirs(task_to_export.copy(filename='').path_root)
 
-    lm.save_file_as(task_to_export.path_root)
+    alc.save_file_as(task_to_export.path_root)
 
 
 def run():

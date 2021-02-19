@@ -1,4 +1,4 @@
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 import bpy
 
 class WriteMeshList(bpy.types.Operator):
@@ -40,11 +40,11 @@ def write_mesh_list(outFile=None):
     :param outFile:
     :return:
     """
-    from cgl.plugins.blender.lumbermill import scene_object
+    from cgl.plugins.blender.alchemy import scene_object
     from cgl.core.utils.read_write import save_json
     import bpy
 
-    scene = lm.scene_object()
+    scene = alc.scene_object()
 
     if outFile == None:
         outFile = scene_object().copy(ext='json', context='render').path_root

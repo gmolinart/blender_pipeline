@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 
 class ResetArmature(bpy.types.Operator):
     """
@@ -26,7 +26,7 @@ def reset_bones(armature=''):
     ik_switches = ["c_foot_ik.l", "c_foot_ik.r", "c_hand_ik.r", "c_hand_ik.l"]
 
     if armature == '':
-        assetName = lm.scene_object().shot
+        assetName = alc.scene_object().shot
         rigname = '{}_rig'.format(assetName)
         rig = bpy.data.objects[rigname]
         armature = rig.pose.bones

@@ -1,5 +1,5 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 import os
 
 
@@ -21,7 +21,7 @@ class PublishLow(bpy.types.Operator):
 
 def convert_low_to_main_collection(assetName=''):
     if assetName == '':
-        assetName = lm.scene_object().shot
+        assetName = alc.scene_object().shot
 
     for collection in bpy.data.collections:
         if collection.name == assetName:
@@ -30,22 +30,22 @@ def convert_low_to_main_collection(assetName=''):
         elif collection.name == '{}_low'.format(assetName):
             collection.name = assetName
 
-        elif lm.scene_object().resolution == 'low':
-             lm.confirm_prompt(message='ALERT: you are currently in the low version nothing to do here')
+        elif alc.scene_object().resolution == 'low':
+             alc.confirm_prompt(message='ALERT: you are currently in the low version nothing to do here')
 
-        elif lm.scene_object().resolution == 'high':
-            lm.confirm_prompt(title='ERROR',
+        elif alc.scene_object().resolution == 'high':
+            alc.confirm_prompt(title='ERROR',
                               message='ERROR: no low collection found, please create {}_low collection'.format(
                                   assetName))
 
 
 
 def save_low():
-    low_path_object = lm.scene_object().copy(resolution='low')
+    low_path_object = alc.scene_object().copy(resolution='low')
     low_dir = low_path_object.copy(filename='').path_root
     if not os.path.isdir(low_dir):
         os.makedirs(low_dir)
-    lm.save_file_as(low_path_object.path_root)
+    alc.save_file_as(low_path_object.path_root)
 
 
 def run():

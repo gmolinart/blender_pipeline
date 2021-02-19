@@ -1,10 +1,10 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 import os
 
 
 def get_items(self, context):
-    from cgl.plugins.blender import lumbermill as lm
+    from cgl.plugins.blender import alchemy as alc
     import os
 
     bpy.ops.file.make_paths_absolute()
@@ -32,8 +32,8 @@ class SwitchSelectedUser(bpy.types.Operator):
 
     def execute(self, context):
         self.report({'INFO'}, "Selected: %s" % self.users)
-        new_user = lm.scene_object().copy(user=self.users).latest_version().path_root
-        # lm.open_file(new_user)
+        new_user = alc.scene_object().copy(user=self.users).latest_version().path_root
+        # alc.open_file(new_user)
         switch_user(self.users)
         return {'FINISHED'}
 
@@ -58,7 +58,7 @@ def selected_path_object():
         library = bpy.context.object.instance_collection.library
         library_path = bpy.path.abspath(library.filepath)
         filename = Path(bpy.path.abspath(library_path)).__str__()
-        lumber_object = lm.LumberObject(filename)
+        lumber_object = alc.PathObject(filename)
         lumber_object = lumber_object.copy(context='source')
         return lumber_object
 

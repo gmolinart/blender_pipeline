@@ -1,5 +1,6 @@
 import bpy
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
+from cgl.core.utils.general import split_all, cgl_copy
 
 class RenderToSource(bpy.types.Operator):
     """
@@ -23,7 +24,7 @@ def run():
     :return:
     """
 
-    scene = lm.scene_object()
+    scene = alc.scene_object()
     current_source = scene.copy(context='render', filename=None, ext=None).path_root
     current_render = scene.copy(context='source', filename=None, ext=None).path_root
     cgl_copy(current_source,current_render)

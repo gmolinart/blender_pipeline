@@ -1,5 +1,5 @@
 import bpy
-# from cgl.plugins.blender import lumbermill as lm
+# from cgl.plugins.blender import Alchemy as alc
 
 class CopyToAnimProject(bpy.types.Operator):
     """
@@ -17,12 +17,12 @@ class CopyToAnimProject(bpy.types.Operator):
         return {'FINISHED'}
 
 
-from cgl.plugins.blender import lumbermill as lm
+from cgl.plugins.blender import alchemy as alc
 from cgl.core.utils.general import split_all, cgl_copy
 
 def move_to_project(project):
     context = ['source', 'render']
-    scene = lm.scene_object()
+    scene = alc.scene_object()
     for item in context:
         fromDir = scene.copy(context=item, filename=None).path_root
         toDir = scene.copy(context=item, filename=None, project=project).path_root
@@ -37,7 +37,7 @@ def run():
 
 
 
-    # project = lm.InputDialog(title='Move to project',
+    # project = alc.InputDialog(title='Move to project',
     #                   message='Please Type project Name', line_edit=True,
     #                   regex='^([a-z]{3,}, *)*[a-z]{3,}', name_example='MILVIO_ANIM',buttons = ['ok','cancel'])
 
