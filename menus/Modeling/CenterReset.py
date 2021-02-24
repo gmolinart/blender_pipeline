@@ -22,6 +22,9 @@ def run():
     This run statement is what's executed when your button is pressed in blender.
     :return:
     """
+    from cgl.plugins.blender.tasks.mdl import read_model_hirarchy, write_model_hirarchy
+    write_model_hirarchy()
+
     bpy.ops.object.origin_set(type='ORIGIN_GEOMETRY')
     obj = bpy.context.object
     loc = bpy.data.objects.new('parent', None)
@@ -43,3 +46,4 @@ def run():
     bpy.context.collection.objects.unlink(loc)
 
     bpy.ops.object.transform_apply(location=True, rotation=True, scale=True)
+    read_model_hirarchy()

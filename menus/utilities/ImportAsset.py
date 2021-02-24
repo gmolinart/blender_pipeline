@@ -117,24 +117,28 @@ def get_items(self, context):
 
     scene = alc.scene_object()
     project = alc.PathObject(scene.split_after('project'))
-    char = project.copy(scope='assets', seq='char')
+    char = project.copy(scope='assets', seq='char',branch = scene.branch)
 
     assets = ['char', 'prop', 'lib', 'veh', 'env']
     asset_dic = {}
 
     for asset in assets:
-        asset_dic.update({asset: project.copy(scope='assets', seq=asset)})
+        asset_dic.update({asset: project.copy(scope='assets', seq=asset,branch = scene.branch)})
 
     list_base = []
     list = []
 
     for type in assets:
+        path_root = asset_dic[type].path_root
+        print(path_root)
+        if os.path.isdir(path_root):
+            print(path_root)
 
-        if os.path.isdir(asset_dic[type].path_root):
-            for i in os.listdir(asset_dic[type].path_root):
+            for i in os.listdir(path_root):
                 list_base.append('{} {}'.format(i, type))
 
     dictionary = {}
+    print(dictionary)
 
     for i in list_base:
         list.append(i.split(' ')[0])
@@ -163,6 +167,8 @@ def get_asset_from_name(keys=''):
              'shot': name,
              'task': task,
              'user': user,
+             'branch' : current_scene.branch,
+             'variant':'default',
              'resolution': 'high'
              }
 

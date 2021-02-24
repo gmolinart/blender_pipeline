@@ -24,3 +24,4 @@ class Modeling(bpy.types.Panel):
         self.layout.row().operator("object.copy_latest_low")
         self.layout.row().operator("object.fix_mesh_name")
         self.layout.row().operator("object.import_base_mesh")
+        self.layout.row().operator("object.read_model_hirarchy")

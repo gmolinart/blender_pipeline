@@ -24,6 +24,8 @@ def open_selected_library():
 
     if 'proxy' in obj.name:
         name = obj.name.split('_')[0]
+    elif ':' in obj.name:
+        name = obj.name.split(':')[0]
     else:
         if '.' in obj.name:
             name = obj.name.split('.')[0]

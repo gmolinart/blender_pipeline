@@ -173,6 +173,12 @@
                     "module": "import cookbook.blender.menus.Modeling.ImportBaseMesh as ImportBaseMesh; ImportBaseMesh.run()",
                     "name": "ImportBaseMesh",
                     "order": 10
+                },
+                {
+                    "label": "Read Model Hirarchy",
+                    "module": "import cgl_tools.blender.menus.Modeling.ReadModelHirarchy as ReadModelHirarchy; ReadModelHirarchy.run()",
+                    "name": "ReadModelHirarchy",
+                    "order": 11
                 }
             ],
             "name": "Modeling"

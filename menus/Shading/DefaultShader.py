@@ -31,11 +31,13 @@ def get_default_shader():
     dict = {'company': current_scene.company,
             'context': 'render',
             'project': current_scene.project,
+            'branch': 'master',
+            'variant': 'default',
             'scope': 'assets',
             'seq': 'lib',
             'shot': 'DEFAULTSHADER',
             'task': 'shd',
-            'version': '003.000',
+            'version': '000.001',
             'user': 'publish',
             'resolution': 'high',
             'filename': 'lib_DEFAULTSHADER_shd',
@@ -44,9 +46,8 @@ def get_default_shader():
 
     path_object = alc.PathObject(dict)
 
-    path_object = path_object.copy(set_proper_filename=True)
-
-    # print(default_shader.path_root)
+    path_object = path_object.copy(set_proper_filename=True,latest = True)
+    print(path_object.path_root)
 
     default_in_scene = False
     # for group in bpy.data.node_groups:
@@ -58,10 +59,10 @@ def get_default_shader():
         from importlib import reload
         import os
 
-        if os.path.isdir(path_object.path_root):
+        if os.path.isfile(path_object.path_root):
 
             reload(shd)
-            print()
+
             shd.import_materials(path_object.path_root)
         else:
             print('NO DEFAULT SHADER FOUND')

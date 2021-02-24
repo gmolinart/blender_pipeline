@@ -25,11 +25,11 @@ def get_items(self, context):
     import os
 
     scene = alc.scene_object()
-    project = alc.PathObject(scene.split_after('branch'))
-    proj_shots = project.copy(scope='shots', context='source',branch = 'branch',variant = 'default')
+    project = alc.PathObject(scene.split_after('project'))
+    proj_shots = project.copy(scope='shots', context='source',branch = scene.branch)
 
     print('_______________SHOTS___________')
-
+    print(proj_shots.path_root)
     sequences = os.listdir(proj_shots.path_root)
 
     # print(sequences)
@@ -100,6 +100,7 @@ def get_shot_from_name(keys=''):
              'shot': shot,
              'task': task,
              'user': user,
+             'branch': current_scene.branch,
              'resolution': 'high'
              }
 

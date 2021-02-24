@@ -115,7 +115,7 @@ def get_items(self, context):
     asset_dic = {}
 
     for asset in assets:
-        asset_dic.update({asset: project.copy(scope='assets', seq=asset)})
+        asset_dic.update({asset: project.copy(scope='assets', seq=asset,branch = scene.branch,)})
 
     list_base = []
     list = []
@@ -156,6 +156,7 @@ def get_asset_from_name(keys=''):
              'shot': name,
              'task': task,
              'user': user,
+             'branch':current_scene.branch,
              'resolution': 'high'
              }
 
