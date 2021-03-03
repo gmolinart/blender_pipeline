@@ -81,7 +81,7 @@ def remove_linked_environment_dependencies(library):
     env = library
     bpy.ops.file.make_paths_absolute()
     env_path = alc.PathObject(env.filepath)
-    env_layout = env_path.copy(ext='json').path_root
+    env_layout = env_path.copy(ext='msd').path_root
 
     data = load_json(env_layout)
 

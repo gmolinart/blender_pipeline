@@ -35,5 +35,4 @@ class Rigging(bpy.types.Panel):
         self.layout.row().operator("object.mirror_vertex_groups")
         self.layout.row().operator("object.remove_mesh_controllers")
         self.layout.row().operator("object.copy_skin_weights")
-        self.layout.row().operator("object.edgard")
         self.layout.row().operator("object.remove_drivers")

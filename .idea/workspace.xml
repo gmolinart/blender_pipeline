@@ -20,20 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="292dd7de-72be-4162-9c08-eb3914d873cb" name="Default Changelist" comment="added import basemesh">
-      <change afterPath="$PROJECT_DIR$/menus/Modeling/ReadModelHirarchy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pre_publish/mdl/DeleteNonTaskObjects.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks.cgl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pre_publish/bndl/CheckNamespace.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus.cgl" beforeDir="false" afterPath="$PROJECT_DIR$/menus.cgl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Alchemy/Build.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Alchemy/Build.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Alchemy/Turntable.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Alchemy/Turntable.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Modeling/CenterReset.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Modeling/CenterReset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Layout/RenameCameras.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Layout/RenameCameras.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Layout/UnlinkAsset.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Layout/UnlinkAsset.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/Modeling/Modeling.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Modeling/Modeling.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Navigation/OpenAsset.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Navigation/OpenAsset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Navigation/OpenSelected.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Navigation/OpenSelected.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Shading/DefaultShader.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Shading/DefaultShader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Rigging/MeshToMdlTask.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Rigging/MeshToMdlTask.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Rigging/Rigging.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Rigging/Rigging.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/utilities/ImportAsset.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/utilities/ImportAsset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/utilities/OpenShot.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/utilities/OpenShot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +57,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/cglumberjack" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
@@ -285,33 +280,6 @@
     <MESSAGE value="updated default shader and addes import audio" />
     <MESSAGE value="added import basemesh" />
     <option name="LAST_COMMIT_MESSAGE" value="added import basemesh" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1002" y="447" width="624" height="540" key="StructurePopup" timestamp="1611841321346">
-      <screen x="0" y="0" width="2560" height="1409" />
-    </state>
-    <state x="1002" y="447" width="624" height="540" key="StructurePopup/-3840.18.2560.1409/0.2160.1600.1170/0.0.2560.1409@0.0.2560.1409" timestamp="1611841321346" />
-    <state x="93" y="93" width="2375" height="1224" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1609282226855">
-      <screen x="0" y="0" width="2560" height="1409" />
-    </state>
-    <state x="93" y="93" width="2375" height="1224" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.2560.1409/-3840.18.2560.1409/0.2160.1600.1170@0.0.2560.1409" timestamp="1609282226855" />
-    <state x="93" y="93" width="2375" height="1224" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1609342953937">
-      <screen x="0" y="0" width="2560" height="1409" />
-    </state>
-    <state x="93" y="93" width="2375" height="1224" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2560.1409/-3840.18.2560.1409/0.2160.1600.1170@0.0.2560.1409" timestamp="1609342953937" />
-    <state x="979" y="429" width="965" height="851" key="find.popup" timestamp="1613740736269">
-      <screen x="0" y="0" width="2560" height="1409" />
-    </state>
-    <state x="-2861" y="447" width="965" height="851" key="find.popup/-3840.18.2560.1409/0.2160.1600.1170/0.0.2560.1409@-3840.18.2560.1409" timestamp="1610639966671" />
-    <state x="979" y="429" width="965" height="851" key="find.popup/-3840.18.2560.1409/0.2160.1600.1170/0.0.2560.1409@0.0.2560.1409" timestamp="1613740736269" />
-    <state x="-2861" y="447" width="965" height="851" key="find.popup/0.0.2560.1409/-3840.18.2560.1409/0.2160.1600.1170@-3840.18.2560.1409" timestamp="1610978971736" />
-    <state x="979" y="429" width="965" height="851" key="find.popup/0.0.2560.1409/-3840.18.2560.1409/0.2160.1600.1170@0.0.2560.1409" timestamp="1610974650060" />
-    <state x="943" y="318" width="672" height="678" key="search.everywhere.popup" timestamp="1610053424415">
-      <screen x="0" y="0" width="2560" height="1409" />
-    </state>
-    <state x="943" y="318" width="672" height="678" key="search.everywhere.popup/-3840.18.2560.1409/0.2160.1600.1170/0.0.2560.1409@0.0.2560.1409" timestamp="1609964960447" />
-    <state x="-2897" y="336" width="672" height="678" key="search.everywhere.popup/0.0.2560.1409/-3840.18.2560.1409/0.2160.1600.1170@-3840.18.2560.1409" timestamp="1609516253088" />
-    <state x="943" y="318" width="672" height="678" key="search.everywhere.popup/0.0.2560.1409/-3840.18.2560.1409/0.2160.1600.1170@0.0.2560.1409" timestamp="1610053424415" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

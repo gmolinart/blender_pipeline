@@ -312,16 +312,10 @@
                     "order": 21
                 },
                 {
-                    "label": "Edgard",
-                    "module": "import cookbook.blender.menus.Rigging.Edgard as Edgard; Edgard.run()",
-                    "name": "Edgard",
-                    "order": 22
-                },
-                {
                     "label": "RemoveDrivers",
                     "module": "import cookbook.blender.menus.Rigging.RemoveDrivers as RemoveDrivers; RemoveDrivers.run()",
                     "name": "RemoveDrivers",
-                    "order": 23
+                    "order": 22
                 }
             ],
             "name": "Rigging"

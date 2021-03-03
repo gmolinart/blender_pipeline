@@ -24,7 +24,7 @@ def rename_cameras():
     shotIncrement = 10
     for camera in selected_cam:
         if camera.type == 'CAMERA':
-            camName  = '%s_%04d_cam' % (currentScene.seq, shotIncrement)
+            camName  = '%04d:cam' % (shotIncrement)
             camera.name = camName
             camera.data.name =  camName
             shotIncrement += 10

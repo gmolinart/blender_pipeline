@@ -83,6 +83,13 @@ class DialogUserB(bpy.types.Operator):
             pass
 
         if os.path.isfile((open_file)):
+            from cgl.core.path import PathObject
+            file_to_be_imported = PathObject(open_file)
+            if file_to_be_imported.task == 'bndl':
+                from cgl.plugins.blender.tasks import bndl
+                bndl.bundle_import(file_to_be_imported.msd_path)
+                return
+
             alc.reference_file(path_object.path_root, namespace=path_object.asset)
 
             name = path_object.asset
