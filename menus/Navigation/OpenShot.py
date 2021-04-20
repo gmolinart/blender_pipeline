@@ -7,7 +7,7 @@ def get_users(self, context):
     scene = bpy.types.Scene.scene_enum
     path_object = alc.PathObject(get_shot_from_name(scene))
 
-    users = os.listdir(path_object.split_after('task'))
+    users = os.listdir(path_object.split_after('variant'))
 
     for i in users:
 
@@ -26,13 +26,13 @@ def get_items(self, context):
 
     scene = alc.scene_object()
     project = alc.PathObject(scene.split_after('project'))
-    proj_shots = project.copy(scope='shots', context='source')
+    proj_shots = project.copy(scope='shots', context='source', branch=alc.scene_object().branch)
 
     print('_______________SHOTS___________')
 
     sequences = os.listdir(proj_shots.path_root)
 
-    # print(sequences)
+    print(sequences)
     shots = []
 
     for seq in sequences:
@@ -50,7 +50,6 @@ def get_items(self, context):
                     if os.path.isdir(os.path.join(shot_dir, task)):
                         shotid = '{} {} {}'.format(seq, shot, task)
                         if '.json' not in shotid:
-
                             shots.append((shotid, shotid, ''))
                         # print(22222222222)
                         print(shotid)
@@ -100,7 +99,8 @@ def get_shot_from_name(keys=''):
              'shot': shot,
              'task': task,
              'user': user,
-             'resolution': 'high'
+             'resolution': 'high',
+             'variant': 'default'
              }
 
     path_object = alc.PathObject(dict_)
@@ -118,14 +118,11 @@ class DialogUser(bpy.types.Operator):
         # my_users =  bpy.props.EnumProperty(items = split_string(self.my_string))
 
         path_object = get_shot_from_name(bpy.types.Scene.scene_enum.replace('publish', self.users))
-        correctName = '%s_%s_%s.blend' % (path_object.seq,
-                                          path_object.shot,
-                                          path_object.task,
-                                          )
-        path_object = path_object.copy(filename=correctName)
-        open_file = path_object.latest_version().copy(set_proper_filename=True).path_root
 
+        open_file = path_object.latest_version().copy(set_proper_filename=True, ext='blend').path_root
+        print(open_file)
         message = 'selected {}'.format(open_file)
+
         alc.open_file(open_file)
         self.report({'INFO'}, message)
 

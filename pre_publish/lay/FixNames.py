@@ -1,10 +1,9 @@
 from cgl.plugins.preflight.preflight_check import PreflightCheck
-# from cgl.plugins.blender import Alchemy as lm
+# from cgl.plugins.blender import magic_browser as lm
 # from cgl.plugins.blender import utils
-from cgl.plugins.blender import msd
-import os
 
-class ExportMsd(PreflightCheck):
+
+class FixNames(PreflightCheck):
 
     def getName(self):
         pass
@@ -20,11 +19,10 @@ class ExportMsd(PreflightCheck):
         self.fail_check('Message about a failed check')
         :return:
         """
-        print('Export Msd')
-        scene = msd.MagicSceneDescription()
-        scene.export()
+        print('Fix Names')
+        from cgl.plugins.blender import msd
 
-        if os.path.isfile(scene.output_msd):
-            self.pass_check('Check Passed')
-        else:
-            self.fail_check('Check Failed')
+        msd.fix_object_name()
+
+        self.pass_check('Check Passed')
+        # self.fail_check('Check Failed')

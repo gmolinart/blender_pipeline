@@ -20,15 +20,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="292dd7de-72be-4162-9c08-eb3914d873cb" name="Default Changelist" comment="added import basemesh">
-      <change afterPath="$PROJECT_DIR$/pre_publish/bndl/CheckNamespace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Alchemy/Alchemy.sync-conflict-20210409-080753-APUC2L3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Animation/SwitchResolution.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Animation/SwitchRigResolution.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Navigation/ExportFile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Navigation/Navigation.sync-conflict-20210409-081050-APUC2L3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Navigation/SwitchVariant.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Rigging/MirrorSelected.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Rigging/Rigging.sync-conflict-20210409-081051-APUC2L3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Shading/ImagesToTexTask.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Shading/ImportTextures.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/Shading/Shading.sync-conflict-20210409-081050-APUC2L3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/utilities/ImportAsset.sync-conflict-20210318-172201-U7OAUD3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menus/utilities/SwitchVariant.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pre_publish/lay/FixNames.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus.cgl" beforeDir="false" afterPath="$PROJECT_DIR$/menus.cgl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Layout/RenameCameras.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Layout/RenameCameras.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Layout/UnlinkAsset.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Layout/UnlinkAsset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/Modeling/Modeling.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Modeling/Modeling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus.sync-conflict-20210211-111255-APUC2L3.cgl" beforeDir="false" afterPath="$PROJECT_DIR$/menus.sync-conflict-20210409-081052-APUC2L3.cgl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Alchemy/OpenAsset.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Alchemy/OpenAsset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Alchemy/Snapshot.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Alchemy/Snapshot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Alchemy/VersionToLatest.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Alchemy/VersionToLatest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Animation/Animation.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Animation/Animation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Animation/RenderWithAudio.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Animation/RenderWithAudio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Animation/SwitchProxy.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Animation/SwitchProxy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Layout/Layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Layout/Layout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Layout/PublishCameras.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Layout/PublishCameras.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Layout/SwitchSelectedUser.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Layout/SwitchSelectedUser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Lighting/DefaultLightSetup.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Lighting/DefaultLightSetup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Modeling/Checknormals.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Modeling/Checknormals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Navigation/Navigation.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Navigation/Navigation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Navigation/OpenSelected.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Navigation/OpenSelected.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Navigation/OpenShot.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Navigation/OpenShot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Navigation/SwitchVersions.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Navigation/SwitchVersions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/Rigging/MeshToMdlTask.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Rigging/MeshToMdlTask.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Rigging/ParentMeshToRig.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Rigging/ParentMeshToRig.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/Rigging/Rigging.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Rigging/Rigging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/Shading/Shading.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/Shading/Shading.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/utilities/FixCollectionName.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/utilities/FixCollectionName.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/utilities/ImportAsset.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/utilities/ImportAsset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/utilities/OpenSelected.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/utilities/OpenSelected.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre_publish.sync-conflict-20210211-110305-APUC2L3.cgl" beforeDir="false" afterPath="$PROJECT_DIR$/pre_publish.cgl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre_publish/lay/ExportMsd.sync-conflict-20210211-111316-APUC2L3.py" beforeDir="false" afterPath="$PROJECT_DIR$/pre_publish/bndl/SaveCurrentScene.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre_publish/mdl/DeleteNonTaskObjects.py" beforeDir="false" afterPath="$PROJECT_DIR$/pre_publish/mdl/DeleteNonTaskObjects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre_publish/mdl/ExportMsd.py" beforeDir="false" afterPath="$PROJECT_DIR$/pre_publish/mdl/ExportMsd.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +91,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/cglumberjack" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../02_SYSTEMS/02_SystemConfig/CG_Lumberjack/latest/cglumberjack/cgl/plugins/blender/alchemy.py" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
@@ -79,6 +113,7 @@
       <workItem from="1608639947495" duration="2118000" />
       <workItem from="1608731986128" duration="1308000" />
       <workItem from="1609180026343" duration="24000" />
+      <workItem from="1617733297656" duration="202000" />
     </task>
     <task id="LOCAL-00001" summary="refformated code">
       <created>1601642898570</created>
@@ -241,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613736980062</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="added import basemesh">
+      <created>1614792975492</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1614792975492</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,6 +322,14 @@
     <MESSAGE value="updated default shader and addes import audio" />
     <MESSAGE value="added import basemesh" />
     <option name="LAST_COMMIT_MESSAGE" value="added import basemesh" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="612" y="2516" width="574" height="552" key="find.popup" timestamp="1618913980381">
+      <screen x="0" y="2160" width="1600" height="1170" />
+    </state>
+    <state x="979" y="429" width="602" height="552" key="find.popup/-3840.18.2560.1409/0.2160.1600.1170/0.0.2560.1409@0.0.2560.1409" timestamp="1618180186545" />
+    <state x="979" y="429" width="602" height="552" key="find.popup/0.0.2560.1409/-3840.18.2560.1409/0.2160.1600.1170@0.0.2560.1409" timestamp="1618446627776" />
+    <state x="612" y="2516" width="574" height="552" key="find.popup/0.0.2560.1409/-3840.18.2560.1409/0.2160.1600.1170@0.2160.1600.1170" timestamp="1618913980381" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

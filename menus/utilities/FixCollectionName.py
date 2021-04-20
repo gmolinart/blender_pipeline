@@ -1,6 +1,7 @@
 import bpy
 
 from cgl.plugins.blender import alchemy as alc
+from cgl.plugins.blender.utils import rename_collection
 
 
 class FixCollectionName(bpy.types.Operator):
@@ -14,32 +15,6 @@ class FixCollectionName(bpy.types.Operator):
         run()
         return {'FINISHED'}
 
-
-def rename_collection(current_scene = None):
-
-    if current_scene == None:
-        current_scene = alc.scene_object()
-
-    if current_scene.scope == 'assets':
-        name = current_scene.asset
-    else:
-        name = current_scene.filename_base
-
-
-    obj = bpy.context.object
-
-    if obj:
-        if current_scene.asset in bpy.data.collections:
-            print('collection exist ')
-        object = bpy.context.object
-        object.users_collection[0].name = name
-
-    else:
-        if current_scene.asset in bpy.data.collections:
-            print('collection exist')
-
-        else:
-            bpy.data.collections['Collection'].name = name
 
 
 

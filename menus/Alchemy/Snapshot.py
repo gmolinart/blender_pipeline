@@ -5,7 +5,7 @@ class Snapshot(bpy.types.Operator):
     """
     This class is required to register a button in blender.
     """
-    bl_idname = 'object.snapshot'
+    bl_idname = 'alchemy.snapshot'
     bl_label = 'Snapshot'
 
     def execute(self, context):

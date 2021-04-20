@@ -1,17 +1,9 @@
 from cgl.plugins.preflight.preflight_check import PreflightCheck
-# from cgl.plugins.blender import magic_browser as lm
+from cgl.plugins.blender import alchemy as alc
 # from cgl.plugins.blender import utils
 
 
-from cgl.plugins.preflight.preflight_check import PreflightCheck
-import bpy
-from cgl.plugins.blender import utils
-from cgl.plugins.blender import alchemy as alc
-from cgl.plugins.blender import utils
-
-
-
-class DeleteNonTaskObjects(PreflightCheck):
+class SaveCurrentScene(PreflightCheck):
 
     def getName(self):
         pass
@@ -27,11 +19,7 @@ class DeleteNonTaskObjects(PreflightCheck):
         self.fail_check('Message about a failed check')
         :return:
         """
-
-        from cgl.plugins.blender.utils import cleanup_file
-
-        cleanup_file(task='mdl')
-
-        print('Delete Non Task Objects')
+        alc.version_up()
+        print('SaveCurrentScene')
         self.pass_check('Check Passed')
         # self.fail_check('Check Failed')

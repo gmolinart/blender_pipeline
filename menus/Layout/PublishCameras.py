@@ -24,7 +24,7 @@ def run():
     from cgl.plugins.blender.tasks import cam
 
     camera = cam.get_selected_camera()
-    cam.publish_selected_camera(camera,fbx=True)
+    cam.publish_camera(camera,fbx=True)
 
 
 if __name__ == "__main__":

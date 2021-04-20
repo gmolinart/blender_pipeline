@@ -2,10 +2,9 @@ import os
 
 import bpy
 from cgl.plugins.blender import alchemy as alc
-from cgl.plugins.blender.tasks.lay import import_rig
+from cgl.plugins.blender.tasks.lay import get_layer, import_rig
 from cgl.plugins.blender.tasks import lay
 from importlib import reload
-from cgl.plugins.blender.utils import get_layer
 
 reload(lay)
 
@@ -62,23 +61,12 @@ def get_version(self, context):
     return (value)
 
 
-def get_variant(self, context):
-    scene = bpy.types.Scene.scene_enum
-    path_object = alc.PathObject(get_asset_from_name(scene))
-
-    versions = path_object.glob_project_element('variant')
-    version = versions.reverse()
-    value = [(versions[i], versions[i], '') for i in range(len(versions))]
-    return (value)
-
-
 class DialogUserB(bpy.types.Operator):
     bl_idname = "object.dialog_user_c"
     bl_label = "Please select user, type and version"
 
     users: bpy.props.EnumProperty(items=get_users)
     task: bpy.props.EnumProperty(items=get_task)
-    variant: bpy.props.EnumProperty(items=get_variant)
     # version: bpy.props.EnumProperty(items=get_version)
     from cgl.plugins.blender.utils import get_object, parent_object
 
@@ -87,7 +75,7 @@ class DialogUserB(bpy.types.Operator):
         # my_users =  bpy.props.EnumProperty(items = split_string(self.my_string))
 
         path_object = get_asset_from_name(bpy.types.Scene.scene_enum.replace('publish', self.users))
-        path_object = path_object.copy(task=self.task, variant=self.variant, set_proper_filename=True)
+        path_object = path_object.copy(task=self.task, set_proper_filename=True)
         path_object = path_object.latest_version().copy(set_proper_filename=True)
         render = path_object.copy(context='render')
 
@@ -111,22 +99,14 @@ class DialogUserB(bpy.types.Operator):
                 return
 
             if path_object.type in ['char', ] and path_object.task == 'rig':
-                print(path_object.path_root)
+
                 object = lay.import_rig(path_object)
 
-
+        from cgl.plugins.blender.utils import parent_object
             else:
-                from cgl.plugins.blender.utils import get_object, parent_object, get_scene_object
-                from cgl.plugins.blender import alchemy as alc
-                object = alc.reference_file(path_object.path_root)
-                main = get_layer('MAIN')
+                object = alc.reference_file(path_object.path_root, namespace=path_object.asset)
+                parent_object(object, get_layer('MAIN'))
 
-                if not main :
-                    try:
-                        main = get_scene_object()
-                        parent_object(object, main)
-                    except:
-                        alc.confirm_prompt('please click on build')
             print(object)
             cursor = bpy.context.scene.cursor.location
             print(object.location)

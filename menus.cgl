@@ -108,6 +108,12 @@
                     "module": "import cookbook.blender.menus.Layout.ReadLayoutFromSelected as ReadLayoutFromSelected; ReadLayoutFromSelected.run()",
                     "name": "ReadLayoutFromSelected",
                     "order": 9
+                },
+                {
+                    "label": "Switch Selected Variant",
+                    "module": "import cgl_tools.blender.menus.Layout.SwitchSelectedVariant as SwitchSelectedVariant; SwitchSelectedVariant.run()",
+                    "name": "SwitchSelectedVariant",
+                    "order": 10
                 }
             ],
             "name": "Layout"
@@ -316,6 +322,12 @@
                     "module": "import cookbook.blender.menus.Rigging.RemoveDrivers as RemoveDrivers; RemoveDrivers.run()",
                     "name": "RemoveDrivers",
                     "order": 22
+                },
+                {
+                    "label": "Mirror Selected",
+                    "module": "import cgl_tools.blender.menus.Rigging.MirrorSelected as MirrorSelected; MirrorSelected.run()",
+                    "name": "MirrorSelected",
+                    "order": 23
                 }
             ],
             "name": "Rigging"
@@ -405,6 +417,12 @@
                     "module": "import cookbook.blender.menus.Animation.ResetRigPublish as ResetRigPublish; ResetRigPublish.run()",
                     "name": "ResetRigPublish",
                     "order": 14
+                },
+                {
+                    "label": "Switch Rig Resolution",
+                    "module": "import cgl_tools.blender.menus.Animation.SwitchRigResolution as SwitchRigResolution; SwitchRigResolution.run()",
+                    "name": "SwitchRigResolution",
+                    "order": 15
                 }
             ],
             "name": "Animation"
@@ -458,6 +476,18 @@
                     "module": "import cookbook.blender.menus.Shading.SetColorViewportDisplay as SetColorViewportDisplay; SetColorViewportDisplay.run()",
                     "name": "SetColorViewportDisplay",
                     "order": 8
+                },
+                {
+                    "label": "Images To Tex Task",
+                    "module": "import cgl_tools.blender.menus.Shading.ImagesToTexTask as ImagesToTexTask; ImagesToTexTask.run()",
+                    "name": "ImagesToTexTask",
+                    "order": 9
+                },
+                {
+                    "label": "Import Textures",
+                    "module": "import cgl_tools.blender.menus.Shading.ImportTextures as ImportTextures; ImportTextures.run()",
+                    "name": "ImportTextures",
+                    "order": 10
                 }
             ],
             "name": "Shading"
@@ -703,10 +733,40 @@
                     "order": 10
                 },
                 {
+                    "label": "Copy To Variant",
+                    "module": "import cgl_tools.blender.menus.Navigation.CopyToVariant as CopyToVariant; CopyToVariant.run()",
+                    "name": "CopyToVariant",
+                    "order": 11
+                },
+                {
                     "label": "CopyToTask",
                     "module": "import cookbook.blender.menus.Navigation.CopyToTask as CopyToTask; CopyToTask.run()",
                     "name": "CopyToTask",
-                    "order": 11
+                    "order": 12
+                },
+                {
+                    "label": "New Variant",
+                    "module": "import cgl_tools.blender.menus.Navigation.NewVariant as NewVariant; NewVariant.run()",
+                    "name": "NewVariant",
+                    "order": 13
+                },
+                {
+                    "label": "Switch Variant",
+                    "module": "import cgl_tools.blender.menus.Navigation.SwitchVariant as SwitchVariant; SwitchVariant.run()",
+                    "name": "SwitchVariant",
+                    "order": 14
+                },
+                {
+                    "label": "Export File",
+                    "module": "import cgl_tools.blender.menus.Navigation.ExportFile as ExportFile; ExportFile.run()",
+                    "name": "ExportFile",
+                    "order": 15
+                },
+                {
+                    "label": "New Resolution",
+                    "module": "import cgl_tools.blender.menus.Navigation.NewResolution as NewResolution; NewResolution.run()",
+                    "name": "NewResolution",
+                    "order": 16
                 }
             ],
             "name": "Navigation"

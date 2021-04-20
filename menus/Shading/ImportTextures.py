@@ -1,12 +1,12 @@
 import bpy
-from cgl.plugins.blender import alchemy as alc
+# from cgl.plugins.blender import alchemy as alc
 
-class RenderWithAudio(bpy.types.Operator):
+class ImportTextures(bpy.types.Operator):
     """
     This class is required to register a button in blender.
     """
-    bl_idname = 'object.render_with_audio'
-    bl_label = 'Render With Audio'
+    bl_idname = 'object.import_textures'
+    bl_label = 'Import Textures'
 
     @classmethod
     def poll(cls, context):
@@ -23,12 +23,5 @@ def run():
     :return:
     """
     from cgl.plugins.blender import alchemy as alc
-    alc.render(preview=True, audio=True)
-
-    scene = alc.scene_object()
-    file_out = scene.copy(context = 'render').path_root.replace('/high/', '/high/.thumb')
-    #alc.render(preview=True, file_out = file_out )
-
-
-    print('Hello World!: button_template')
+    alc.import_task('tex')
 

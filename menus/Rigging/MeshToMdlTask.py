@@ -30,8 +30,15 @@ def run():
     This run statement is what's executed when your button is pressed in blender.
     :return:
     """
+    from cgl.plugins.blender import msd, utils
+    from cgl.plugins.blender.alchemy import scene_object
+    task = 'mdl'
+    utils.cleanup_file(task)
 
-    utils.cleanup_file()
+    collection = utils.get_scene_collection()
+    collection.name = collection.name.replace(':{}'.format(scene_object().task), ':{}'.format(task))
+
+
     mdl_task = utils.save_to_task('mdl')
     alc.confirm_prompt('file exported to mdl task user: {} version: {}'.format(mdl_task.user,mdl_task.version))
 

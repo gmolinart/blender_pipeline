@@ -23,16 +23,16 @@ def run():
     :return:
     """
 
+    from cgl.plugins.blender.alchemy import scene_object
+    master = scene_object().project_info['main_controller']
 
-    master = bpy.context.object.pose.bones["c_root_master.x"]['proxy']
+    if master in bpy.context.object.pose.bones:
 
-    if "c_root_master.x" in bpy.context.object.pose.bones:
-
-        if master == 0.0:
-            bpy.context.object.pose.bones["c_root_master.x"]['proxy'] = 1.0
+        if bpy.context.object.pose.bones[master]['proxy'] == 0.0:
+            bpy.context.object.pose.bones[master]['proxy'] = 1.0
             print('Turning on')
         else:
-            bpy.context.object.pose.bones["c_root_master.x"]['proxy'] = 0
+            bpy.context.object.pose.bones[master]['proxy'] = 0
             print('Turning off')
 
 

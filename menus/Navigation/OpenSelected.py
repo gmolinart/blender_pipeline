@@ -20,26 +20,17 @@ class OpenSelected(bpy.types.Operator):
 
 def open_selected_library():
     obj = bpy.context.active_object
+    from cgl.plugins.blender.msd import path_object_from_source_path
+    library = obj['source_path']
 
 
-    if 'proxy' in obj.name:
-        name = obj.name.split('_')[0]
-    elif ':' in obj.name:
-        name = obj.name.split(':')[0]
-    else:
-        if '.' in obj.name:
-            name = obj.name.split('.')[0]
-        else:
+    lumber_object = path_object_from_source_path(library)
 
-            name = obj.name
-
-    library = bpy.data.collections[name].library
-    libraryPath = bpy.path.abspath(library.filepath)
-    filename = Path(bpy.path.abspath(libraryPath)).__str__()
-
-    lumber_object = alc.PathObject(filename)
     alc.save_file()
-    alc.open_file(lumber_object.copy(context = 'source').path_root)
+
+    import os
+    os.startfile(lumber_object.copy(context ='source').path_root, 'open')
+
     #latestVersion = lumber_object.latest_version().path_root
 
 

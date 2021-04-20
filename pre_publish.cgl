@@ -24,37 +24,37 @@
                     "required": "True"
                 },
                 {
+                    "label": "Delete Namespaces",
+                    "module": "cookbook.blender.pre_publish.mdl.DeleteNamespaces",
+                    "name": "DeleteNamespaces",
+                    "order": 4,
+                    "required": "True"
+                },
+                {
+                    "label": "Delete Non Task Objects",
+                    "module": "cookbook.blender.pre_publish.mdl.DeleteNonTaskObjects",
+                    "name": "DeleteNonTaskObjects",
+                    "order": 5,
+                    "required": "True"
+                },
+                {
                     "label": "CleanTurntable",
                     "module": "cookbook.blender.pre_publish.mdl.CleanTurntable",
                     "name": "CleanTurntable",
-                    "order": 4,
+                    "order": 6,
                     "required": "True"
                 },
                 {
                     "label": "RemoveEnvironments",
                     "module": "cookbook.blender.pre_publish.mdl.RemoveEnvironments",
                     "name": "RemoveEnvironments",
-                    "order": 5,
+                    "order": 7,
                     "required": "True"
                 },
                 {
                     "label": "RemoveLinkedAssets",
                     "module": "cookbook.blender.pre_publish.mdl.RemoveLinkedAssets",
                     "name": "RemoveLinkedAssets",
-                    "order": 6,
-                    "required": "True"
-                },
-                {
-                    "label": "BakeModifiers",
-                    "module": "cookbook.blender.pre_publish.mdl.BakeModifiers",
-                    "name": "BakeModifiers",
-                    "order": 7,
-                    "required": "True"
-                },
-                {
-                    "label": "Resettransformations",
-                    "module": "cookbook.blender.pre_publish.mdl.Resettransformations",
-                    "name": "Resettransformations",
                     "order": 8,
                     "required": "True"
                 },
@@ -73,10 +73,17 @@
                     "required": "True"
                 },
                 {
+                    "label": "Export Msd",
+                    "module": "cookbook.blender.pre_publish.mdl.ExportMsd",
+                    "name": "ExportMsd",
+                    "order": 11,
+                    "required": "True"
+                },
+                {
                     "label": "Publish",
                     "module": "cookbook.blender.pre_publish.mdl.Publish",
                     "name": "Publish",
-                    "order": 11,
+                    "order": 12,
                     "required": "True"
                 }
             ],
@@ -158,24 +165,45 @@
                     "required": "True"
                 },
                 {
+                    "label": "Tag Layer",
+                    "module": "cookbook.blender.pre_publish.lay.TagLayer",
+                    "name": "TagLayer",
+                    "order": 2,
+                    "required": "True"
+                },
+                {
                     "label": "CheckRelativePaths",
                     "module": "cookbook.blender.pre_publish.lay.CheckRelativePaths",
                     "name": "CheckRelativePaths",
-                    "order": 2,
+                    "order": 3,
                     "required": "True"
                 },
                 {
                     "label": "ExportMsd",
                     "module": "cookbook.blender.pre_publish.lay.ExportMsd",
                     "name": "ExportMsd",
-                    "order": 3,
+                    "order": 4,
+                    "required": "True"
+                },
+                {
+                    "label": "Fix Names",
+                    "module": "cookbook.blender.pre_publish.lay.FixNames",
+                    "name": "FixNames",
+                    "order": 5,
+                    "required": "True"
+                },
+                {
+                    "label": "Export Cam Task",
+                    "module": "cookbook.blender.pre_publish.lay.ExportCamTask",
+                    "name": "ExportCamTask",
+                    "order": 6,
                     "required": "True"
                 },
                 {
                     "label": "Publish",
                     "module": "cookbook.blender.pre_publish.mdl.Publish",
                     "name": "Publish",
-                    "order": 4,
+                    "order": 7,
                     "required": "True"
                 }
             ],
@@ -217,10 +245,24 @@
                     "required": "True"
                 },
                 {
+                    "label": "CheckNames",
+                    "module": "cookbook.blender.pre_publish.tex.CheckNames",
+                    "name": "CheckNames",
+                    "order": 2,
+                    "required": "True"
+                },
+                {
                     "label": "ExportTextures",
                     "module": "cookbook.blender.pre_publish.tex.ExportTextures",
                     "name": "ExportTextures",
-                    "order": 2,
+                    "order": 3,
+                    "required": "True"
+                },
+                {
+                    "label": "Publish",
+                    "module": "cookbook.blender.pre_publish.tex.Publish",
+                    "name": "Publish",
+                    "order": 4,
                     "required": "True"
                 }
             ],
@@ -244,6 +286,53 @@
                 }
             ],
             "name": "shd"
+        },
+        {
+            "buttons": [
+                {
+                    "label": "Save Current Scene",
+                    "module": "cookbook.blender.pre_publish.bndl.SaveCurrentScene",
+                    "name": "SaveCurrentScene",
+                    "order": 1,
+                    "required": "True"
+                },
+                {
+                    "label": "Add Source Path",
+                    "module": "cookbook.blender.pre_publish.bndl.AddSourcePath",
+                    "name": "AddSourcePath",
+                    "order": 2,
+                    "required": "True"
+                },
+                {
+                    "label": "Check Namespace",
+                    "module": "cookbook.blender.pre_publish.bndl.CheckNamespace",
+                    "name": "CheckNamespace",
+                    "order": 3,
+                    "required": "True"
+                },
+                {
+                    "label": "Export Msd",
+                    "module": "cookbook.blender.pre_publish.bndl.ExportMsd",
+                    "name": "ExportMsd",
+                    "order": 4,
+                    "required": "True"
+                },
+                {
+                    "label": "Check Object Names",
+                    "module": "cookbook.blender.pre_publish.bndl.CheckObjectNames",
+                    "name": "CheckObjectNames",
+                    "order": 5,
+                    "required": "True"
+                },
+                {
+                    "label": "Pre Publish",
+                    "module": "cookbook.blender.pre_publish.bndl.PrePublish",
+                    "name": "PrePublish",
+                    "order": 6,
+                    "required": "True"
+                }
+            ],
+            "name": "bndl"
         }
     ]
 }

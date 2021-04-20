@@ -23,3 +23,4 @@ class Layout(bpy.types.Panel):
         self.layout.row().operator("object.switch_selected_version")
         self.layout.row().operator("object.unlink_asset")
         self.layout.row().operator("object.read_layout_from_selected")
+        self.layout.row().operator("object.switch__selected__variant")

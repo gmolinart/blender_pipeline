@@ -21,9 +21,11 @@ class ExportMsd(PreflightCheck):
         """
         from cgl.plugins.blender.tasks import mdl
         from cgl.plugins.blender.alchemy import scene_object
+        from cgl.plugins.blender.utils import get_scene_object
+        from cgl.plugins.blender import msd
         scene = mdl.Task(scene_object())
         scene.export_msd()
-
+        msd.add_namespace(get_scene_object('mdl'))
         print('Export Msd')
         self.pass_check('Check Passed')
         # self.fail_check('Check Failed')

@@ -29,7 +29,12 @@ class SwitchVersions(bpy.types.Operator):
     def execute(self, context):
         self.report({'INFO'}, "Selected: %s" % self.selected_versions)
         new_user = alc.scene_object().copy(version=self.selected_versions).path_root
-        alc.open_file(new_user)
+        import os
+
+        if os.path.isfile(new_user):
+
+            alc.open_file(new_user)
+
         return {'FINISHED'}
 
     def invoke(self, context, event):

@@ -28,3 +28,4 @@ class Animation(bpy.types.Panel):
         self.layout.row().operator("object.gp_main_layers")
         self.layout.row().operator("object.interactive")
         self.layout.row().operator("object.reset_rig_publish")
+        self.layout.row().operator("object.switch_rig_resolution")

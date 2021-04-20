@@ -34,9 +34,11 @@ def open_selected_library():
     libraryPath = bpy.path.abspath(library.filepath)
     filename = Path(bpy.path.abspath(libraryPath)).__str__()
 
-    lumber_object = alc.PathObject(filename)
+    lumber_object = alc.PathObject(filename).copy(context = 'source')
     alc.save_file()
-    alc.open_file(lumber_object.path_root)
+    import os
+    os.startfile(lumber_object.path_root, 'open')
+    #alc.open_file()
     #latestVersion = lumber_object.latest_version().path_root
 
 

@@ -23,4 +23,3 @@ class Shading(bpy.types.Panel):
         self.layout.row().operator("object.add_to_shader_group")
         self.layout.row().operator("object.set_color_viewport_display")
         self.layout.row().operator("object.images__to__tex__task")
-        self.layout.row().operator("object.import__textures")

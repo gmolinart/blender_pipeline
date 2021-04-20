@@ -9,7 +9,7 @@ def get_items(self, context):
 
     scene = alc.scene_object()
     project = alc.PathObject(scene.split_after('project'))
-    char = project.copy(scope='assets', seq='char')
+    char = project.copy(scope='assets', seq='char',branch = scene.branch)
 
     assets = ['char', 'prop', 'lib', 'veh', 'env']
     asset_dic = {}

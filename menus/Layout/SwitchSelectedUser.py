@@ -17,6 +17,16 @@ def get_items(self, context):
     return (value)
 
 
+def get_collection_from_path_object(path_object):
+    import bpy
+
+    for i in bpy.data.collections:
+        if i.library:
+
+            if i.library.filepath == path_object.path_root:
+                return i
+
+
 class SwitchSelectedUser(bpy.types.Operator):
     """
     This class is required to register a button in blender.
@@ -55,29 +65,40 @@ def selected_path_object():
                 name = obj.name.split('.')[0]
             else:
                 name = obj.name
-        library = bpy.context.object.instance_collection.library
-        library_path = bpy.path.abspath(library.filepath)
-        filename = Path(bpy.path.abspath(library_path)).__str__()
-        lumber_object = alc.PathObject(filename)
-        lumber_object = lumber_object.copy(context='source')
+
+        from cgl.plugins.blender.msd import path_object_from_source_path
+        from cgl.plugins.blender.utils import selection
+
+        lumber_object = path_object_from_source_path(obj['source_path'])
         return lumber_object
 
 
 def switch_user(user):
     import os
-    lumber_object = selected_path_object()
-    latest_version = lumber_object.copy(user=user).latest_version()
-    print(1111111111111)
-    # print(latest_version)
-    if os.path.isdir(latest_version.copy(context='render', filename='').path_root):
-        latest_version = latest_version.copy(context='render')
+    from cgl.plugins.blender.utils import get_scene_collection, get_object, load_library, purge_unused_data, \
+        set_all_paths_relative
+    from cgl.plugins.blender.msd import path_object_from_source_path
 
-    library = bpy.context.object.instance_collection.library
-    library.filepath = latest_version.path_root
-    bpy.ops.file.make_paths_relative()
-    library.reload()
+    selection = bpy.context.selected_objects
+    set_all_paths_relative(False)
+    for object in selection:
 
-    print(library.filepath + ' CHANGED')
+        library = object['source_path']
+        lumber_object = path_object_from_source_path(library)
+        latest_version = lumber_object.copy(user=user, context='render').latest_version()
+
+        if latest_version.task == 'mdl':
+            print(latest_version.path_root)
+            load_library(latest_version)
+
+            collection = get_collection_from_path_object(path_object=latest_version)
+            print(collection)
+            object.instance_collection = collection
+
+        purge_unused_data()
+        alc.confirm_prompt(message='{} update to {}'.format(latest_version.asset, latest_version.version))
+
+        set_all_paths_relative(True)
 
 
 def run():
@@ -100,4 +121,5 @@ if __name__ == "__main__":
     register()
 
     # test call
+
     bpy.ops.object.switch_selected_user('INVOKE_DEFAULT')

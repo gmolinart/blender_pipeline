@@ -55,8 +55,8 @@ def check_normals(selection = None):
         for obj in bpy.context.selected_objects:
             obj.data.use_auto_smooth = True
             mod = obj.modifiers.new("weighted_normal", 'WEIGHTED_NORMAL')
-            scn = bpy.context.scene
-            applyModifierToMultiUser(scn)
+            #scn = bpy.context.scene
+            #applyModifierToMultiUser(scn)
     except(AttributeError):
         pass
 def run():
